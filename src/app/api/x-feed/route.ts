@@ -1,6 +1,5 @@
 import { XMLParser } from "fast-xml-parser";
 import { NextResponse } from "next/server";
-import https from "node:https";
 import { URL } from "node:url";
 
 export const dynamic = "force-dynamic";
@@ -32,7 +31,8 @@ const parser = new XMLParser({
   ignoreAttributes: false,
 });
 
-const allowedFeedRedirectHosts = new Set(["nitter.net", "xcancel.com"]);
+const feedHosts = ["https://nitter.net"];
+const allowedFeedRedirectHosts = new Set(["nitter.net"]);
 
 function safeExternalUrl(value: string, fallback = "") {
   try {
@@ -44,60 +44,35 @@ function safeExternalUrl(value: string, fallback = "") {
   }
 }
 
-function fetchText(url: string, redirectCount = 0): Promise<string> {
-  return new Promise((resolve, reject) => {
-    const requestUrl = new URL(url);
-    const request = https.request(
-      requestUrl,
-      {
-        headers: {
-          Accept: "application/rss+xml,text/xml;q=0.9,*/*;q=0.8",
-          "Accept-Encoding": "identity",
-          "User-Agent":
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125 Safari/537.36",
-        },
-        method: "GET",
-      },
-      (response) => {
-        const location = response.headers.location;
-
-        if (
-          response.statusCode &&
-          response.statusCode >= 300 &&
-          response.statusCode < 400 &&
-          location &&
-          redirectCount < 3
-        ) {
-          const redirectUrl = new URL(location, requestUrl);
-
-          if (redirectUrl.protocol !== "https:" || !allowedFeedRedirectHosts.has(redirectUrl.hostname)) {
-            reject(new Error("Blocked X feed redirect outside the allowed hosts."));
-            response.resume();
-            return;
-          }
-
-          resolve(fetchText(redirectUrl.toString(), redirectCount + 1));
-          response.resume();
-          return;
-        }
-
-        const chunks: Buffer[] = [];
-
-        response.on("data", (chunk: Buffer) => {
-          chunks.push(chunk);
-        });
-        response.on("end", () => {
-          resolve(Buffer.concat(chunks).toString("utf8"));
-        });
-      },
-    );
-
-    request.on("error", reject);
-    request.setTimeout(18_000, () => {
-      request.destroy(new Error("X feed request timed out"));
-    });
-    request.end();
+async function fetchText(url: string, redirectCount = 0): Promise<string> {
+  const requestUrl = new URL(url);
+  const response = await fetch(requestUrl, {
+    cache: "no-store",
+    headers: {
+      Accept: "application/rss+xml,text/xml;q=0.9,*/*;q=0.8",
+      "User-Agent":
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125 Safari/537.36",
+    },
+    redirect: "manual",
+    signal: AbortSignal.timeout(18_000),
   });
+  const location = response.headers.get("location");
+
+  if (response.status >= 300 && response.status < 400 && location && redirectCount < 3) {
+    const redirectUrl = new URL(location, requestUrl);
+
+    if (redirectUrl.protocol !== "https:" || !allowedFeedRedirectHosts.has(redirectUrl.hostname)) {
+      throw new Error("Blocked X feed redirect outside the allowed hosts.");
+    }
+
+    return fetchText(redirectUrl.toString(), redirectCount + 1);
+  }
+
+  if (!response.ok) {
+    throw new Error(`X feed returned ${response.status}.`);
+  }
+
+  return response.text();
 }
 
 function decodeHtml(value: string) {
@@ -167,11 +142,31 @@ export async function GET(request: Request) {
     .replace(/[^\w]/g, "");
 
   try {
-    const xml = await fetchText(`https://nitter.net/${handle}/rss`);
+    let xml = "";
+    let feedError: unknown = null;
+
+    for (const feedHost of feedHosts) {
+      try {
+        xml = await fetchText(`${feedHost}/${handle}/rss`);
+
+        if (xml.trim()) {
+          break;
+        }
+      } catch (error) {
+        feedError = error;
+      }
+    }
 
     if (!xml.trim()) {
       return NextResponse.json(
-        { error: "The public feed returned no items.", handle, tweets: [] },
+        {
+          error:
+            feedError instanceof Error
+              ? feedError.message
+              : "The public feed returned no items.",
+          handle,
+          tweets: [],
+        },
         { status: 502 },
       );
     }
