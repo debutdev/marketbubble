@@ -122,15 +122,38 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1180px) {
   .shell {
-    bottom: 10px;
-    width: calc(100% - 20px);
-    height: 64px;
+    position: relative;
+    left: auto;
+    bottom: auto;
+    width: 100%;
+    height: auto;
+    min-height: 64px;
+    grid-column: 1 / -1;
+    translate: 0 0;
   }
 
   .scroll {
-    grid-template-columns: repeat(11, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(92px, 1fr));
+  }
+
+  .item {
+    min-height: 56px;
+  }
+}
+
+@media (max-width: 640px) {
+  .shell {
+    min-height: 0;
+  }
+
+  .scroll {
+    grid-template-columns: repeat(auto-fit, minmax(94px, 1fr));
+  }
+
+  .item {
+    min-height: 58px;
   }
 }
 

@@ -3,6 +3,8 @@
 import { useCallback, useEffect, useState } from "react";
 import { FiMaximize2, FiMinimize2 } from "react-icons/fi";
 
+const COMPACT_EXPANDED_BREAKPOINT = 980;
+
 type StatusSources = {
   kickChannels: { channel: string }[];
   twitchChannels: string[];
@@ -18,13 +20,48 @@ type StreamStageProps = {
 export function StreamStage({ src, statusSources, title }: StreamStageProps) {
   const [expanded, setExpanded] = useState(false);
   const [entered, setEntered] = useState(false);
+  const [compactViewport, setCompactViewport] = useState(false);
   const [online, setOnline] = useState(false);
   const statusTwitchChannelsKey = statusSources?.twitchChannels.join(",") ?? "";
   const statusKickChannelsKey =
     statusSources?.kickChannels.map((kickChannel) => kickChannel.channel).join(",") ?? "";
   const statusXHandlesKey = statusSources?.xHandles.join(",") ?? "";
 
+  const clearExpandedMetricStyles = useCallback(() => {
+    document.body.style.removeProperty("--stream-expanded-stage-width");
+    document.body.style.removeProperty("--stream-expanded-chat-left");
+    document.body.style.removeProperty("--stream-expanded-chat-top");
+    document.body.style.removeProperty("--stream-expanded-chat-height");
+
+    const chatStage = document.querySelector<HTMLElement>(".chat-stage");
+    const backdrop = document.querySelector<HTMLElement>(".stream-expanded-backdrop");
+
+    if (chatStage) {
+      chatStage.style.removeProperty("top");
+      chatStage.style.removeProperty("left");
+      chatStage.style.removeProperty("bottom");
+      chatStage.style.removeProperty("height");
+      chatStage.style.removeProperty("z-index");
+      chatStage.style.removeProperty("opacity");
+      chatStage.style.removeProperty("translate");
+      chatStage.style.removeProperty("scale");
+      chatStage.style.removeProperty("animation");
+      chatStage.style.removeProperty("transition");
+    }
+
+    if (backdrop) {
+      backdrop.style.removeProperty("opacity");
+      backdrop.style.removeProperty("backdrop-filter");
+      backdrop.style.removeProperty("transition");
+    }
+  }, []);
+
   const updateExpandedMetrics = useCallback(() => {
+    if (window.innerWidth <= COMPACT_EXPANDED_BREAKPOINT) {
+      clearExpandedMetricStyles();
+      return;
+    }
+
     const shell = document.querySelector(".site-shell");
 
     if (!shell) {
@@ -83,35 +120,23 @@ export function StreamStage({ src, statusSources, title }: StreamStageProps) {
       backdrop.style.backdropFilter = "blur(18px)";
       backdrop.style.transition = "none";
     }
-  }, []);
+  }, [clearExpandedMetricStyles]);
 
   const resetExpandedMetrics = useCallback(() => {
-    document.body.style.removeProperty("--stream-expanded-stage-width");
-    document.body.style.removeProperty("--stream-expanded-chat-left");
-    document.body.style.removeProperty("--stream-expanded-chat-top");
-    document.body.style.removeProperty("--stream-expanded-chat-height");
+    clearExpandedMetricStyles();
+  }, [clearExpandedMetricStyles]);
 
-    const chatStage = document.querySelector<HTMLElement>(".chat-stage");
-    const backdrop = document.querySelector<HTMLElement>(".stream-expanded-backdrop");
+  useEffect(() => {
+    const updateCompactViewport = () => {
+      setCompactViewport(window.innerWidth <= COMPACT_EXPANDED_BREAKPOINT);
+    };
 
-    if (chatStage) {
-      chatStage.style.removeProperty("top");
-      chatStage.style.removeProperty("left");
-      chatStage.style.removeProperty("bottom");
-      chatStage.style.removeProperty("height");
-      chatStage.style.removeProperty("z-index");
-      chatStage.style.removeProperty("opacity");
-      chatStage.style.removeProperty("translate");
-      chatStage.style.removeProperty("scale");
-      chatStage.style.removeProperty("animation");
-      chatStage.style.removeProperty("transition");
-    }
+    updateCompactViewport();
+    window.addEventListener("resize", updateCompactViewport);
 
-    if (backdrop) {
-      backdrop.style.removeProperty("opacity");
-      backdrop.style.removeProperty("backdrop-filter");
-      backdrop.style.removeProperty("transition");
-    }
+    return () => {
+      window.removeEventListener("resize", updateCompactViewport);
+    };
   }, []);
 
   useEffect(() => {
@@ -196,7 +221,7 @@ export function StreamStage({ src, statusSources, title }: StreamStageProps) {
         data-expanded={expanded ? "true" : undefined}
         aria-label="Twitch stream"
         style={
-          expanded
+          expanded && !compactViewport
             ? {
                 translate: "-50% -50%",
                 width: "var(--stream-expanded-stage-width)",

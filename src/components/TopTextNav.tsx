@@ -3,6 +3,7 @@ import Link from "next/link";
 const navItems = [
   { href: "/", label: "Home", key: "home" },
   { href: "/market", label: "Market", key: "market" },
+  { href: "/content", label: "Content", key: "content" },
 ] as const;
 
 type TopTextNavProps = {

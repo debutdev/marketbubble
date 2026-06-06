@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main
       aria-label="Market Bubble"
-      className="site-shell relative min-h-dvh overflow-hidden bg-background"
+      className="site-shell home-site-shell relative min-h-dvh overflow-hidden bg-background"
     >
       <div className="logo-stage" aria-hidden="true">
         <div className="logo-motion">

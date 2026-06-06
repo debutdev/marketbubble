@@ -421,15 +421,19 @@
   place-items: center;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1180px) {
   .shell {
-    right: 10px;
-    bottom: calc(10px + 64px + 10px);
-    left: 10px;
-    width: auto;
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 100%;
     min-width: 0;
     max-width: none;
-    height: clamp(180px, 34vh, 260px);
+    height: auto;
+    min-height: 0;
+    overflow: visible;
   }
 
   .viewport h2 {
@@ -443,5 +447,25 @@
 
   .dialog {
     grid-template-rows: auto auto minmax(150px, 0.65fr) auto minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .header,
+  .row {
+    grid-template-columns: minmax(92px, 1fr) minmax(64px, 0.72fr) minmax(48px, 0.54fr) minmax(54px, 0.58fr);
+  }
+
+  .row {
+    min-height: 2.55rem;
+  }
+
+  .dialogBackdrop {
+    padding: 0.65rem;
+  }
+
+  .dialog {
+    width: min(100%, calc(100vw - 1.3rem));
+    max-height: calc(100svh - 1.3rem);
   }
 }

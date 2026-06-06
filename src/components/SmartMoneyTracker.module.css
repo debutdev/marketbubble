@@ -340,8 +340,71 @@
   text-align: center;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1180px) {
   .shell {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    height: clamp(560px, 70vh, 720px);
+    min-height: 0;
+    grid-column: 1 / -1;
+    display: grid;
+  }
+
+  .viewport {
+    grid-template-rows: auto minmax(150px, 0.9fr) minmax(170px, 1.05fr) minmax(190px, 1.08fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .shell {
+    height: auto;
+  }
+
+  .viewport {
+    overflow: visible;
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .third {
+    min-height: auto;
+    overflow: visible;
+  }
+
+  .traderRow {
+    min-height: 2.4rem;
+  }
+
+  .portfolios {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    overflow: visible;
+  }
+
+  .portfolioCard {
+    min-height: 4.4rem;
+  }
+
+  .marketRow {
+    min-height: 2.65rem;
+    grid-template-columns: minmax(6.5rem, 1fr) 2rem 2rem 3.1rem 3rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .traderHeader,
+  .traderRow {
+    grid-template-columns: 1.1rem minmax(4.2rem, 1fr) minmax(2.9rem, 0.68fr) 2rem 2.8rem;
+    gap: 0.24rem;
+  }
+
+  .marketRow {
+    grid-template-columns: minmax(0, 1fr) 1.8rem 1.8rem 2.8rem;
+  }
+
+  .marketRow .sparkline {
     display: none;
   }
 }

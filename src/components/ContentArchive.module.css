@@ -1,0 +1,672 @@
+.shell {
+  position: relative;
+  z-index: 17;
+  display: grid;
+  width: 100%;
+  height: calc(100dvh - (var(--site-inset) * 2));
+  min-height: 0;
+  grid-template-columns: minmax(250px, 0.9fr) minmax(430px, 1.9fr) minmax(270px, 1fr);
+  gap: clamp(8px, 0.9vw, 12px);
+  padding: clamp(86px, 10vh, 112px) calc(clamp(24px, 3vw, 40px) / 2)
+    calc(clamp(14px, 2vw, 24px) + 2px);
+}
+
+.sidePanel,
+.mainPanel,
+.clipPanel {
+  display: grid;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: clamp(10px, 1.1vw, 16px);
+  background: #202020;
+  color: #e4e4e4;
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  padding: clamp(5px, 0.6vw, 8px);
+}
+
+.sidePanel,
+.clipPanel {
+  grid-template-rows: auto minmax(0, 1fr);
+}
+
+.sidePanel {
+  grid-template-rows: auto auto auto minmax(0, 1fr);
+}
+
+.mainPanel {
+  grid-template-rows: auto minmax(0, 1fr);
+}
+
+.sidePanel > *,
+.mainPanel > *,
+.clipPanel > * {
+  background: var(--background);
+}
+
+.panelHeader {
+  display: flex;
+  min-width: 0;
+  min-height: clamp(2.45rem, 4vh, 3rem);
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.72rem;
+  border-bottom: 1px solid rgb(228 228 228 / 0.08);
+  border-radius: clamp(8px, 0.88vw, 12px) clamp(8px, 0.88vw, 12px) 0 0;
+  padding: 0 clamp(0.78rem, 0.95vw, 1rem);
+}
+
+.panelHeader h1,
+.panelHeader h2 {
+  margin: 0;
+  overflow: hidden;
+  color: #ffffff;
+  font-family: var(--font-playfair-display), Georgia, serif;
+  font-size: clamp(1rem, 1.3vw, 1.45rem);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.panelHeader span {
+  flex: 0 0 auto;
+  color: rgb(228 228 228 / 0.44);
+  font-size: clamp(0.52rem, 0.62vw, 0.66rem);
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.metrics {
+  display: grid;
+  gap: 0;
+  margin: 0;
+}
+
+.metrics div {
+  display: grid;
+  min-height: 3.4rem;
+  align-items: center;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.8rem;
+  border-bottom: 1px solid rgb(228 228 228 / 0.08);
+  padding: 0 clamp(0.78rem, 0.95vw, 1rem);
+}
+
+.metrics dt {
+  color: rgb(228 228 228 / 0.5);
+  font-size: 0.62rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.metrics dd {
+  margin: 0;
+  color: #ffffff;
+  font-family: var(--font-playfair-display), Georgia, serif;
+  font-size: clamp(1rem, 1.5vw, 1.45rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.profileLink {
+  display: flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem;
+  border-bottom: 1px solid rgb(228 228 228 / 0.08);
+  color: rgb(228 228 228 / 0.88);
+  font-size: 0.72rem;
+  font-weight: 850;
+  line-height: 1;
+  padding: 0 clamp(0.78rem, 0.95vw, 1rem);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.profileLink:hover,
+.profileLink:focus-visible {
+  background: rgb(228 228 228 / 0.045);
+  outline: none;
+}
+
+.streamSection {
+  display: grid;
+  min-height: 0;
+  grid-template-rows: auto minmax(0, 1fr);
+  border-radius: 0 0 clamp(8px, 0.88vw, 12px) clamp(8px, 0.88vw, 12px);
+}
+
+.streamHeader {
+  display: flex;
+  min-width: 0;
+  min-height: 2.6rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.72rem;
+  border-bottom: 1px solid rgb(228 228 228 / 0.08);
+  padding: 0 clamp(0.78rem, 0.95vw, 1rem);
+}
+
+.streamHeader h2 {
+  margin: 0;
+  overflow: hidden;
+  color: #ffffff;
+  font-family: var(--font-playfair-display), Georgia, serif;
+  font-size: clamp(0.9rem, 1.08vw, 1.16rem);
+  font-weight: 400;
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.streamHeader span {
+  flex: 0 0 auto;
+  color: rgb(228 228 228 / 0.44);
+  font-size: clamp(0.52rem, 0.62vw, 0.66rem);
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.streamList {
+  display: grid;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  align-content: start;
+  scrollbar-width: none;
+}
+
+.streamList::-webkit-scrollbar {
+  display: none;
+}
+
+.streamItem {
+  display: grid;
+  min-height: 5rem;
+  min-width: 0;
+  align-items: center;
+  grid-template-columns: 4.9rem minmax(0, 1fr);
+  gap: 0.62rem;
+  border-bottom: 1px solid rgb(228 228 228 / 0.08);
+  color: #e4e4e4;
+  padding: 0.58rem clamp(0.62rem, 0.82vw, 0.82rem);
+  text-decoration: none;
+}
+
+.streamItem:hover,
+.streamItem:focus-visible {
+  background: rgb(228 228 228 / 0.045);
+  outline: none;
+}
+
+.streamThumb {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border-radius: 6px;
+  background: #101010;
+}
+
+.streamThumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.streamThumb > span {
+  position: absolute;
+  right: 0.34rem;
+  bottom: 0.34rem;
+  display: grid;
+  width: 1.34rem;
+  height: 1.34rem;
+  place-items: center;
+  border-radius: 999px;
+  background: rgb(22 22 22 / 0.78);
+  color: #ffffff;
+}
+
+.streamThumb svg {
+  width: 0.82rem;
+  height: 0.82rem;
+}
+
+.streamCopy {
+  display: grid;
+  min-width: 0;
+  gap: 0.28rem;
+}
+
+.streamCopy strong {
+  display: -webkit-box;
+  overflow: hidden;
+  color: rgb(228 228 228 / 0.92);
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: clamp(0.66rem, 0.76vw, 0.8rem);
+  font-weight: 850;
+  line-height: 1.18;
+}
+
+.streamCopy em,
+.streamCopy span {
+  display: block;
+  overflow: hidden;
+  color: rgb(228 228 228 / 0.46);
+  font-size: 0.56rem;
+  font-style: normal;
+  font-weight: 850;
+  line-height: 1;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.streamCopy span {
+  color: rgb(228 228 228 / 0.58);
+}
+
+.streamStatus {
+  display: grid;
+  min-height: 5rem;
+  place-items: center;
+  border-bottom: 1px solid rgb(228 228 228 / 0.08);
+  color: rgb(228 228 228 / 0.5);
+  font-size: 0.68rem;
+  font-weight: 850;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.tweetGrid {
+  display: grid;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  grid-auto-flow: dense;
+  grid-auto-rows: minmax(146px, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.55rem, 0.8vw, 0.8rem);
+  padding: clamp(0.56rem, 0.76vw, 0.82rem);
+  scrollbar-width: none;
+}
+
+.tweetGrid::-webkit-scrollbar,
+.clipList::-webkit-scrollbar {
+  display: none;
+}
+
+.tweetCard,
+.clipCard {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgb(228 228 228 / 0.08);
+  border-radius: 8px;
+  background: #101010;
+  color: #e4e4e4;
+  text-decoration: none;
+}
+
+.tweetCard {
+  display: flex;
+  min-height: 0;
+  isolation: isolate;
+}
+
+.tweetWide {
+  grid-column: span 2;
+}
+
+.tweetTall {
+  grid-row: span 2;
+}
+
+.tweetCard:first-child {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.tweetCard:hover,
+.tweetCard:focus-visible,
+.clipCard:hover,
+.clipCard:focus-visible {
+  border-color: rgb(228 228 228 / 0.18);
+  background: rgb(228 228 228 / 0.045);
+  outline: none;
+}
+
+.tweetImage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  filter: saturate(0.88) contrast(1.05);
+  opacity: 0.25;
+  object-fit: cover;
+}
+
+.cardShade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgb(22 22 22 / 0.06), rgb(22 22 22 / 0.94)),
+    radial-gradient(circle at 20% 0%, rgb(228 228 228 / 0.08), transparent 38%);
+  pointer-events: none;
+}
+
+.cardGlow {
+  position: absolute;
+  right: -30%;
+  bottom: -35%;
+  z-index: 1;
+  width: 70%;
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background: rgb(228 228 228 / 0.07);
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.78rem;
+  padding: clamp(0.74rem, 0.92vw, 0.92rem);
+}
+
+.cardTop {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  color: rgb(228 228 228 / 0.5);
+  font-size: clamp(0.55rem, 0.68vw, 0.7rem);
+  font-weight: 750;
+  line-height: 1;
+}
+
+.cardTop span {
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+  gap: 0.38rem;
+}
+
+.cardTop time,
+.cardTop span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cardCopy {
+  display: grid;
+  min-height: 0;
+  gap: 0.5rem;
+}
+
+.badge {
+  width: max-content;
+  border: 1px solid rgb(228 228 228 / 0.12);
+  border-radius: 999px;
+  color: rgb(228 228 228 / 0.62);
+  font-size: 0.56rem;
+  font-weight: 850;
+  line-height: 1;
+  padding: 0.3rem 0.46rem;
+  text-transform: uppercase;
+}
+
+.cardCopy strong {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  color: rgb(228 228 228 / 0.92);
+  font-size: clamp(0.78rem, 0.9vw, 0.98rem);
+  font-weight: 650;
+  line-height: 1.28;
+  white-space: pre-line;
+}
+
+.tweetCard:first-child .cardCopy strong {
+  -webkit-line-clamp: 7;
+  font-size: clamp(0.96rem, 1.24vw, 1.28rem);
+  line-height: 1.2;
+}
+
+.clipList {
+  display: grid;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  gap: 0;
+  border-radius: 0 0 clamp(8px, 0.88vw, 12px) clamp(8px, 0.88vw, 12px);
+  scrollbar-width: none;
+}
+
+.clipCard {
+  display: grid;
+  min-height: 5.6rem;
+  align-items: center;
+  grid-template-columns: 4.8rem minmax(0, 1fr);
+  gap: 0.62rem;
+  border-radius: 0;
+  border-bottom: 1px solid rgb(228 228 228 / 0.08);
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  background: var(--background);
+  padding: 0.58rem 0.66rem;
+}
+
+.clipThumb {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  border-radius: 6px;
+  background: #101010;
+}
+
+.clipThumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.clipThumb span {
+  position: absolute;
+  right: 0.34rem;
+  bottom: 0.34rem;
+  display: grid;
+  width: 1.5rem;
+  height: 1.5rem;
+  place-items: center;
+  border-radius: 999px;
+  background: rgb(22 22 22 / 0.78);
+  color: #ffffff;
+}
+
+.clipCopy {
+  display: grid;
+  min-width: 0;
+  gap: 0.42rem;
+}
+
+.clipCopy strong {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  color: rgb(228 228 228 / 0.9);
+  font-family: var(--font-playfair-display), Georgia, serif;
+  font-size: clamp(0.7rem, 0.82vw, 0.86rem);
+  font-weight: 400;
+  line-height: 1.12;
+}
+
+.clipCopy em {
+  color: rgb(228 228 228 / 0.46);
+  font-size: 0.56rem;
+  font-style: normal;
+  font-weight: 850;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.status {
+  display: grid;
+  min-height: 8rem;
+  place-items: center;
+  gap: 0.5rem;
+  color: rgb(228 228 228 / 0.54);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.skeletonTitle,
+.skeletonLine,
+.skeletonCard,
+.skeletonClip {
+  border-radius: 8px;
+  background: linear-gradient(
+    100deg,
+    rgb(228 228 228 / 0.04),
+    rgb(228 228 228 / 0.1),
+    rgb(228 228 228 / 0.04)
+  );
+  background-size: 220% 100%;
+  animation: content-loading 1.4s ease-in-out infinite;
+}
+
+.skeletonTitle {
+  height: 3rem;
+}
+
+.skeletonLine {
+  height: 3rem;
+}
+
+.skeletonCard,
+.skeletonClip {
+  min-height: 8rem;
+}
+
+@keyframes content-loading {
+  to {
+    background-position: -220% 0;
+  }
+}
+
+@media (max-width: 1180px) {
+  .shell {
+    height: auto;
+    min-height: calc(100svh - (var(--site-inset) * 2));
+    grid-template-columns: minmax(245px, 0.75fr) minmax(0, 1.25fr);
+    grid-template-rows: auto auto;
+    padding: clamp(74px, 9vh, 92px) clamp(10px, 1.8vw, 18px)
+      clamp(12px, 2vw, 20px);
+  }
+
+  .clipPanel {
+    grid-column: 1 / -1;
+    min-height: 330px;
+  }
+
+  .clipList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tweetGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: minmax(150px, auto);
+  }
+}
+
+@media (max-width: 900px) {
+  .shell {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    padding: clamp(64px, 18vw, 78px) 10px 12px;
+  }
+
+  .sidePanel,
+  .mainPanel,
+  .clipPanel {
+    overflow: visible;
+  }
+
+  .streamList {
+    overflow: visible;
+  }
+
+  .panelHeader {
+    min-height: 2.8rem;
+  }
+
+  .tweetGrid,
+  .clipList {
+    overflow: visible;
+    grid-template-columns: 1fr;
+  }
+
+  .tweetCard,
+  .tweetCard:first-child,
+  .tweetWide,
+  .tweetTall {
+    min-height: 164px;
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .clipPanel {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .panelHeader {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.28rem;
+    padding-block: 0.72rem;
+  }
+
+  .clipCard {
+    grid-template-columns: 4.4rem minmax(0, 1fr);
+  }
+
+  .streamItem {
+    grid-template-columns: 4.4rem minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeletonTitle,
+  .skeletonLine,
+  .skeletonCard,
+  .skeletonClip {
+    animation: none;
+  }
+}

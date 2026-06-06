@@ -14,7 +14,7 @@ export default function MarketPage() {
   return (
     <main
       aria-label="Market Bubble market"
-      className="site-shell relative min-h-dvh overflow-hidden bg-background"
+      className="site-shell market-site-shell relative min-h-dvh overflow-hidden bg-background"
     >
       <TopTextNav current="market" />
       <MarketSidePanel />

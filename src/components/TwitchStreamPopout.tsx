@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { CSSProperties, PointerEvent } from "react";
 import { usePathname } from "next/navigation";
 import { FiMaximize2, FiMinus, FiX } from "react-icons/fi";
@@ -16,6 +16,7 @@ function getTwitchVideoEmbedSrc() {
 
 export function TwitchStreamPopout() {
   const pathname = usePathname();
+  const [compactViewport, setCompactViewport] = useState(false);
   const [controlsState, setControlsState] = useState({
     dismissed: false,
     minimized: false,
@@ -29,7 +30,7 @@ export function TwitchStreamPopout() {
   const [position, setPosition] = useState<{ left: number; top: number } | null>(null);
   const embedSrc = useMemo(() => getTwitchVideoEmbedSrc(), []);
   const dismissed = controlsState.pathname === pathname && controlsState.dismissed;
-  const defaultMinimized = pathname === "/market";
+  const defaultMinimized = pathname === "/market" || compactViewport;
   const minimized =
     controlsState.pathname === pathname ? controlsState.minimized : defaultMinimized;
   const marketMinimizedStyle =
@@ -49,6 +50,19 @@ export function TwitchStreamPopout() {
         top: `${position.top}px`,
       } satisfies CSSProperties)
     : marketMinimizedStyle;
+
+  useEffect(() => {
+    const updateCompactViewport = () => {
+      setCompactViewport(window.innerWidth <= 760);
+    };
+
+    updateCompactViewport();
+    window.addEventListener("resize", updateCompactViewport);
+
+    return () => {
+      window.removeEventListener("resize", updateCompactViewport);
+    };
+  }, []);
 
   function handleHeaderPointerDown(event: PointerEvent<HTMLElement>) {
     if ((event.target as HTMLElement).closest("button")) {
