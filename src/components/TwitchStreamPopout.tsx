@@ -30,7 +30,7 @@ export function TwitchStreamPopout() {
   const [position, setPosition] = useState<{ left: number; top: number } | null>(null);
   const embedSrc = useMemo(() => getTwitchVideoEmbedSrc(), []);
   const dismissed = controlsState.pathname === pathname && controlsState.dismissed;
-  const defaultMinimized = pathname === "/market" || compactViewport;
+  const defaultMinimized = pathname !== "/" || compactViewport;
   const minimized =
     controlsState.pathname === pathname ? controlsState.minimized : defaultMinimized;
   const marketMinimizedStyle =
