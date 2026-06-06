@@ -5,7 +5,7 @@ import { AggregatedChat } from "@/components/AggregatedChat";
 import { StreamStage } from "@/components/StreamStage";
 import { channelOptions } from "@/lib/channel-options";
 
-const twitchParents = ["127.0.0.1", "localhost"];
+const twitchParents = ["127.0.0.1", "localhost", "marketbubble.vercel.app"];
 const fallbackTwitchVideoId = "2788673017";
 
 function getTwitchVideoEmbedSrc(videoId: string) {

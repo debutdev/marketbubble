@@ -8,7 +8,7 @@ import { FiMaximize2, FiMinus, FiX } from "react-icons/fi";
 const fallbackTwitchVideoId = "2788673017";
 
 function getTwitchVideoEmbedSrc() {
-  const parents = ["127.0.0.1", "localhost"];
+  const parents = ["127.0.0.1", "localhost", "marketbubble.vercel.app"];
   const parentParams = parents.map((parent) => `parent=${encodeURIComponent(parent)}`).join("&");
 
   return `https://player.twitch.tv/?video=${fallbackTwitchVideoId}&${parentParams}&muted=true&autoplay=true`;
