@@ -1,0 +1,141 @@
+.shell {
+  position: absolute;
+  left: 50%;
+  bottom: clamp(14px, 2vw, 24px);
+  z-index: 22;
+  display: grid;
+  width: calc(100% - clamp(24px, 3vw, 40px));
+  height: clamp(64px, 5.6vw, 76px);
+  min-width: 0;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  overflow: hidden;
+  border: 0;
+  border-radius: clamp(10px, 1.1vw, 16px);
+  background: #202020;
+  color: #e4e4e4;
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  padding: clamp(5px, 0.6vw, 8px);
+  translate: -50% 0;
+}
+
+.scroll {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  overflow: visible;
+  grid-template-columns: repeat(11, minmax(0, 1fr));
+  border-radius: clamp(8px, 0.88vw, 12px);
+  background: var(--background);
+}
+
+.item {
+  display: grid;
+  min-width: 0;
+  align-content: center;
+  gap: 0.2rem;
+  border-left: 1px solid rgb(228 228 228 / 0.07);
+  padding: 0.56rem clamp(0.58rem, 0.92vw, 0.9rem);
+}
+
+.item:first-child {
+  border-left: 0;
+}
+
+.symbol,
+.price,
+.change {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  font-style: normal;
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.symbol {
+  color: #ffffff;
+  font-family: var(--font-playfair-display), Georgia, serif;
+  font-size: clamp(0.66rem, 0.76vw, 0.82rem);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.price {
+  color: rgb(228 228 228 / 0.64);
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-size: clamp(0.56rem, 0.63vw, 0.68rem);
+  font-weight: 650;
+}
+
+.change {
+  color: rgb(228 228 228 / 0.5);
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-size: clamp(0.56rem, 0.62vw, 0.66rem);
+  font-weight: 800;
+}
+
+.item[data-tone="positive"] .change {
+  color: #78e7a5;
+}
+
+.item[data-tone="negative"] .change {
+  color: #ff8f8f;
+}
+
+.loadingItem span {
+  width: 72%;
+  height: 0.58rem;
+  border-radius: 999px;
+  background: linear-gradient(
+    100deg,
+    rgb(228 228 228 / 0.05),
+    rgb(228 228 228 / 0.12),
+    rgb(228 228 228 / 0.05)
+  );
+  background-size: 220% 100%;
+  animation: ticker-loading 1.4s ease-in-out infinite;
+}
+
+.loadingItem span:nth-child(2) {
+  width: 86%;
+}
+
+.loadingItem span:nth-child(3) {
+  width: 58%;
+}
+
+.status {
+  display: grid;
+  min-width: 240px;
+  place-items: center;
+  color: rgb(228 228 228 / 0.62);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+@keyframes ticker-loading {
+  to {
+    background-position: -220% 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .shell {
+    bottom: 10px;
+    width: calc(100% - 20px);
+    height: 64px;
+  }
+
+  .scroll {
+    grid-template-columns: repeat(11, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loadingItem span {
+    animation: none;
+  }
+}
