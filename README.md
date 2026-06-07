@@ -28,6 +28,7 @@ The app uses free or public data sources where possible:
 - SEC EDGAR 13F filings
 - TradingView embeddable heatmaps
 - Massive.com, optionally, for CUSIP-to-ticker enrichment
+- X/Twitter public scraping via gallery-dl for the content archive
 
 This project is for informational and challenge/demo purposes only. It is not financial advice.
 
@@ -57,6 +58,8 @@ NEXT_PUBLIC_SITE_URL=http://localhost:3000
 ```
 
 `MASSIVE_API_KEY` is optional. Without it, the app falls back to built-in ticker aliases for portfolio holdings where possible.
+
+The X content archive updates through `.github/workflows/update-x-archive.yml`. Public profile scraping works without a paid X API. X search for posts that tag `@MarketBubble` can require authenticated cookies, so set a GitHub Actions secret named `X_COOKIES_TXT` with a Netscape-format cookies.txt export if tagged-user clips should be indexed. Never commit cookies or tokens.
 
 For Vercel, set these values in the project environment settings instead of committing them to Git.
 

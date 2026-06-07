@@ -1,0 +1,82 @@
+name: Update X Archive
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    env:
+      X_COOKIES_TXT: ${{ secrets.X_COOKIES_TXT }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install gallery-dl
+        run: python -m pip install --upgrade gallery-dl
+
+      - name: Fetch MarketBubble tweets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .cache/x
+          COOKIE_ARGS=()
+
+          if [ -n "${X_COOKIES_TXT:-}" ]; then
+            printf '%s' "$X_COOKIES_TXT" > .cache/x-cookies.txt
+            COOKIE_ARGS=(-C .cache/x-cookies.txt)
+          fi
+
+          fetch_x() {
+            local url="$1"
+            local output="$2"
+
+            if ! python -m gallery_dl \
+              -j \
+              --no-download \
+              --post-range 1-2000 \
+              "${COOKIE_ARGS[@]}" \
+              "$url" \
+              > "$output"; then
+              printf '[]' > "$output"
+            fi
+          }
+
+          fetch_x "https://x.com/MarketBubble/tweets" .cache/marketbubble-profile-gallery.json
+          fetch_x "https://x.com/search?q=from%3AMarketBubble" .cache/marketbubble-search-gallery.json
+          fetch_x "https://x.com/search?q=%40MarketBubble%20filter%3Avideos" .cache/marketbubble-tagged-video-gallery.json
+
+      - name: Build archive JSON
+        run: >
+          python scripts/build-x-archive.py
+          --handle MarketBubble
+          --input .cache/marketbubble-profile-gallery.json
+          --input .cache/marketbubble-search-gallery.json
+          --clip-input .cache/marketbubble-tagged-video-gallery.json
+          --output public/data/x-archive/marketbubble.json
+
+      - name: Commit archive update
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "marketbubble-archive-bot"
+          git config user.email "actions@github.com"
+          git add public/data/x-archive/marketbubble.json
+
+          if git diff --cached --quiet; then
+            echo "No archive changes."
+            exit 0
+          fi
+
+          git commit -m "Update MarketBubble tweet archive"
+          git push

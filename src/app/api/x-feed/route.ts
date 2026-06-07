@@ -1,5 +1,7 @@
 import { XMLParser } from "fast-xml-parser";
 import { NextResponse } from "next/server";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { URL } from "node:url";
 
 export const dynamic = "force-dynamic";
@@ -24,6 +26,37 @@ type ParsedRss = {
       title?: string;
     };
   };
+};
+
+type MarketTweet = {
+  author: string;
+  id: string;
+  isRetweet: boolean;
+  media: string[];
+  metrics?: {
+    bookmarks?: number | null;
+    likes?: number | null;
+    quotes?: number | null;
+    replies?: number | null;
+    reposts?: number | null;
+    views?: number | null;
+  };
+  nitterUrl?: string;
+  publishedAt: string;
+  text: string;
+  title: string;
+  url: string;
+  videoUrl?: string;
+};
+
+type ArchivePayload = {
+  fetchedAt?: string;
+  handle?: string;
+  profileImageUrl?: string | null;
+  profileTitle?: string;
+  source?: string;
+  taggedClips?: MarketTweet[];
+  tweets?: MarketTweet[];
 };
 
 const parser = new XMLParser({
@@ -240,6 +273,60 @@ function toXStatusUrl(link: string, author: string, id: string) {
   return safeExternalUrl(link.replace("https://nitter.net", "https://x.com").replace(/#m$/, ""), "https://x.com");
 }
 
+async function getArchiveFeed(handle: string): Promise<ArchivePayload | null> {
+  if (handle.toLowerCase() !== "marketbubble") {
+    return null;
+  }
+
+  try {
+    const archivePath = join(process.cwd(), "public", "data", "x-archive", "marketbubble.json");
+    const rawArchive = await readFile(archivePath, "utf8");
+    const payload = JSON.parse(rawArchive) as ArchivePayload;
+
+    if (!Array.isArray(payload.tweets)) {
+      return null;
+    }
+
+    return payload;
+  } catch {
+    return null;
+  }
+}
+
+function getTweetTimestamp(tweet: MarketTweet) {
+  const timestamp = new Date(tweet.publishedAt).getTime();
+
+  return Number.isFinite(timestamp) ? timestamp : 0;
+}
+
+function mergeTweets(liveTweets: MarketTweet[], archivedTweets: MarketTweet[]) {
+  const merged = new Map<string, MarketTweet>();
+
+  for (const tweet of archivedTweets) {
+    if (tweet.id) {
+      merged.set(tweet.id, tweet);
+    }
+  }
+
+  for (const tweet of liveTweets) {
+    if (!tweet.id) {
+      continue;
+    }
+
+    const archived = merged.get(tweet.id);
+
+    merged.set(tweet.id, {
+      ...archived,
+      ...tweet,
+      media: tweet.media.length > 0 ? tweet.media : archived?.media ?? [],
+      metrics: archived?.metrics,
+      videoUrl: archived?.videoUrl,
+    });
+  }
+
+  return Array.from(merged.values()).sort((a, b) => getTweetTimestamp(b) - getTweetTimestamp(a));
+}
+
 function getFallbackFeed(handle: string, error?: string) {
   return {
     error,
@@ -257,6 +344,7 @@ export async function GET(request: Request) {
   const handle = (searchParams.get("handle") ?? "MarketBubble")
     .replace(/^@/, "")
     .replace(/[^\w]/g, "");
+  const archive = await getArchiveFeed(handle);
 
   try {
     let xml = "";
@@ -275,6 +363,22 @@ export async function GET(request: Request) {
     }
 
     if (!xml.trim()) {
+      if (archive?.tweets?.length) {
+        return NextResponse.json({
+          archiveCount: archive.tweets.length,
+          error: feedError instanceof Error ? feedError.message : "The public feed returned no items.",
+          fetchedAt: archive.fetchedAt ?? new Date().toISOString(),
+          handle,
+          liveCount: 0,
+          profileImageUrl: archive.profileImageUrl ?? null,
+          profileTitle: archive.profileTitle ?? `@${handle}`,
+          source: archive.source ?? "gallery-dl",
+          taggedClipCount: archive.taggedClips?.length ?? 0,
+          taggedClips: archive.taggedClips ?? [],
+          tweets: archive.tweets,
+        });
+      }
+
       return NextResponse.json(
         getFallbackFeed(
           handle,
@@ -291,7 +395,7 @@ export async function GET(request: Request) {
         : [channel.item]
       : [];
 
-    const tweets = rawItems.map((item) => {
+    const liveTweets: MarketTweet[] = rawItems.map((item) => {
       const descriptionHtml = getDescriptionHtml(item.description);
       const author = item["dc:creator"] ?? `@${handle}`;
       const link = item.link ?? "";
@@ -310,15 +414,37 @@ export async function GET(request: Request) {
         url: toXStatusUrl(link, author, id),
       };
     });
+    const tweets = mergeTweets(liveTweets, archive?.tweets ?? []);
 
     return NextResponse.json({
+      archiveCount: archive?.tweets?.length ?? 0,
       fetchedAt: new Date().toISOString(),
       handle,
-      profileImageUrl: channel?.image?.url ?? null,
-      profileTitle: channel?.title ?? `@${handle}`,
+      liveCount: liveTweets.length,
+      profileImageUrl: channel?.image?.url ?? archive?.profileImageUrl ?? null,
+      profileTitle: channel?.title ?? archive?.profileTitle ?? `@${handle}`,
+      source: archive ? "live-rss+gallery-dl-archive" : "live-rss",
+      taggedClipCount: archive?.taggedClips?.length ?? 0,
+      taggedClips: archive?.taggedClips ?? [],
       tweets,
     });
   } catch (error) {
+    if (archive?.tweets?.length) {
+      return NextResponse.json({
+        archiveCount: archive.tweets.length,
+        error: error instanceof Error ? error.message : "Unable to load live X feed.",
+        fetchedAt: archive.fetchedAt ?? new Date().toISOString(),
+        handle,
+        liveCount: 0,
+        profileImageUrl: archive.profileImageUrl ?? null,
+        profileTitle: archive.profileTitle ?? `@${handle}`,
+        source: archive.source ?? "gallery-dl",
+        taggedClipCount: archive.taggedClips?.length ?? 0,
+        taggedClips: archive.taggedClips ?? [],
+        tweets: archive.tweets,
+      });
+    }
+
     return NextResponse.json(
       getFallbackFeed(handle, error instanceof Error ? error.message : "Unable to load X feed."),
     );

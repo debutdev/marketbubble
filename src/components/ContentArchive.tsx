@@ -27,12 +27,14 @@ type MarketTweet = {
   text: string;
   title: string;
   url: string;
+  videoUrl?: string;
 };
 
 type XFeedResponse = {
   error?: string;
   fetchedAt?: string;
   handle: string;
+  taggedClips?: MarketTweet[];
   tweets: MarketTweet[];
 };
 
@@ -109,6 +111,7 @@ function getStatusId(tweet: MarketTweet) {
 
 function isLikelyVideoClip(tweet: MarketTweet) {
   return (
+    Boolean(tweet.videoUrl) ||
     tweet.media.some((url) => /(?:amplify_video_thumb|ext_tw_video_thumb|video_thumb)/i.test(url)) ||
     /\nVideo\s*$/i.test(tweet.text)
   );
@@ -140,6 +143,31 @@ function formatPlaybackTime(seconds: number) {
 
 function getToneClass(index: number) {
   return index % 4 === 0 ? styles.tweetWide : index % 5 === 0 ? styles.tweetTall : "";
+}
+
+function getTweetTimestamp(tweet: MarketTweet) {
+  const timestamp = new Date(tweet.publishedAt).getTime();
+
+  return Number.isFinite(timestamp) ? timestamp : 0;
+}
+
+function mergeUniqueTweets(...groups: MarketTweet[][]) {
+  const merged = new Map<string, MarketTweet>();
+
+  for (const tweet of groups.flat()) {
+    if (!tweet.id) {
+      continue;
+    }
+
+    merged.set(tweet.id, {
+      ...merged.get(tweet.id),
+      ...tweet,
+      media: tweet.media.length > 0 ? tweet.media : merged.get(tweet.id)?.media ?? [],
+      videoUrl: tweet.videoUrl ?? merged.get(tweet.id)?.videoUrl,
+    });
+  }
+
+  return Array.from(merged.values()).sort((a, b) => getTweetTimestamp(b) - getTweetTimestamp(a));
 }
 
 export function ContentArchive() {
@@ -243,12 +271,19 @@ export function ContentArchive() {
 
   useEffect(() => {
     let active = true;
+    let inFlight = false;
 
     async function loadContent() {
+      if (inFlight) {
+        return;
+      }
+
+      inFlight = true;
+
       try {
         const [feedResponse, streamsResponse] = await Promise.all([
           fetch("/api/x-feed?handle=MarketBubble", { cache: "no-store" }),
-          fetch("/api/twitch-videos?channel=fazebanks&limit=5", { cache: "no-store" }),
+          fetch("/api/twitch-videos?channel=fazebanks&limit=8", { cache: "no-store" }),
         ]);
         const payload = (await feedResponse.json()) as XFeedResponse;
         const streamsPayload = (await streamsResponse.json()) as TwitchVideosResponse;
@@ -269,20 +304,24 @@ export function ContentArchive() {
           setStreams([]);
           setStreamsError("Unable to load recent streams.");
         }
+      } finally {
+        inFlight = false;
       }
     }
 
     loadContent();
+    const intervalId = window.setInterval(loadContent, 120_000);
 
     return () => {
       active = false;
+      window.clearInterval(intervalId);
     };
   }, []);
 
   const tweets = useMemo(() => feed?.tweets ?? [], [feed?.tweets]);
   const clips = useMemo(
-    () => tweets.filter((tweet) => tweet.media.length > 0 && isLikelyVideoClip(tweet)).slice(0, 8),
-    [tweets],
+    () => mergeUniqueTweets(tweets.filter((tweet) => isLikelyVideoClip(tweet)), feed?.taggedClips ?? []),
+    [feed?.taggedClips, tweets],
   );
   const clipProgress = clipDuration > 0 ? Math.min((clipCurrentTime / clipDuration) * 100, 100) : 0;
   const playerRangeStyle = { "--clip-progress": `${clipProgress}%` } as CSSProperties;
@@ -483,7 +522,7 @@ export function ContentArchive() {
 
       <section className={styles.mainPanel} aria-label="@MarketBubble tweets">
         <header className={styles.panelHeader}>
-          <h2>Latest Tweets</h2>
+          <h2>MarketBubble Tweets</h2>
           <span>{feed?.fetchedAt ? `Updated ${formatDate(feed.fetchedAt)}` : "Live"}</span>
         </header>
         <div className={styles.tweetGrid}>
@@ -540,7 +579,13 @@ export function ContentArchive() {
               type="button"
             >
               <span className={styles.clipThumb}>
-                <img alt="" loading="lazy" src={tweet.media[0]} />
+                {tweet.media[0] ? (
+                  <img alt="" loading="lazy" src={tweet.media[0]} />
+                ) : (
+                  <div className={styles.clipThumbFallback}>
+                    <FiFilm aria-hidden="true" />
+                  </div>
+                )}
                 <span>
                   <FiFilm aria-hidden="true" />
                 </span>
