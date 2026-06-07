@@ -11,6 +11,10 @@
     calc(clamp(14px, 2vw, 24px) + 2px);
 }
 
+.shell:has(.clipDialogLayer) {
+  z-index: 180;
+}
+
 .sidePanel,
 .mainPanel,
 .clipPanel {
@@ -191,11 +195,18 @@
   min-height: 5rem;
   min-width: 0;
   align-items: center;
+  width: 100%;
+  appearance: none;
   grid-template-columns: 4.9rem minmax(0, 1fr);
   gap: 0.62rem;
+  border: 0;
   border-bottom: 1px solid rgb(228 228 228 / 0.08);
+  background: var(--background);
   color: #e4e4e4;
+  cursor: pointer;
+  font: inherit;
   padding: 0.58rem clamp(0.62rem, 0.82vw, 0.82rem);
+  text-align: left;
   text-decoration: none;
 }
 
@@ -464,8 +475,12 @@
 
 .clipCard {
   display: grid;
+  width: 100%;
   min-height: 5.6rem;
   align-items: center;
+  appearance: none;
+  cursor: pointer;
+  font: inherit;
   grid-template-columns: 4.8rem minmax(0, 1fr);
   gap: 0.62rem;
   border-radius: 0;
@@ -475,6 +490,7 @@
   border-top: 0;
   background: var(--background);
   padding: 0.58rem 0.66rem;
+  text-align: left;
 }
 
 .clipThumb {
@@ -532,6 +548,414 @@
   font-weight: 850;
   line-height: 1;
   text-transform: uppercase;
+}
+
+.clipDialogLayer {
+  position: fixed;
+  inset: 0;
+  z-index: 140;
+  display: grid;
+  place-items: center;
+  padding: clamp(12px, 2vw, 28px);
+}
+
+.clipDialogBackdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgb(0 0 0 / 0.72);
+  cursor: pointer;
+  backdrop-filter: blur(16px);
+}
+
+.clipDialog {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: min(100%, 1120px);
+  max-height: calc(100svh - 42px);
+  overflow: hidden;
+  grid-template-rows: auto auto;
+  border: 1px solid rgb(228 228 228 / 0.12);
+  border-radius: 14px;
+  background: #202020;
+  color: #e4e4e4;
+  box-shadow: 0 34px 120px rgb(0 0 0 / 0.62);
+  padding: 6px;
+}
+
+.clipDialogHeader,
+.clipDialogBody,
+.clipDialogInfo,
+.clipVideoWrap {
+  min-width: 0;
+}
+
+.clipDialogHeader {
+  display: grid;
+  align-items: center;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.9rem;
+  border-radius: 8px 8px 0 0;
+  background: var(--background);
+  border-bottom: 1px solid rgb(228 228 228 / 0.08);
+  padding: clamp(0.68rem, 0.9vw, 0.9rem) clamp(0.78rem, 1vw, 1rem);
+}
+
+.clipDialogHeader span,
+.clipDialogInfo span {
+  display: block;
+  color: rgb(228 228 228 / 0.44);
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-size: 0.62rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.clipDialogHeader h2 {
+  display: -webkit-box;
+  margin: 0.28rem 0 0;
+  overflow: hidden;
+  color: #ffffff;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  font-family: var(--font-playfair-display), Georgia, serif;
+  font-size: clamp(1rem, 1.28vw, 1.42rem);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.clipDialogHeader button {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border: 1px solid rgb(228 228 228 / 0.12);
+  border-radius: 999px;
+  background: rgb(228 228 228 / 0.06);
+  color: rgb(228 228 228 / 0.78);
+  cursor: pointer;
+}
+
+.clipDialogHeader button:hover,
+.clipDialogHeader button:focus-visible {
+  border-color: rgb(228 228 228 / 0.3);
+  color: #ffffff;
+  outline: none;
+}
+
+.clipDialogHeader svg {
+  width: 0.92rem;
+  height: 0.92rem;
+}
+
+.clipDialogBody {
+  display: grid;
+  min-height: 0;
+  height: min(clamp(360px, 28vw, 560px), calc(100svh - 178px));
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.42fr);
+  gap: 6px;
+  overflow: hidden;
+}
+
+.clipVideoWrap,
+.clipDialogInfo {
+  background: var(--background);
+}
+
+.clipVideoWrap {
+  display: grid;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  place-items: stretch;
+  background: #050505;
+  border-radius: 0 0 0 8px;
+}
+
+.clipPlayer {
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  background: #050505;
+}
+
+.clipPlayer:fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.clipVideo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #050505;
+  object-fit: contain;
+}
+
+.streamEmbed {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #050505;
+}
+
+.playerHitArea {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.playerCenterButton {
+  display: grid;
+  width: clamp(3.2rem, 5vw, 4.6rem);
+  height: clamp(3.2rem, 5vw, 4.6rem);
+  place-items: center;
+  border: 1px solid rgb(228 228 228 / 0.18);
+  border-radius: 999px;
+  background: rgb(22 22 22 / 0.74);
+  box-shadow: 0 18px 56px rgb(0 0 0 / 0.38);
+  backdrop-filter: blur(10px);
+}
+
+.playerCenterButton svg {
+  width: 38%;
+  height: 38%;
+  margin-left: 4%;
+}
+
+.playerControls {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  display: grid;
+  min-height: 3.8rem;
+  align-items: center;
+  grid-template-columns: auto auto minmax(90px, 1fr) auto minmax(58px, 88px) auto;
+  gap: clamp(0.42rem, 0.7vw, 0.72rem);
+  background: linear-gradient(180deg, transparent, rgb(0 0 0 / 0.78));
+  padding: 1.15rem clamp(0.7rem, 1vw, 0.95rem) clamp(0.58rem, 0.78vw, 0.78rem);
+}
+
+.playerIconButton {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border: 1px solid rgb(228 228 228 / 0.12);
+  border-radius: 999px;
+  background: rgb(228 228 228 / 0.08);
+  color: rgb(228 228 228 / 0.84);
+  cursor: pointer;
+}
+
+.playerIconButton:hover,
+.playerIconButton:focus-visible {
+  border-color: rgb(228 228 228 / 0.3);
+  color: #ffffff;
+  outline: none;
+}
+
+.playerIconButton svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.playerTime {
+  color: rgb(228 228 228 / 0.72);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.68rem;
+  font-weight: 750;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.playerTimeline,
+.playerVolume {
+  min-width: 0;
+  height: 1.1rem;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.playerTimeline::-webkit-slider-runnable-track,
+.playerVolume::-webkit-slider-runnable-track {
+  height: 0.24rem;
+  border-radius: 999px;
+  background: rgb(228 228 228 / 0.18);
+}
+
+.playerTimeline::-webkit-slider-runnable-track {
+  background: linear-gradient(
+    90deg,
+    #e4e4e4 var(--clip-progress),
+    rgb(228 228 228 / 0.18) var(--clip-progress)
+  );
+}
+
+.playerTimeline::-moz-range-track,
+.playerVolume::-moz-range-track {
+  height: 0.24rem;
+  border-radius: 999px;
+  background: rgb(228 228 228 / 0.18);
+}
+
+.playerTimeline::-moz-range-progress {
+  height: 0.24rem;
+  border-radius: 999px;
+  background: #e4e4e4;
+}
+
+.playerTimeline::-webkit-slider-thumb,
+.playerVolume::-webkit-slider-thumb {
+  width: 0.7rem;
+  height: 0.7rem;
+  appearance: none;
+  border: 0;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgb(228 228 228 / 0.12);
+  margin-top: -0.23rem;
+}
+
+.playerTimeline::-moz-range-thumb,
+.playerVolume::-moz-range-thumb {
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 0;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgb(228 228 228 / 0.12);
+}
+
+.clipVideoPlaceholder {
+  position: relative;
+  display: grid;
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
+  place-items: center;
+  background: #050505;
+  color: rgb(228 228 228 / 0.72);
+}
+
+.clipVideoPlaceholder img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  filter: saturate(0.9) contrast(1.05);
+  opacity: 0.42;
+  object-fit: cover;
+}
+
+.clipVideoPlaceholder::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: radial-gradient(circle at 50% 44%, transparent, rgb(0 0 0 / 0.64));
+}
+
+.clipVideoPlaceholder span {
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgb(228 228 228 / 0.12);
+  border-radius: 999px;
+  background: rgb(22 22 22 / 0.72);
+  font-size: 0.72rem;
+  font-weight: 900;
+  line-height: 1;
+  padding: 0.62rem 0.78rem;
+  text-transform: uppercase;
+}
+
+.clipDialogInfo {
+  display: grid;
+  height: 100%;
+  min-height: 0;
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  gap: 0.72rem;
+  overflow-y: auto;
+  border-radius: 0 0 8px 0;
+  padding: clamp(0.78rem, 1vw, 1rem);
+  scrollbar-color: rgb(228 228 228 / 0.24) transparent;
+  scrollbar-width: thin;
+}
+
+.clipDialogInfo div {
+  display: grid;
+  gap: 0.32rem;
+  border-bottom: 1px solid rgb(228 228 228 / 0.08);
+  padding-bottom: 0.72rem;
+}
+
+.clipDialogInfo strong {
+  color: #ffffff;
+  font-family: var(--font-playfair-display), Georgia, serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.clipDialogInfo p {
+  margin: 0;
+  overflow-y: auto;
+  color: rgb(228 228 228 / 0.75);
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 650;
+  line-height: 1.42;
+  white-space: pre-line;
+  scrollbar-width: none;
+}
+
+.clipDialogInfo p::-webkit-scrollbar {
+  display: none;
+}
+
+.clipDialogInfo a {
+  display: inline-flex;
+  width: max-content;
+  align-items: center;
+  gap: 0.42rem;
+  border: 1px solid rgb(228 228 228 / 0.12);
+  border-radius: 999px;
+  color: #e4e4e4;
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 900;
+  line-height: 1;
+  padding: 0.7rem 0.82rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.clipDialogInfo a:hover,
+.clipDialogInfo a:focus-visible {
+  border-color: rgb(228 228 228 / 0.3);
+  background: rgb(228 228 228 / 0.06);
+  outline: none;
+}
+
+.clipDialogInfo svg {
+  width: 0.78rem;
+  height: 0.78rem;
 }
 
 .status {
@@ -629,6 +1053,50 @@
   .clipList {
     overflow: visible;
     grid-template-columns: 1fr;
+  }
+
+  .clipDialog {
+    max-height: calc(100svh - 20px);
+  }
+
+  .clipDialogBody {
+    height: auto;
+    overflow-y: auto;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .clipVideoWrap {
+    height: auto;
+    aspect-ratio: 16 / 9;
+    max-height: none;
+    border-radius: 0;
+  }
+
+  .clipVideo,
+  .clipPlayer,
+  .clipVideoPlaceholder {
+    min-height: 0;
+  }
+
+  .clipDialogInfo {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    grid-template-rows: auto auto auto auto;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .clipDialogInfo p {
+    overflow: visible;
+  }
+
+  .playerControls {
+    grid-template-columns: auto minmax(0, 1fr) auto auto;
+  }
+
+  .playerTime,
+  .playerVolume {
+    display: none;
   }
 
   .tweetCard,
