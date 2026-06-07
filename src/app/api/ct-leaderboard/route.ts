@@ -1,5 +1,7 @@
 import { XMLParser } from "fast-xml-parser";
 import { NextResponse } from "next/server";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
@@ -56,6 +58,14 @@ type CtProfile = {
   recentTweets: string[];
   tag?: string;
   verified: boolean;
+};
+
+type CtArchiveMember = Partial<CtProfile>;
+
+type CtArchive = {
+  fetchedAt?: string;
+  members?: CtArchiveMember[];
+  source?: string;
 };
 
 type CtSignal = {
@@ -287,6 +297,22 @@ function normalizeAvatarUrl(avatarUrl?: string) {
   }
 }
 
+async function getCtArchive() {
+  try {
+    const archivePath = join(process.cwd(), "public", "data", "ct-leaderboard.json");
+    const archive = JSON.parse(await readFile(archivePath, "utf8")) as CtArchive;
+    const members = archive.members ?? [];
+
+    return new Map(
+      members
+        .filter((member) => member.handle)
+        .map((member) => [String(member.handle).toLowerCase(), member]),
+    );
+  } catch {
+    return new Map<string, CtArchiveMember>();
+  }
+}
+
 function getDescriptionHtml(description: ParsedRssItem["description"]) {
   if (typeof description === "string") {
     return description;
@@ -354,6 +380,27 @@ function getFallbackProfile(member: CtMember): CtProfile {
   };
 }
 
+function getArchivedProfile(member: CtMember, archived?: CtArchiveMember): CtProfile | null {
+  if (!archived) {
+    return null;
+  }
+
+  const handle = archived.handle || member.handle;
+
+  return {
+    avatarUrl: archived.avatarUrl ?? null,
+    description: archived.description || member.fallbackDescription,
+    followers: Number(archived.followers ?? 0),
+    handle,
+    name: archived.name || handle,
+    profileUrl: archived.profileUrl || `https://x.com/${handle}`,
+    rank: member.rank,
+    recentTweets: (archived.recentTweets ?? []).filter(Boolean).slice(0, 8),
+    tag: member.tag ?? archived.tag,
+    verified: Boolean(archived.verified),
+  };
+}
+
 async function getXProfile(member: CtMember): Promise<CtProfile> {
   try {
     const response = await fetch(`https://x.com/${encodeURIComponent(member.handle)}`, {
@@ -397,15 +444,18 @@ async function getXProfile(member: CtMember): Promise<CtProfile> {
   }
 }
 
-async function getCtProfile(member: CtMember) {
-  const [profile, recentTweets] = await Promise.all([
-    getXProfile(member),
-    getRecentTweets(member.handle),
-  ]);
+async function getCtProfile(member: CtMember, archived?: CtArchiveMember) {
+  const archivedProfile = getArchivedProfile(member, archived);
+
+  if (archivedProfile?.recentTweets.length) {
+    return archivedProfile;
+  }
+
+  const [profile, recentTweets] = await Promise.all([getXProfile(member), getRecentTweets(member.handle)]);
 
   return {
     ...profile,
-    recentTweets,
+    recentTweets: recentTweets.length ? recentTweets : archivedProfile?.recentTweets ?? [],
   };
 }
 
@@ -533,7 +583,10 @@ async function getGrokSignals(profiles: CtProfile[]) {
 }
 
 export async function GET() {
-  const profiles = await Promise.all(ctMembers.map(getCtProfile));
+  const archive = await getCtArchive();
+  const profiles = await Promise.all(
+    ctMembers.map((member) => getCtProfile(member, archive.get(member.handle.toLowerCase()))),
+  );
   const signalResult = await getGrokSignals(profiles);
   const signalByHandle = new Map<string, CtSignal>();
 

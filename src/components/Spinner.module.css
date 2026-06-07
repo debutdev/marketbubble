@@ -1,0 +1,22 @@
+.spinner {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.track {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  animation: spinner-spin 900ms linear infinite;
+}
+
+.bar {
+  opacity: 0.86;
+}
+
+@keyframes spinner-spin {
+  to {
+    transform: rotate(1turn);
+  }
+}

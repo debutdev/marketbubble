@@ -2,7 +2,8 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { FiArrowUpRight, FiRefreshCw } from "react-icons/fi";
+import { FiArrowUpRight } from "react-icons/fi";
+import { Spinner } from "@/components/Spinner";
 import styles from "./LeaderboardTop10.module.css";
 
 type CtSignal = {
@@ -160,7 +161,7 @@ export function LeaderboardTop10() {
           ))}
           {!members.length ? (
             <div className={styles.status}>
-              <FiRefreshCw aria-hidden="true" />
+              <Spinner aria-hidden="true" size={18} />
               {error ?? "Loading CT leaderboard"}
             </div>
           ) : null}

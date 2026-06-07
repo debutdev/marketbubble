@@ -56,6 +56,11 @@ jobs:
           fetch_x "https://x.com/search?q=from%3AMarketBubble" .cache/marketbubble-search-gallery.json
           fetch_x "https://x.com/search?q=%40MarketBubble%20filter%3Avideos" .cache/marketbubble-tagged-video-gallery.json
 
+          mkdir -p .cache/ct
+          for handle in cobie CL207 mert notthreadguy chameleon_jeff Tradermayne ThinkingUSD based16z jessepollak sershokunin; do
+            fetch_x "https://x.com/${handle}/tweets" ".cache/ct/${handle}.json"
+          done
+
       - name: Build archive JSON
         run: >
           python scripts/build-x-archive.py
@@ -65,13 +70,19 @@ jobs:
           --clip-input .cache/marketbubble-tagged-video-gallery.json
           --output public/data/x-archive/marketbubble.json
 
+      - name: Build CT leaderboard archive JSON
+        run: >
+          python scripts/build-ct-leaderboard-archive.py
+          --input-dir .cache/ct
+          --output public/data/ct-leaderboard.json
+
       - name: Commit archive update
         shell: bash
         run: |
           set -euo pipefail
           git config user.name "marketbubble-archive-bot"
           git config user.email "actions@github.com"
-          git add public/data/x-archive/marketbubble.json
+          git add public/data/x-archive/marketbubble.json public/data/ct-leaderboard.json
 
           if git diff --cached --quiet; then
             echo "No archive changes."
