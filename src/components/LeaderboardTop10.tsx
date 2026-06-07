@@ -33,6 +33,8 @@ type CtLeaderboardResponse = {
   signalSource: "openrouter" | "local-fallback";
 };
 
+let cachedLeaderboardPayload: CtLeaderboardResponse | null = null;
+
 function formatFollowers(value: number) {
   if (!value) {
     return "CT";
@@ -69,15 +71,17 @@ function initials(member: CtMember) {
 }
 
 export function LeaderboardTop10() {
-  const [payload, setPayload] = useState<CtLeaderboardResponse | null>(null);
+  const [payload, setPayload] = useState<CtLeaderboardResponse | null>(() => cachedLeaderboardPayload);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     let active = true;
+    let scheduledAiRefresh = false;
+    let upgradeTimeoutId: number | null = null;
 
     async function loadLeaderboard() {
       try {
-        const response = await fetch("/api/ct-leaderboard", { cache: "no-store" });
+        const response = await fetch("/api/ct-leaderboard");
         const nextPayload = (await response.json()) as CtLeaderboardResponse;
 
         if (!active) {
@@ -89,8 +93,17 @@ export function LeaderboardTop10() {
           return;
         }
 
+        cachedLeaderboardPayload = nextPayload;
         setPayload(nextPayload);
         setError(null);
+
+        if (nextPayload.signalSource === "local-fallback" && !scheduledAiRefresh) {
+          scheduledAiRefresh = true;
+          upgradeTimeoutId = window.setTimeout(() => {
+            upgradeTimeoutId = null;
+            loadLeaderboard();
+          }, 12_000);
+        }
       } catch {
         if (active) {
           setError("CT leaderboard unavailable.");
@@ -103,6 +116,9 @@ export function LeaderboardTop10() {
 
     return () => {
       active = false;
+      if (upgradeTimeoutId) {
+        window.clearTimeout(upgradeTimeoutId);
+      }
       window.clearInterval(intervalId);
     };
   }, []);
@@ -121,7 +137,15 @@ export function LeaderboardTop10() {
         </header>
         <div className={styles.cardGrid}>
           {members.map((member) => (
-            <article className={styles.card} data-tone={member.signal.signal} key={member.handle}>
+            <a
+              aria-label={`Open ${member.name} on X`}
+              className={styles.card}
+              data-tone={member.signal.signal}
+              href={member.profileUrl}
+              key={member.handle}
+              rel="noreferrer"
+              target="_blank"
+            >
               <div className={styles.media}>
                 {member.avatarUrl ? (
                   <img alt="" loading="lazy" src={member.avatarUrl} />
@@ -152,12 +176,12 @@ export function LeaderboardTop10() {
                   <em>{member.signal.overview}</em>
                 </div>
                 <small>{member.recentTweets.length ? `${member.recentTweets.length} recent tweets analyzed` : "Recent tweets unavailable"}</small>
-                <a className={styles.action} href={member.profileUrl} rel="noreferrer" target="_blank">
+                <span className={styles.action}>
                   Open X
                   <FiArrowUpRight aria-hidden="true" />
-                </a>
+                </span>
               </div>
-            </article>
+            </a>
           ))}
           {!members.length ? (
             <div className={styles.status}>

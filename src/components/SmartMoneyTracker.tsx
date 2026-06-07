@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
+import { fetchCachedJson, getCachedJson } from "@/lib/client-json-cache";
 import styles from "./SmartMoneyTracker.module.css";
 
 type SmartTrader = {
@@ -51,6 +52,9 @@ type SmartMoneyResponse = {
   polymarketMarkets: SmartMarket[];
   portfolios: SmartPortfolio[];
 };
+
+const smartMoneyUrl = "/api/smart-money";
+const smartMoneyTtlMs = 120_000;
 
 function formatCompactUsd(value: number) {
   const absolute = Math.abs(value);
@@ -132,7 +136,8 @@ function PortfolioRing({ value }: { value: number }) {
 }
 
 export function SmartMoneyTracker() {
-  const [payload, setPayload] = useState<SmartMoneyResponse | null>(null);
+  const cachedPayload = getCachedJson<SmartMoneyResponse>(smartMoneyUrl);
+  const [payload, setPayload] = useState<SmartMoneyResponse | null>(() => cachedPayload);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -140,14 +145,16 @@ export function SmartMoneyTracker() {
 
     async function loadSmartMoney() {
       try {
-        const response = await fetch("/api/smart-money", { cache: "no-store" });
-        const nextPayload = (await response.json()) as SmartMoneyResponse;
+        const { ok, payload: nextPayload } = await fetchCachedJson<SmartMoneyResponse>(
+          smartMoneyUrl,
+          smartMoneyTtlMs,
+        );
 
         if (!active) {
           return;
         }
 
-        if (!response.ok) {
+        if (!ok) {
           setError(nextPayload.error ?? "Smart money data unavailable.");
           return;
         }

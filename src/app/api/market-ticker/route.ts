@@ -103,6 +103,10 @@ const commodityAssets: YahooAssetConfig[] = [
   { name: "Oil", symbol: "Oil", type: "commodity", yahooSymbol: "CL=F" },
 ];
 
+const marketTickerCacheHeaders = {
+  "Cache-Control": "public, max-age=45, s-maxage=60, stale-while-revalidate=300",
+};
+
 function isFiniteNumber(value: unknown): value is number {
   return typeof value === "number" && Number.isFinite(value);
 }
@@ -359,7 +363,7 @@ export async function GET() {
     if (!assets.length) {
       return NextResponse.json(
         { assets: [], error: "Unable to load market ticker." },
-        { status: 502 },
+        { headers: marketTickerCacheHeaders, status: 502 },
       );
     }
 
@@ -371,14 +375,14 @@ export async function GET() {
         crypto: cryptoTicker,
         stockIndices,
       },
-    });
+    }, { headers: marketTickerCacheHeaders });
   } catch (error) {
     return NextResponse.json(
       {
         assets: [],
         error: error instanceof Error ? error.message : "Unable to load market ticker.",
       },
-      { status: 500 },
+      { headers: marketTickerCacheHeaders, status: 500 },
     );
   }
 }

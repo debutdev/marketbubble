@@ -2,6 +2,7 @@
 
 import type { CSSProperties } from "react";
 import { useEffect, useState } from "react";
+import { fetchCachedJson, getCachedJson } from "@/lib/client-json-cache";
 
 type CryptoSentiment = {
   classification: string;
@@ -10,6 +11,9 @@ type CryptoSentiment = {
   timestamp: number | null;
   value: number;
 };
+
+const cryptoSentimentUrl = "/api/crypto-sentiment";
+const cryptoSentimentTtlMs = 30 * 60_000;
 
 function formatIndexDate(value: number | null) {
   if (!value) {
@@ -43,7 +47,8 @@ function getSentimentTone(value: number) {
 }
 
 export function CryptoFearGreedCard() {
-  const [sentiment, setSentiment] = useState<CryptoSentiment | null>(null);
+  const cachedSentiment = getCachedJson<CryptoSentiment>(cryptoSentimentUrl);
+  const [sentiment, setSentiment] = useState<CryptoSentiment | null>(() => cachedSentiment);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -51,16 +56,16 @@ export function CryptoFearGreedCard() {
 
     async function loadSentiment() {
       try {
-        const response = await fetch("/api/crypto-sentiment", {
-          cache: "no-store",
-        });
-        const payload = (await response.json()) as CryptoSentiment & { error?: string };
+        const { ok, payload } = await fetchCachedJson<CryptoSentiment & { error?: string }>(
+          cryptoSentimentUrl,
+          cryptoSentimentTtlMs,
+        );
 
         if (!active) {
           return;
         }
 
-        if (!response.ok) {
+        if (!ok) {
           setError(payload.error ?? "Crypto sentiment unavailable.");
           return;
         }

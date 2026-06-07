@@ -15,6 +15,10 @@ type FearGreedResponse = {
   name?: string;
 };
 
+const cryptoSentimentCacheHeaders = {
+  "Cache-Control": "public, max-age=1800, s-maxage=3600, stale-while-revalidate=21600",
+};
+
 export async function GET() {
   try {
     const response = await fetch("https://api.alternative.me/fng/?limit=1&format=json", {
@@ -27,7 +31,7 @@ export async function GET() {
     if (!response.ok) {
       return NextResponse.json(
         { error: "Unable to load crypto sentiment." },
-        { status: response.status },
+        { headers: cryptoSentimentCacheHeaders, status: response.status },
       );
     }
 
@@ -38,7 +42,7 @@ export async function GET() {
     if (!latest || !Number.isFinite(value)) {
       return NextResponse.json(
         { error: payload.metadata?.error ?? "Crypto sentiment is unavailable." },
-        { status: 502 },
+        { headers: cryptoSentimentCacheHeaders, status: 502 },
       );
     }
 
@@ -51,13 +55,13 @@ export async function GET() {
       timeUntilUpdate: Number(latest.time_until_update ?? 0),
       timestamp: latest.timestamp ? Number(latest.timestamp) * 1000 : null,
       value,
-    });
+    }, { headers: cryptoSentimentCacheHeaders });
   } catch (error) {
     return NextResponse.json(
       {
         error: error instanceof Error ? error.message : "Unable to load crypto sentiment.",
       },
-      { status: 500 },
+      { headers: cryptoSentimentCacheHeaders, status: 500 },
     );
   }
 }

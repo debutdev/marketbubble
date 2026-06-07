@@ -19,6 +19,11 @@ const activeWindowMs = 5 * 60 * 1000;
 const rateWindowMs = 60 * 1000;
 const statsIntroDelayMs = 4320;
 const platforms: Platform[] = ["Twitch", "Kick", "X"];
+const platformLogoColors: Record<Platform, string> = {
+  Kick: "#53fc18",
+  Twitch: "#9146ff",
+  X: "#e4e4e4",
+};
 const authorColors = [
   "#a970ff",
   "#ff7a9a",
@@ -737,11 +742,6 @@ export function AggregatedChat({
   const [streamMetrics, setStreamMetrics] = useState<StreamMetrics>(() =>
     getMockStreamMetrics(selectedChannelValue),
   );
-  const [tooltip, setTooltip] = useState<{
-    platform: Platform;
-    x: number;
-    y: number;
-  } | null>(null);
   const [profileTooltip, setProfileTooltip] = useState<{
     option: ChannelOption;
     x: number;
@@ -902,7 +902,6 @@ export function AggregatedChat({
 
       contextMenuPausedRef.current = true;
       pauseChat();
-      setTooltip(null);
       setChatContextMenu({ x, y });
     },
     [enablePopout, mode, pauseChat],
@@ -1367,6 +1366,11 @@ export function AggregatedChat({
     (sum, platformCount) => sum + platformCount,
     0,
   );
+  const displayPlatformViewers: Record<Platform, number> = {
+    Kick: streamMetrics.kickViewers,
+    Twitch: streamMetrics.twitchViewers,
+    X: streamMetrics.xViewers,
+  };
   const displayActiveChatters = mockChatStats.activeChatters + liveActiveChatters;
   const displayMessagesPerMinute =
     mockChatStats.messagesPerMinute + liveMessagesPerMinute;
@@ -1428,52 +1432,40 @@ export function AggregatedChat({
               className="chat-message"
               key={message.id}
               tabIndex={0}
-              onMouseEnter={(event) => {
+              onMouseEnter={() => {
                 hoverPausedRef.current = true;
                 pauseChat();
-                setTooltip({
-                  platform: message.platform,
-                  x: event.clientX,
-                  y: event.clientY,
-                });
-              }}
-              onMouseMove={(event) => {
-                setTooltip({
-                  platform: message.platform,
-                  x: event.clientX,
-                  y: event.clientY,
-                });
               }}
               onMouseLeave={() => {
                 hoverPausedRef.current = false;
                 resumeChat();
-                setTooltip(null);
               }}
-              onFocus={(event) => {
-                const rect = event.currentTarget.getBoundingClientRect();
-
+              onFocus={() => {
                 hoverPausedRef.current = true;
                 pauseChat();
-                setTooltip({
-                  platform: message.platform,
-                  x: rect.left + rect.width / 2,
-                  y: rect.top,
-                });
               }}
               onBlur={() => {
                 hoverPausedRef.current = false;
                 resumeChat();
-                setTooltip(null);
               }}
               aria-label={`${message.author} from ${message.platform}: ${message.text}`}
             >
               <div className="chat-message-meta">
                 <span className="chat-time">{message.time}</span>
-                <span
-                  className="chat-author"
-                  style={{ color: message.authorColor ?? getAuthorColor(message.author) }}
-                >
-                  {message.author}
+                <span className="chat-author-group">
+                  <span
+                    className={`chat-platform-badge chat-platform-badge-${message.platform.toLowerCase()}`}
+                    aria-label={message.platform}
+                    style={{ color: platformLogoColors[message.platform] }}
+                  >
+                    <PlatformLogo platform={message.platform} />
+                  </span>
+                  <span
+                    className="chat-author"
+                    style={{ color: message.authorColor ?? getAuthorColor(message.author) }}
+                  >
+                    {message.author}
+                  </span>
                 </span>
               </div>
               <p>{message.text}</p>
@@ -1563,13 +1555,13 @@ export function AggregatedChat({
               </dd>
             </div>
           </dl>
-          <div className="stats-platforms" aria-label="Messages by platform">
+          <div className="stats-platforms" aria-label="Viewers by platform">
             {platforms.map((platform) => {
-              const platformCount = displayPlatformCounts[platform];
+              const platformCount = displayPlatformViewers[platform];
               const platformShare =
-                displayTotalMessages === 0
+                streamMetrics.totalViewers === 0
                   ? 0
-                  : Math.round((platformCount / displayTotalMessages) * 100);
+                  : Math.round((platformCount / streamMetrics.totalViewers) * 100);
 
               return (
                 <div className="stats-platform-row" key={platform}>
@@ -1609,22 +1601,6 @@ export function AggregatedChat({
         </div>
         </section>
       ) : null}
-      {tooltipRoot && tooltip
-        ? createPortal(
-            <div
-              className="platform-tooltip platform-tooltip-cursor"
-              style={{ left: tooltip.x, top: tooltip.y }}
-            >
-              <span
-                className={`platform-tooltip-logo platform-tooltip-logo-${tooltip.platform.toLowerCase()}`}
-              >
-                <PlatformLogo platform={tooltip.platform} />
-              </span>
-              <span>{tooltip.platform}</span>
-            </div>,
-            tooltipRoot,
-          )
-        : null}
       {tooltipRoot && chatExpanded && mode !== "popout"
         ? createPortal(
             <button

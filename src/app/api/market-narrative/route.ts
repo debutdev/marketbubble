@@ -170,6 +170,10 @@ const newsFeeds = [
   { domain: "marketwatch.com", source: "MarketWatch", url: "https://feeds.content.dowjones.io/public/rss/mw_topstories" },
 ];
 
+const marketNarrativeCacheHeaders = {
+  "Cache-Control": "public, max-age=90, s-maxage=180, stale-while-revalidate=900",
+};
+
 function isFiniteNumber(value: unknown): value is number {
   return typeof value === "number" && Number.isFinite(value);
 }
@@ -525,7 +529,7 @@ export async function GET() {
       narratives: buildNarratives(news, polymarket.volumeByNarrative),
       news,
       sources: ["Yahoo Finance", "CoinGecko", "Polymarket Gamma", ...newsFeeds.map((feed) => feed.source)],
-    });
+    }, { headers: marketNarrativeCacheHeaders });
   } catch (error) {
     return NextResponse.json(
       {
@@ -534,7 +538,7 @@ export async function GET() {
         narratives: [],
         news: [],
       },
-      { status: 500 },
+      { headers: marketNarrativeCacheHeaders, status: 500 },
     );
   }
 }

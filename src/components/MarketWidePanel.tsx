@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { CSSProperties } from "react";
+import { fetchCachedJson, getCachedJson } from "@/lib/client-json-cache";
 import styles from "./MarketWidePanel.module.css";
 
 type NewsItem = {
@@ -22,6 +23,9 @@ type MarketNarrativeResponse = {
 };
 
 type HeatmapMode = "stock" | "crypto";
+
+const marketNarrativeUrl = "/api/market-narrative";
+const marketNarrativeTtlMs = 90_000;
 
 function formatUpdatedAt(value?: string) {
   if (!value) {
@@ -128,7 +132,8 @@ function TradingViewHeatmap({ mode }: { mode: HeatmapMode }) {
 
 export function MarketWidePanel() {
   const [heatmapMode, setHeatmapMode] = useState<HeatmapMode>("crypto");
-  const [payload, setPayload] = useState<MarketNarrativeResponse | null>(null);
+  const cachedPayload = getCachedJson<MarketNarrativeResponse>(marketNarrativeUrl);
+  const [payload, setPayload] = useState<MarketNarrativeResponse | null>(() => cachedPayload);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -136,14 +141,16 @@ export function MarketWidePanel() {
 
     async function loadNarratives() {
       try {
-        const response = await fetch("/api/market-narrative", { cache: "no-store" });
-        const nextPayload = (await response.json()) as MarketNarrativeResponse;
+        const { ok, payload: nextPayload } = await fetchCachedJson<MarketNarrativeResponse>(
+          marketNarrativeUrl,
+          marketNarrativeTtlMs,
+        );
 
         if (!active) {
           return;
         }
 
-        if (!response.ok) {
+        if (!ok) {
           setError(nextPayload.error ?? "Narrative data unavailable.");
           return;
         }

@@ -127,7 +127,7 @@ const tickerAliases = new Map<string, string>([
   ["H17182108", "CRSP"],
 ]);
 const smartMoneyCacheHeaders = {
-  "Cache-Control": "public, s-maxage=300, stale-while-revalidate=900",
+  "Cache-Control": "public, max-age=120, s-maxage=300, stale-while-revalidate=900",
 };
 
 function toNumber(value: number | string | undefined | null) {

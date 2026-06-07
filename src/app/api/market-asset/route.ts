@@ -136,6 +136,10 @@ const coingeckoIds: Record<string, string> = {
   HYPE: "hyperliquid",
 };
 
+const marketAssetCacheHeaders = {
+  "Cache-Control": "public, max-age=300, s-maxage=300, stale-while-revalidate=1800",
+};
+
 function toNumber(value: unknown) {
   return typeof value === "number" && Number.isFinite(value) ? value : null;
 }
@@ -318,5 +322,5 @@ export async function GET(request: Request) {
     news,
     price: chartSource?.price ?? null,
     sources: ["Yahoo Finance", ...(coingeckoIds[config.displayTicker] ? ["CoinGecko"] : [])],
-  });
+  }, { headers: marketAssetCacheHeaders });
 }

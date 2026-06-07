@@ -8,10 +8,14 @@ const defaultXHandles = ["blknoiz06"];
 const twitchClientId = "kimne78kx3ncx6brgo4mv6wki5h1ko";
 const execFileAsync = promisify(execFile);
 const maxRequestedChannels = 8;
+const fallbackKickChatroomIds: Record<string, number> = {
+  solomission: 2218947,
+};
 
 export const runtime = "nodejs";
 
 type ChannelMetrics = {
+  chatroomId?: number;
   online: boolean;
   viewers: number;
 };
@@ -30,6 +34,20 @@ function normalizeXHandle(value: string) {
 
 function uniqueValues(values: string[], normalize: (value: string) => string) {
   return Array.from(new Set(values.map(normalize).filter(Boolean))).slice(0, maxRequestedChannels);
+}
+
+function getKickChatroomId(data: unknown) {
+  if (!data || typeof data !== "object") {
+    return undefined;
+  }
+
+  const channelData = data as {
+    chatroom?: { id?: unknown };
+    chatroom_id?: unknown;
+  };
+  const chatroomId = Number(channelData.chatroom?.id ?? channelData.chatroom_id);
+
+  return Number.isFinite(chatroomId) && chatroomId > 0 ? chatroomId : undefined;
 }
 
 async function getTwitchChannelMetrics(twitchChannel: string): Promise<ChannelMetrics> {
@@ -98,6 +116,7 @@ async function getKickChannelMetrics(kickChannel: string): Promise<ChannelMetric
     const livestream = data?.livestream;
 
     return {
+      chatroomId: getKickChatroomId(data) ?? fallbackKickChatroomIds[kickChannel],
       online: Boolean(livestream),
       viewers: Number(livestream?.viewer_count ?? 0),
     };
@@ -134,11 +153,12 @@ async function getKickChannelMetricsWithCurl(
     const livestream = data?.livestream;
 
     return {
+      chatroomId: getKickChatroomId(data) ?? fallbackKickChatroomIds[kickChannel],
       online: Boolean(livestream),
       viewers: Number(livestream?.viewer_count ?? 0),
     };
   } catch {
-    return { online: false, viewers: 0 };
+    return { chatroomId: fallbackKickChatroomIds[kickChannel], online: false, viewers: 0 };
   }
 }
 
@@ -181,6 +201,14 @@ function mapOnline(channelMetrics: Record<string, ChannelMetrics>) {
       channel,
       channelMetric.online,
     ]),
+  );
+}
+
+function mapChatroomIds(channelMetrics: Record<string, ChannelMetrics>) {
+  return Object.fromEntries(
+    Object.entries(channelMetrics)
+      .filter(([, channelMetric]) => channelMetric.chatroomId)
+      .map(([channel, channelMetric]) => [channel, channelMetric.chatroomId]),
   );
 }
 
@@ -246,6 +274,7 @@ export async function GET(request: Request) {
     return NextResponse.json(
       {
         kickChannelOnline: mapOnline(kickChannelMetrics),
+        kickChannelChatroomIds: mapChatroomIds(kickChannelMetrics),
         kickChannelViewers: mapViewers(kickChannelMetrics),
         kickViewers,
         online,
@@ -266,6 +295,7 @@ export async function GET(request: Request) {
         kickChannelOnline: Object.fromEntries(
           kickChannels.map((kickChannel) => [kickChannel, false]),
         ),
+        kickChannelChatroomIds: {},
         kickChannelViewers: Object.fromEntries(
           kickChannels.map((kickChannel) => [kickChannel, 0]),
         ),

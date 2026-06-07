@@ -58,79 +58,99 @@ body {
 }
 
 .top-text-nav {
+  --top-nav-active-offset: 0px;
+  --top-nav-gap: 0.28rem;
+  --top-nav-padding: 0.24rem;
   position: absolute;
   top: clamp(24px, 3vw, 40px);
   left: 50%;
   z-index: 20;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.62em;
+  isolation: isolate;
+  display: grid;
+  width: clamp(430px, 42vw, 610px);
+  max-width: calc(100vw - (var(--site-inset) * 2) - 28px);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--top-nav-gap);
+  overflow: hidden;
+  border: 1px solid rgb(228 228 228 / 0.12);
+  border-radius: 999px;
+  background: rgb(228 228 228 / 0.06);
   color: #e4e4e4;
-  font-family: var(--font-playfair-display), Georgia, serif;
-  font-size: clamp(0.72rem, 1.05vw, 1.05rem);
-  font-weight: 400;
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-size: clamp(0.56rem, 0.72vw, 0.74rem);
+  font-weight: 800;
   letter-spacing: 0;
   line-height: 1;
   opacity: 1;
+  padding: var(--top-nav-padding);
   text-align: center;
   translate: -50% 0;
   white-space: nowrap;
 }
 
+.top-text-nav::before {
+  position: absolute;
+  z-index: 0;
+  top: var(--top-nav-padding);
+  bottom: var(--top-nav-padding);
+  left: var(--top-nav-padding);
+  width: calc((100% - (var(--top-nav-padding) * 2) - (var(--top-nav-gap) * 4)) / 5);
+  border-radius: 999px;
+  background: #e4e4e4;
+  content: "";
+  transform: translateX(var(--top-nav-active-offset));
+  transition:
+    transform 360ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 220ms ease;
+  will-change: transform;
+}
+
 .top-text-nav-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.62em;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  min-width: 0;
 }
 
 .top-text-nav-link {
   position: relative;
-  color: inherit;
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  color: rgb(228 228 228 / 0.58);
+  line-height: 1;
+  overflow: hidden;
+  padding: 0.48rem 0.5rem;
   text-decoration: none;
+  text-overflow: ellipsis;
   transition:
-    color 180ms ease,
-    opacity 180ms ease,
-    text-shadow 180ms ease,
-    transform 180ms ease;
-}
-
-.top-text-nav-link::after {
-  position: absolute;
-  right: 0;
-  bottom: -0.34em;
-  left: 0;
-  height: 1px;
-  background: currentColor;
-  content: "";
-  opacity: 0;
-  transform: scaleX(0.35);
-  transform-origin: center;
-  transition:
-    opacity 180ms ease,
-    transform 180ms ease;
+    color 220ms ease,
+    transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .top-text-nav-link:hover,
 .top-text-nav-link:focus-visible {
-  opacity: 1;
-  text-shadow: 0 0 10px rgb(228 228 228 / 0.22);
-  transform: translateY(-1px);
+  color: rgb(228 228 228 / 0.9);
 }
 
-.top-text-nav-link:hover::after,
-.top-text-nav-link:focus-visible::after {
-  opacity: 0.72;
-  transform: scaleX(1);
+.top-text-nav-link[data-active="true"] {
+  background: transparent;
+  color: #161616;
+}
+
+.top-text-nav-link[data-active="true"]:hover {
+  color: #161616;
 }
 
 .top-text-nav-link:focus-visible {
-  outline: 1px solid rgb(228 228 228 / 0.5);
-  outline-offset: 0.38em;
+  outline: 2px solid rgb(228 228 228 / 0.42);
+  outline-offset: 2px;
 }
 
 .top-text-nav-separator {
-  opacity: 0.9;
+  display: none;
 }
 
 .simple-page-hero {
@@ -4842,6 +4862,40 @@ body[data-chat-expanded="true"] .stats-stage {
   white-space: nowrap;
 }
 
+.chat-author-group {
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+  gap: 0.34rem;
+}
+
+.chat-platform-badge {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.22rem;
+  font-size: clamp(0.48rem, 0.58vw, 0.6rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.chat-platform-badge svg {
+  width: 0.62rem;
+  height: 0.62rem;
+}
+
+.chat-platform-badge-twitch {
+  color: #9146ff;
+}
+
+.chat-platform-badge-kick {
+  color: #53fc18;
+}
+
+.chat-platform-badge-x {
+  color: #e4e4e4;
+}
+
 .chat-fullscreen-button {
   position: absolute;
   top: 0;
@@ -6195,6 +6249,10 @@ body[data-chat-expanded="true"] .stats-stage {
   .presented-by,
   .bottom-left-line {
     font-size: clamp(0.62rem, 2.6vw, 0.8rem);
+  }
+
+  .top-text-nav {
+    font-size: clamp(0.48rem, 1.95vw, 0.62rem);
   }
 
   .presented-lockup {

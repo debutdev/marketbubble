@@ -1,4 +1,3 @@
-import { XMLParser } from "fast-xml-parser";
 import { NextResponse } from "next/server";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
@@ -11,40 +10,6 @@ type CtMember = {
   handle: string;
   rank: number;
   tag?: string;
-};
-
-type XUserEntity = {
-  description?: string;
-  followers_count?: number;
-  friends_count?: number;
-  is_blue_verified?: boolean;
-  name?: string;
-  normal_followers_count?: number;
-  profile_image_url_https?: string;
-  screen_name?: string;
-  verified?: boolean;
-};
-
-type XInitialState = {
-  entities?: {
-    users?: {
-      entities?: Record<string, XUserEntity>;
-    };
-  };
-};
-
-type ParsedRssItem = {
-  description?: string | { cdata?: string; "#text"?: string };
-  pubDate?: string;
-  title?: string;
-};
-
-type ParsedRss = {
-  rss?: {
-    channel?: {
-      item?: ParsedRssItem | ParsedRssItem[];
-    };
-  };
 };
 
 type CtProfile = {
@@ -72,6 +37,24 @@ type CtSignal = {
   handle: string;
   overview: string;
   signal: "bullish" | "bearish";
+};
+
+type SignalResult = {
+  model: string | null;
+  signals: CtSignal[];
+  source: "openrouter" | "local-fallback";
+};
+
+type CtLeaderboardPayload = {
+  fetchedAt: string;
+  members: Array<CtProfile & { signal: CtSignal }>;
+  signalModel: string | null;
+  signalSource: SignalResult["source"];
+};
+
+type CachedLeaderboard = {
+  cachedAt: number;
+  payload: CtLeaderboardPayload;
 };
 
 const ctMembers: CtMember[] = [
@@ -162,10 +145,12 @@ const bearishKeywords = [
   "top",
 ];
 
-const rssParser = new XMLParser({
-  cdataPropName: "cdata",
-  ignoreAttributes: false,
-});
+const browserCacheSeconds = 60;
+const freshCacheMs = 30 * 60 * 1000;
+const staleCacheMs = 6 * 60 * 60 * 1000;
+
+let cachedLeaderboard: CachedLeaderboard | null = null;
+let refreshPromise: Promise<CtLeaderboardPayload> | null = null;
 
 function getKeywordScore(text: string, keywords: string[]) {
   return keywords.reduce((score, keyword) => {
@@ -202,101 +187,6 @@ function isCtSignal(value: CtSignal | undefined): value is CtSignal {
   return Boolean(value);
 }
 
-function decodeHtmlEntities(value: string) {
-  return value
-    .replace(/&amp;/g, "&")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&quot;/g, '"')
-    .replace(/&#x27;/g, "'")
-    .replace(/&#(\d+);/g, (_, codePoint: string) =>
-      String.fromCodePoint(Number(codePoint)),
-    )
-    .replace(/&#x([a-f0-9]+);/gi, (_, codePoint: string) =>
-      String.fromCodePoint(Number.parseInt(codePoint, 16)),
-    );
-}
-
-function findJsonObjectEnd(source: string, startIndex: number) {
-  let depth = 0;
-  let escaped = false;
-  let inString = false;
-
-  for (let index = startIndex; index < source.length; index += 1) {
-    const character = source[index];
-
-    if (inString) {
-      if (escaped) {
-        escaped = false;
-      } else if (character === "\\") {
-        escaped = true;
-      } else if (character === '"') {
-        inString = false;
-      }
-
-      continue;
-    }
-
-    if (character === '"') {
-      inString = true;
-      continue;
-    }
-
-    if (character === "{") {
-      depth += 1;
-    } else if (character === "}") {
-      depth -= 1;
-
-      if (depth === 0) {
-        return index;
-      }
-    }
-  }
-
-  return -1;
-}
-
-function parseInitialState(html: string): XInitialState | null {
-  const marker = "window.__INITIAL_STATE__=";
-  const markerIndex = html.indexOf(marker);
-
-  if (markerIndex === -1) {
-    return null;
-  }
-
-  const objectStart = html.indexOf("{", markerIndex + marker.length);
-
-  if (objectStart === -1) {
-    return null;
-  }
-
-  const objectEnd = findJsonObjectEnd(html, objectStart);
-
-  if (objectEnd === -1) {
-    return null;
-  }
-
-  try {
-    return JSON.parse(html.slice(objectStart, objectEnd + 1)) as XInitialState;
-  } catch {
-    return null;
-  }
-}
-
-function normalizeAvatarUrl(avatarUrl?: string) {
-  if (!avatarUrl) {
-    return null;
-  }
-
-  try {
-    const url = new URL(avatarUrl.replace("_normal.", "_400x400."));
-
-    return url.protocol === "https:" || url.protocol === "http:" ? url.toString() : null;
-  } catch {
-    return null;
-  }
-}
-
 async function getCtArchive() {
   try {
     const archivePath = join(process.cwd(), "public", "data", "ct-leaderboard.json");
@@ -310,58 +200,6 @@ async function getCtArchive() {
     );
   } catch {
     return new Map<string, CtArchiveMember>();
-  }
-}
-
-function getDescriptionHtml(description: ParsedRssItem["description"]) {
-  if (typeof description === "string") {
-    return description;
-  }
-
-  return description?.cdata ?? description?.["#text"] ?? "";
-}
-
-function stripHtml(html: string) {
-  return decodeHtmlEntities(
-    html
-      .replace(/<br\s*\/?>/gi, "\n")
-      .replace(/<\/p>/gi, "\n")
-      .replace(/<[^>]+>/g, "")
-      .replace(/\n{3,}/g, "\n\n")
-      .trim(),
-  );
-}
-
-async function getRecentTweets(handle: string) {
-  try {
-    const response = await fetch(`https://nitter.net/${encodeURIComponent(handle)}/rss`, {
-      cache: "no-store",
-      headers: {
-        Accept: "application/rss+xml,text/xml;q=0.9,*/*;q=0.8",
-        "User-Agent":
-          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
-      },
-      signal: AbortSignal.timeout(12_000),
-    });
-
-    if (!response.ok) {
-      return [];
-    }
-
-    const parsed = rssParser.parse(await response.text()) as ParsedRss;
-    const rawItems = parsed.rss?.channel?.item
-      ? Array.isArray(parsed.rss.channel.item)
-        ? parsed.rss.channel.item
-        : [parsed.rss.channel.item]
-      : [];
-
-    return rawItems
-      .map((item) => stripHtml(getDescriptionHtml(item.description) || item.title || ""))
-      .map((tweet) => tweet.replace(/\s+/g, " ").trim())
-      .filter(Boolean)
-      .slice(0, 8);
-  } catch {
-    return [];
   }
 }
 
@@ -401,62 +239,12 @@ function getArchivedProfile(member: CtMember, archived?: CtArchiveMember): CtPro
   };
 }
 
-async function getXProfile(member: CtMember): Promise<CtProfile> {
-  try {
-    const response = await fetch(`https://x.com/${encodeURIComponent(member.handle)}`, {
-      cache: "no-store",
-      headers: {
-        Accept: "text/html",
-        "User-Agent":
-          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
-      },
-      signal: AbortSignal.timeout(12_000),
-    });
+async function getArchivedProfiles() {
+  const archive = await getCtArchive();
 
-    if (!response.ok) {
-      return getFallbackProfile(member);
-    }
-
-    const state = parseInitialState(await response.text());
-    const users = state?.entities?.users?.entities ?? {};
-    const user = Object.values(users).find(
-      (candidate) => candidate.screen_name?.toLowerCase() === member.handle.toLowerCase(),
-    );
-
-    if (!user?.screen_name) {
-      return getFallbackProfile(member);
-    }
-
-    return {
-      avatarUrl: normalizeAvatarUrl(user.profile_image_url_https),
-      description: decodeHtmlEntities(user.description || member.fallbackDescription),
-      followers: Number(user.normal_followers_count ?? user.followers_count ?? 0),
-      handle: user.screen_name,
-      name: decodeHtmlEntities(user.name ?? user.screen_name),
-      profileUrl: `https://x.com/${user.screen_name}`,
-      rank: member.rank,
-      recentTweets: [],
-      tag: member.tag,
-      verified: Boolean(user.is_blue_verified || user.verified),
-    };
-  } catch {
-    return getFallbackProfile(member);
-  }
-}
-
-async function getCtProfile(member: CtMember, archived?: CtArchiveMember) {
-  const archivedProfile = getArchivedProfile(member, archived);
-
-  if (archivedProfile?.recentTweets.length) {
-    return archivedProfile;
-  }
-
-  const [profile, recentTweets] = await Promise.all([getXProfile(member), getRecentTweets(member.handle)]);
-
-  return {
-    ...profile,
-    recentTweets: recentTweets.length ? recentTweets : archivedProfile?.recentTweets ?? [],
-  };
+  return ctMembers.map(
+    (member) => getArchivedProfile(member, archive.get(member.handle.toLowerCase())) ?? getFallbackProfile(member),
+  );
 }
 
 function getFallbackSignals(profiles: CtProfile[]) {
@@ -515,7 +303,7 @@ function sanitizeAiSignals(value: unknown, profiles: CtProfile[]) {
   );
 }
 
-async function getGrokSignals(profiles: CtProfile[]) {
+async function getGrokSignals(profiles: CtProfile[]): Promise<SignalResult> {
   const apiKey = process.env.OPENROUTER_API_KEY;
 
   if (!apiKey) {
@@ -582,12 +370,7 @@ async function getGrokSignals(profiles: CtProfile[]) {
   }
 }
 
-export async function GET() {
-  const archive = await getCtArchive();
-  const profiles = await Promise.all(
-    ctMembers.map((member) => getCtProfile(member, archive.get(member.handle.toLowerCase()))),
-  );
-  const signalResult = await getGrokSignals(profiles);
+function createLeaderboardPayload(profiles: CtProfile[], signalResult: SignalResult): CtLeaderboardPayload {
   const signalByHandle = new Map<string, CtSignal>();
 
   for (const signal of signalResult.signals) {
@@ -596,20 +379,98 @@ export async function GET() {
     }
   }
 
-  return NextResponse.json(
-    {
-      fetchedAt: new Date().toISOString(),
-      members: profiles.map((profile) => ({
-        ...profile,
-        signal: signalByHandle.get(profile.handle.toLowerCase()) ?? getFallbackSignal(profile),
-      })),
-      signalModel: signalResult.model,
-      signalSource: signalResult.source,
+  return {
+    fetchedAt: new Date().toISOString(),
+    members: profiles.map((profile) => ({
+      ...profile,
+      signal: signalByHandle.get(profile.handle.toLowerCase()) ?? getFallbackSignal(profile),
+    })),
+    signalModel: signalResult.model,
+    signalSource: signalResult.source,
+  };
+}
+
+async function buildLocalPayload() {
+  const profiles = await getArchivedProfiles();
+
+  return createLeaderboardPayload(profiles, {
+    model: null,
+    signals: getFallbackSignals(profiles),
+    source: "local-fallback",
+  });
+}
+
+async function buildAiPayload() {
+  const profiles = await getArchivedProfiles();
+  const signalResult = await getGrokSignals(profiles);
+
+  return createLeaderboardPayload(profiles, signalResult);
+}
+
+function refreshLeaderboardCache() {
+  if (!refreshPromise) {
+    refreshPromise = buildAiPayload()
+      .then((payload) => {
+        cachedLeaderboard = {
+          cachedAt: Date.now(),
+          payload,
+        };
+
+        return payload;
+      })
+      .catch(async () => {
+        const payload = await buildLocalPayload();
+
+        cachedLeaderboard = {
+          cachedAt: Date.now(),
+          payload,
+        };
+
+        return payload;
+      })
+      .finally(() => {
+        refreshPromise = null;
+      });
+  }
+
+  return refreshPromise;
+}
+
+function startBackgroundRefresh() {
+  void refreshLeaderboardCache();
+}
+
+function leaderboardResponse(payload: CtLeaderboardPayload, cacheStatus: "HIT" | "MISS" | "STALE") {
+  return NextResponse.json(payload, {
+    headers: {
+      "Cache-Control": `public, max-age=${browserCacheSeconds}, s-maxage=1800, stale-while-revalidate=7200`,
+      "X-MarketBubble-Cache": cacheStatus,
     },
-    {
-      headers: {
-        "Cache-Control": "public, s-maxage=1800, stale-while-revalidate=7200",
-      },
-    },
-  );
+  });
+}
+
+export async function GET() {
+  const now = Date.now();
+
+  if (cachedLeaderboard) {
+    const cacheAge = now - cachedLeaderboard.cachedAt;
+
+    if (cacheAge < freshCacheMs) {
+      return leaderboardResponse(cachedLeaderboard.payload, "HIT");
+    }
+
+    if (cacheAge < staleCacheMs) {
+      startBackgroundRefresh();
+      return leaderboardResponse(cachedLeaderboard.payload, "STALE");
+    }
+  }
+
+  const payload = await buildLocalPayload();
+  cachedLeaderboard = {
+    cachedAt: Date.now(),
+    payload,
+  };
+  startBackgroundRefresh();
+
+  return leaderboardResponse(payload, "MISS");
 }

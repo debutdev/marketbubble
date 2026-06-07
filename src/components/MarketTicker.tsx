@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { fetchCachedJson, getCachedJson } from "@/lib/client-json-cache";
 import styles from "./MarketTicker.module.css";
 
 type MarketTickerAsset = {
@@ -18,6 +19,9 @@ type MarketTickerResponse = {
   error?: string;
   fetchedAt?: string;
 };
+
+const marketTickerUrl = "/api/market-ticker";
+const marketTickerTtlMs = 45_000;
 
 function formatPrice(asset: MarketTickerAsset) {
   const fractionDigits =
@@ -44,23 +48,23 @@ function formatChange(value: number) {
 
 export function MarketTicker() {
   const scrollerRef = useRef<HTMLDivElement>(null);
-  const [assets, setAssets] = useState<MarketTickerAsset[]>([]);
+  const cachedPayload = getCachedJson<MarketTickerResponse>(marketTickerUrl);
+  const [assets, setAssets] = useState<MarketTickerAsset[]>(() => cachedPayload?.assets ?? []);
   const [error, setError] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(() => !cachedPayload?.assets?.length);
 
   useEffect(() => {
     let active = true;
 
     async function loadTicker() {
       try {
-        const response = await fetch("/api/market-ticker", { cache: "no-store" });
-        const payload = (await response.json()) as MarketTickerResponse;
+        const { ok, payload } = await fetchCachedJson<MarketTickerResponse>(marketTickerUrl, marketTickerTtlMs);
 
         if (!active) {
           return;
         }
 
-        if (!response.ok || !payload.assets.length) {
+        if (!ok || !payload.assets.length) {
           setError(payload.error ?? "Market data unavailable.");
           setIsLoading(false);
           return;

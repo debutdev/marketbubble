@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useState } from "react";
+import { fetchCachedJson, getCachedJson } from "@/lib/client-json-cache";
 import styles from "./MarketSidePanel.module.css";
 
 type MarketRow = {
@@ -40,6 +41,10 @@ type MarketTickerResponse = {
     stockIndices: MarketRow[];
   };
 };
+
+const marketTickerUrl = "/api/market-ticker";
+const marketTickerTtlMs = 45_000;
+const marketAssetTtlMs = 5 * 60_000;
 
 const cryptoIconUrls: Record<string, string> = {
   BTC: "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/bitcoin/default.svg",
@@ -236,7 +241,6 @@ function MarketAssetDialog({
     let active = true;
 
     async function loadDetails() {
-      setDetails(null);
       setError(null);
 
       try {
@@ -244,14 +248,18 @@ function MarketAssetDialog({
           name: asset.name,
           symbol: asset.symbol,
         });
-        const response = await fetch(`/api/market-asset?${searchParams.toString()}`, { cache: "no-store" });
-        const payload = (await response.json()) as MarketAssetDetail;
+        const requestUrl = `/api/market-asset?${searchParams.toString()}`;
+        const cachedDetails = getCachedJson<MarketAssetDetail>(requestUrl);
+
+        setDetails(cachedDetails);
+
+        const { ok, payload } = await fetchCachedJson<MarketAssetDetail>(requestUrl, marketAssetTtlMs);
 
         if (!active) {
           return;
         }
 
-        if (!response.ok) {
+        if (!ok) {
           setError("Market details unavailable.");
           return;
         }
@@ -331,18 +339,24 @@ function MarketAssetDialog({
 }
 
 export function MarketSidePanel() {
-  const [commodities, setCommodities] = useState<MarketRow[]>([]);
-  const [crypto, setCrypto] = useState<MarketRow[]>([]);
+  const cachedPayload = getCachedJson<MarketTickerResponse>(marketTickerUrl);
+  const [commodities, setCommodities] = useState<MarketRow[]>(
+    () => cachedPayload?.globalMarkets?.commodities ?? [],
+  );
+  const [crypto, setCrypto] = useState<MarketRow[]>(
+    () => cachedPayload?.globalMarkets?.crypto ?? [],
+  );
   const [selectedAsset, setSelectedAsset] = useState<MarketRow | null>(null);
-  const [stockIndices, setStockIndices] = useState<MarketRow[]>([]);
+  const [stockIndices, setStockIndices] = useState<MarketRow[]>(
+    () => cachedPayload?.globalMarkets?.stockIndices ?? [],
+  );
 
   useEffect(() => {
     let active = true;
 
     async function loadMarkets() {
       try {
-        const response = await fetch("/api/market-ticker", { cache: "no-store" });
-        const payload = (await response.json()) as MarketTickerResponse;
+        const { payload } = await fetchCachedJson<MarketTickerResponse>(marketTickerUrl, marketTickerTtlMs);
 
         if (!active) {
           return;

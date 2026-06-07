@@ -88,8 +88,11 @@
   border: 1px solid rgb(228 228 228 / 0.1);
   border-radius: 8px;
   background: #101010;
+  color: inherit;
+  cursor: pointer;
   grid-template-rows: minmax(130px, 0.95fr) minmax(0, 1.05fr);
   isolation: isolate;
+  text-decoration: none;
 }
 
 .card::before,
@@ -120,6 +123,12 @@
 
 .card:hover {
   border-color: rgb(228 228 228 / 0.24);
+}
+
+.card:focus-visible {
+  border-color: rgb(228 228 228 / 0.36);
+  outline: 2px solid rgb(255 255 255 / 0.36);
+  outline-offset: 2px;
 }
 
 .card:hover::before {
@@ -316,17 +325,17 @@
   font-weight: 900;
   line-height: 1;
   padding: 0.48rem 0.62rem;
+  pointer-events: none;
   text-decoration: none;
   text-transform: uppercase;
   transition: border-color 180ms ease, background 180ms ease, color 180ms ease;
 }
 
-.action:hover,
-.action:focus-visible {
+.card:hover .action,
+.card:focus-visible .action {
   border-color: rgb(228 228 228 / 0.3);
   background: rgb(228 228 228 / 0.055);
   color: #ffffff;
-  outline: none;
 }
 
 .action svg {
