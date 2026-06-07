@@ -5891,7 +5891,8 @@ body[data-chat-expanded="true"] .stats-stage {
     scrollbar-width: none;
   }
 
-  .content-site-shell {
+  .content-site-shell,
+  .leaderboard-site-shell {
     min-height: calc(100svh - (var(--site-inset) * 2));
     height: auto;
     overflow-x: hidden;
@@ -5900,7 +5901,8 @@ body[data-chat-expanded="true"] .stats-stage {
   }
 
   .market-site-shell::-webkit-scrollbar,
-  .content-site-shell::-webkit-scrollbar {
+  .content-site-shell::-webkit-scrollbar,
+  .leaderboard-site-shell::-webkit-scrollbar {
     display: none;
   }
 }
@@ -6078,7 +6080,8 @@ body[data-chat-expanded="true"] .stats-stage {
     padding: clamp(64px, 18vw, 78px) 10px 12px;
   }
 
-  .content-site-shell {
+  .content-site-shell,
+  .leaderboard-site-shell {
     padding: 0;
   }
 

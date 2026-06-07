@@ -4,6 +4,7 @@ const navItems = [
   { href: "/", label: "Home", key: "home" },
   { href: "/market", label: "Market", key: "market" },
   { href: "/content", label: "Content", key: "content" },
+  { href: "/leaderboard", label: "Leaderboard", key: "leaderboard" },
 ] as const;
 
 type TopTextNavProps = {

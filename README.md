@@ -55,9 +55,12 @@ Create `.env.local` for local secrets. Do not commit it.
 ```bash
 MASSIVE_API_KEY=your_massive_key_here
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
+OPENROUTER_API_KEY=your_openrouter_key_here
+OPENROUTER_MODEL=x-ai/grok-4.3
 ```
 
 `MASSIVE_API_KEY` is optional. Without it, the app falls back to built-in ticker aliases for portfolio holdings where possible.
+`OPENROUTER_API_KEY` is optional for local development; without it, the CT leaderboard falls back to local tweet-keyword stance summaries. Production should set it in Vercel environment variables, not in source control.
 
 The X content archive updates through `.github/workflows/update-x-archive.yml`. Public profile scraping works without a paid X API. X search for posts that tag `@MarketBubble` can require authenticated cookies, so set a GitHub Actions secret named `X_COOKIES_TXT` with a Netscape-format cookies.txt export if tagged-user clips should be indexed. Never commit cookies or tokens.
 
