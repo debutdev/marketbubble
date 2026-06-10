@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-06-10T12:42:46.271121Z",
+  "fetchedAt": "2026-06-10T21:29:43.942948Z",
   "handle": "MarketBubble",
   "profileImageUrl": "https://pbs.twimg.com/profile_images/2049931777729609728/48E45qmE.jpg",
   "profileTitle": "Market Bubble / @MarketBubble",
@@ -8,16 +8,76 @@
   "tweets": [
     {
       "author": "@MarketBubble",
+      "id": "2064783536318476497",
+      "isRetweet": false,
+      "media": [
+        "https://pbs.twimg.com/media/HKeTgpQXcAAWiyy?format=jpg&name=orig"
+      ],
+      "metrics": {
+        "bookmarks": 7,
+        "likes": 66,
+        "quotes": 1,
+        "replies": 9,
+        "reposts": 3,
+        "views": 2712
+      },
+      "publishedAt": "2026-06-10T18:55:31Z",
+      "text": "Now loading...\n\nAndrew Kang, CEO of RoboStrategy\n\nThursday, June 11th, 5:30pm EST",
+      "title": "Now loading...",
+      "url": "https://x.com/MarketBubble/status/2064783536318476497"
+    },
+    {
+      "author": "@MarketBubble",
+      "id": "2064780608497164581",
+      "isRetweet": false,
+      "media": [
+        "https://pbs.twimg.com/media/HKeSt1gWUAAshPB?format=jpg&name=orig"
+      ],
+      "metrics": {
+        "bookmarks": 0,
+        "likes": 21,
+        "quotes": 0,
+        "replies": 3,
+        "reposts": 1,
+        "views": 3418
+      },
+      "publishedAt": "2026-06-10T18:43:53Z",
+      "text": "",
+      "title": "",
+      "url": "https://x.com/MarketBubble/status/2064780608497164581"
+    },
+    {
+      "author": "@MarketBubble",
+      "id": "2064745295393497335",
+      "isRetweet": false,
+      "media": [
+        "https://pbs.twimg.com/media/HKdxiY1XsAA2UyE?format=png&name=orig"
+      ],
+      "metrics": {
+        "bookmarks": 1,
+        "likes": 61,
+        "quotes": 2,
+        "replies": 23,
+        "reposts": 5,
+        "views": 3854
+      },
+      "publishedAt": "2026-06-10T16:23:34Z",
+      "text": "BREAKING: Crypto Fear & Greed Index falls below 10 to Extreme Fear",
+      "title": "BREAKING: Crypto Fear & Greed Index falls below 10 to Extreme Fear",
+      "url": "https://x.com/MarketBubble/status/2064745295393497335"
+    },
+    {
+      "author": "@MarketBubble",
       "id": "2064439735175496055",
       "isRetweet": false,
       "media": [],
       "metrics": {
-        "bookmarks": 51,
-        "likes": 102,
-        "quotes": 2,
-        "replies": 5,
-        "reposts": 12,
-        "views": 31139
+        "bookmarks": 60,
+        "likes": 113,
+        "quotes": 3,
+        "replies": 6,
+        "reposts": 14,
+        "views": 37456
       },
       "publishedAt": "2026-06-09T20:09:22Z",
       "text": "Our full conversation with Erik Voorhees\n\n2:54 The first Bitcoin meetup\n4:20 Selling Satoshi Dice for 125,000 BTC\n8:47 What is Venice AI\n9:30 The AI privacy problem nobody's talking about\n14:37 Why crypto is still cool\n16:05 Debating SBF before FTX collapsed\n19:28 Thoughts on Michael Saylor\n20:35 The dollar going to zero\n23:40 Venice's dual token model\n29:33 DeFi summer\n31:15 His take on Hyperliquid\n36:30 Why learning AI matters\n49:05 A world where agents outnumber humans\n53:45 Master AI or join the permanent underclass",
@@ -32,12 +92,12 @@
       "isRetweet": false,
       "media": [],
       "metrics": {
-        "bookmarks": 19,
-        "likes": 62,
+        "bookmarks": 20,
+        "likes": 69,
         "quotes": 0,
-        "replies": 10,
+        "replies": 13,
         "reposts": 2,
-        "views": 6696
+        "views": 7655
       },
       "publishedAt": "2026-06-09T18:55:55Z",
       "text": "Banks explains why we're doing the $10,000 Vibe Code Challenge\n\n\"We wanna reward our community. That's the whole idea\"\n\n\"I'm staring at Twitch right now. I have no idea what Twitter is saying. I don't know what Ansem's chat is saying either. We wanna put it all in one place\"\n\n\"We could've paid $500 for somebody to build this and it probably exists somewhere already. But we want someone to build one from scratch, we wanna attract talent who's interested in building in AI\"\n\n\"I'm gonna want to be in contact with all of the best submissions. We're gonna do more stuff like this moving forward. This is the whole point of the show\"",
@@ -53,11 +113,11 @@
       "media": [],
       "metrics": {
         "bookmarks": 34,
-        "likes": 74,
+        "likes": 77,
         "quotes": 0,
         "replies": 5,
         "reposts": 3,
-        "views": 10703
+        "views": 11014
       },
       "publishedAt": "2026-06-09T15:09:31Z",
       "text": "Ansem & Banks on copy trading Trump/Jensen\n\n\"Trump's taken this thesis that I'm gonna be publicly bullish on what I'm buying and taken it to the stock market as President. All of his stuff is public. You can see everything he buys\"\n\n\"He's very transparent about the companies he thinks are important for the United States\"\n\n\"Jensen does the same thing with all the companies Nvidia has in its wheelhouse. He got on stage at GTC and called Marvell 'the next trillion-dollar company' and it popped like +50%\"",
@@ -79,7 +139,7 @@
         "quotes": 0,
         "replies": 8,
         "reposts": 3,
-        "views": 6351
+        "views": 6487
       },
       "publishedAt": "2026-06-09T00:27:57Z",
       "text": "Wemby's locking in for game 3",
@@ -95,11 +155,11 @@
       ],
       "metrics": {
         "bookmarks": 2,
-        "likes": 80,
+        "likes": 82,
         "quotes": 0,
         "replies": 18,
         "reposts": 1,
-        "views": 5539
+        "views": 5643
       },
       "publishedAt": "2026-06-08T19:20:11Z",
       "text": "how the intern feels after posting bangers all day",
@@ -113,11 +173,11 @@
       "media": [],
       "metrics": {
         "bookmarks": 7,
-        "likes": 75,
+        "likes": 76,
         "quotes": 2,
         "replies": 4,
         "reposts": 11,
-        "views": 5253
+        "views": 5352
       },
       "publishedAt": "2026-06-08T18:16:44Z",
       "text": "Erik Voorhees on building for a world where AI agents outnumber people\n\n\"The normal app is for humans, but we have a full API where an agent can access any kind of AI resource it would want\"\n\n\"Our docs page has text in it that is not meant for humans to see, but give it to an agent and it reads instructions meant for it to learn all the resources in Venice\"\n\n\"Most of our customers in a year or two or three may be agents. There'll be more agents than humans in the not-too-distant future\"",
@@ -132,12 +192,12 @@
       "isRetweet": false,
       "media": [],
       "metrics": {
-        "bookmarks": 45,
-        "likes": 177,
+        "bookmarks": 46,
+        "likes": 178,
         "quotes": 2,
         "replies": 6,
-        "reposts": 10,
-        "views": 53435
+        "reposts": 9,
+        "views": 53755
       },
       "publishedAt": "2026-06-08T16:30:10Z",
       "text": "Flood breaks down why he's been bullish on Hyperliquid since day 1\n\n\"I was told when I joined crypto that you'd be able to do whatever you want with your money, trade any asset, no KYC, whenever you want\"\n\n\"It's a fundamental human right for people to be able to transact value\"\n\n\"Jeff is the most transparent, self-accountable person I've met operating at this level. This is his life's work, his magnum opus. And he's willing to die behind it\"\n\n\"You can see the spread between the way Hyperliquid operates and everyone else\"",
@@ -157,7 +217,7 @@
         "quotes": 5,
         "replies": 13,
         "reposts": 15,
-        "views": 15703
+        "views": 15795
       },
       "publishedAt": "2026-06-07T18:05:43Z",
       "text": "Erik Voorhees explains how you can combine different AI tools to beat any single model\n\n\"We're working on a concept called Minds. If you put modules of AI systems together the right way, you can get results better than any single model itself\"\n\n\"All the labs are focused on their models and beating each other's scores, but if you combine these things in creative interesting ways you get stuff no model can do on its own\"\n\n\"If no new models came out for five years, the advances in AI would still continue apace because people have not realized how much they can do even with the stuff created two years ago\"",
@@ -173,11 +233,11 @@
       "media": [],
       "metrics": {
         "bookmarks": 82,
-        "likes": 547,
+        "likes": 546,
         "quotes": 11,
         "replies": 39,
         "reposts": 13,
-        "views": 29730
+        "views": 29784
       },
       "publishedAt": "2026-06-06T21:51:12Z",
       "text": "Banks and Ansem try the pineapple kool-aid jar with Mike Majlak",
@@ -192,12 +252,12 @@
       "isRetweet": false,
       "media": [],
       "metrics": {
-        "bookmarks": 208,
+        "bookmarks": 209,
         "likes": 260,
         "quotes": 2,
         "replies": 22,
         "reposts": 8,
-        "views": 20956
+        "views": 21007
       },
       "publishedAt": "2026-06-06T18:59:10Z",
       "text": "Ansem breaks down how to start investing from zero\n\n\"First thing is figure out your profits and your expenses. Whatever's left after you pay everything, that's what you invest with\"\n\n\"Think of it as three buckets. Your cash bucket for emergencies, low risk. Your long term bucket for 10-year stuff, basic ETFs like SPY and QQQ, plus large successful companies. And your active trading bucket for high risk, high conviction plays\"\n\n\"People always discount how much compound interest impacts a portfolio. Hit ~10% and keep compounding year over year over a long period, that grows a lot\"\n\n\"You don't wanna go all in on the risky plays. If you go all in leveraged and lose it, you start from zero and you don't wanna be in that position\"",
@@ -219,7 +279,7 @@
         "quotes": 2,
         "replies": 20,
         "reposts": 3,
-        "views": 59353
+        "views": 59446
       },
       "publishedAt": "2026-06-06T01:22:31Z",
       "text": "Ansem is up +450% in two weeks, leading the Bullpen trading comp by nearly $100k\n\n$25K → $137K\n\nAnd he's been calling every trade live on the show",
@@ -237,7 +297,7 @@
         "quotes": 0,
         "replies": 2,
         "reposts": 0,
-        "views": 6300
+        "views": 6326
       },
       "publishedAt": "2026-06-06T00:19:01Z",
       "text": "Mike Majlak reveals Logan Paul is already up ~ $20,000 on his $50,000 Knick’s position he put on before Game 1",
@@ -252,12 +312,12 @@
       "isRetweet": false,
       "media": [],
       "metrics": {
-        "bookmarks": 81,
+        "bookmarks": 80,
         "likes": 282,
         "quotes": 11,
-        "replies": 15,
+        "replies": 16,
         "reposts": 32,
-        "views": 130194
+        "views": 130481
       },
       "publishedAt": "2026-06-05T21:31:23Z",
       "text": "Erik Voorhees explains how Venice's dual token model actually works\n\n\"You can stake 100 VVV to get pro access to Venice. We take a bunch of our revenue, buy the token, and burn it\"\n\n\"We want to take that to its extreme and try to buy every last token we can and burn it all\"\n\n\"You lock up VVV to mint DIEM. Each DIEM you hold gives you $1/day to use on any AI model you want\"\n\n\"We built it so AI agents could hold an asset and get marginally free inference\"\n\n\"It changes the economic calculation. We thought that'd be an interesting design space to explore\"",
@@ -277,7 +337,7 @@
         "quotes": 3,
         "replies": 31,
         "reposts": 4,
-        "views": 79735
+        "views": 79805
       },
       "publishedAt": "2026-06-05T19:36:35Z",
       "text": "Ansem called the market crash live on last nights show\n\nBanks: \"Where do you think Bitcoin is headed\"\n\nAnsem: \"I don't think 60K is gonna hold. I think you're gonna see a high volume sell off and probably some longs get liquidated.\"\n\n\"If it breaks beneath the range lows, all the long positions with stops under 60K get liquidated and that pulls the rest of the market down.\"",
@@ -297,7 +357,7 @@
         "quotes": 3,
         "replies": 4,
         "reposts": 1,
-        "views": 17230
+        "views": 17257
       },
       "publishedAt": "2026-06-05T16:20:06Z",
       "text": "Erik Voorhees reveals he debated SBF right before FTX collapsed\n\n\"I expected a rigorous back and forth. He was totally unhinged, and he fell apart pretty quickly under the scrutiny of the principles that matter in crypto\"\n\n\"Right after the debate, people started piling on. CZ said something to him and Sam snapped back about regulators and jail time and CZ basically said oh yeah? and dumped all the FTT\"\n\n\"That was the beginning of the collapse and the exposure of the biggest fraud in all of crypto. And now he's in jail\"",
@@ -317,7 +377,7 @@
         "quotes": 1,
         "replies": 15,
         "reposts": 3,
-        "views": 4825
+        "views": 4855
       },
       "publishedAt": "2026-06-05T01:31:17Z",
       "text": "Erik Voorhees on the censorship risk he sees coming for AI\n\n\"We all remember COVID and the period of people most freaking out about it, everyone went online to research how dangerous it was\"\n\n\"Even asking certain questions about the vaccines could get you de-platformed\"\n\n\"Imagine if AI had existed then. You go to ChatGPT and ask about the vaccine, the government 100% would've been telling ChatGPT what it could and couldn't say\"",
@@ -337,7 +397,7 @@
         "quotes": 2,
         "replies": 8,
         "reposts": 8,
-        "views": 8723
+        "views": 8755
       },
       "publishedAt": "2026-06-05T00:01:59Z",
       "text": "Erik Voorhees on the AI privacy problem nobody's talking about\n\n\"Everything you send to ChatGPT/Claude, they have forever. All the close thoughts you share, your business info, the code you write, they save all of it\"\n\n\"If the only way to use AI is to hand it to a company that stores it forever, then we have a problem\"",
@@ -357,7 +417,7 @@
         "quotes": 3,
         "replies": 10,
         "reposts": 3,
-        "views": 45849
+        "views": 45891
       },
       "publishedAt": "2026-06-04T23:15:48Z",
       "text": "Ansem's take on Solana's biggest problems and how to fix them\n\n\"I think one issue is the tokenomics. They're probably gonna have to lower the inflation.\"\n\n\"They need to compete with Hyperliquid on perps volumes.\"\n\n\"Memecoins can't be the only thing doing well if it's gonna succeed as an L1 long term.\"",
@@ -377,7 +437,7 @@
         "quotes": 5,
         "replies": 18,
         "reposts": 9,
-        "views": 33853
+        "views": 33920
       },
       "publishedAt": "2026-06-04T22:24:04Z",
       "text": "Erik Voorhees reveals he got into crypto in 2011 \n\n\"I went to the first Bitcoin meetup ever in 2011 when BTC was $5. Only 50 people were there and that was the entire global Bitcoin community”\n\n\"Some wondered if we were too late and some liked to fantasize that maybe someday Bitcoin could hit $100”",
@@ -393,11 +453,11 @@
       "media": [],
       "metrics": {
         "bookmarks": 53,
-        "likes": 170,
+        "likes": 169,
         "quotes": 4,
         "replies": 26,
         "reposts": 10,
-        "views": 55197
+        "views": 55233
       },
       "publishedAt": "2026-06-04T21:49:01Z",
       "text": "Ansem breaks down the Saylor situation\n\n\"He sold 32 Bitcoin. For $2.5 million... but how much did it actually cost him?\"\n\n\"He lost $8 billion on a $2 million sale.\"\n\n\"Saylor was like 'We're gonna sell Bitcoin just a little bit to ease people's concerns'... and people were like, 'what the fuck? Why are you selling?' 'Cause he never sells.\"",
@@ -417,7 +477,7 @@
         "quotes": 1,
         "replies": 7,
         "reposts": 4,
-        "views": 21022
+        "views": 21057
       },
       "publishedAt": "2026-06-04T21:18:12Z",
       "text": "People lined up to fade Ansem in the trading comp two weeks ago. He's now up 260% & winning by a landslide.\n\n\"I'm at 90K right now, and I started with 25K, almost 4x in two weeks\"\n\n\"Every trade I've taken I've been talking about on the show, literally. And it's public too.\"",
@@ -434,12 +494,12 @@
         "https://pbs.twimg.com/media/HJ-8av5WQAA1SkD?format=jpg&name=orig"
       ],
       "metrics": {
-        "bookmarks": 140,
-        "likes": 179,
+        "bookmarks": 139,
+        "likes": 180,
         "quotes": 13,
-        "replies": 38,
+        "replies": 40,
         "reposts": 13,
-        "views": 138791
+        "views": 139195
       },
       "publishedAt": "2026-06-04T16:36:54Z",
       "text": "We're hosting a $10,000 Vibe Code Challenge\n\nBUILD: Unified chat aggregator — Twitch + X + Kick in one real-time feed with source labels\n\nWIN: $10,000\n\nDEADLINE: June 11th\n\nENTER: Form below 👇",
@@ -459,7 +519,7 @@
         "quotes": 3,
         "replies": 39,
         "reposts": 3,
-        "views": 79480
+        "views": 79537
       },
       "publishedAt": "2026-06-03T23:32:16Z",
       "text": "Now loading...  \n\nMike Majlak, Co-host of Impaulsive\n\nThursday, June 4th, 6:30pm EST",
@@ -479,7 +539,7 @@
         "quotes": 1,
         "replies": 9,
         "reposts": 2,
-        "views": 11547
+        "views": 11568
       },
       "publishedAt": "2026-06-03T22:00:07Z",
       "text": "Yea and you know who’s going nowhere REALLY FAST 😭",
@@ -497,7 +557,7 @@
         "quotes": 3,
         "replies": 6,
         "reposts": 4,
-        "views": 11388
+        "views": 11424
       },
       "publishedAt": "2026-06-03T20:09:57Z",
       "text": "Greg Osuri on the supply chain crisis hiding behind the AI boom\n\n\"Most new data centers are using LNG. There's no other way to power these systems\"\n\n\"Now we have a 4-year lead time to get a transformer and a 14-year lead time to get a turbine\"\n\n\"Every part of the supply chain is constrained right now\"",
@@ -517,7 +577,7 @@
         "quotes": 0,
         "replies": 1,
         "reposts": 1,
-        "views": 3887
+        "views": 3899
       },
       "publishedAt": "2026-06-03T16:44:38Z",
       "text": "Ansem's $VVV Thesis\n\nMay 7th\nhttps://t.co/5KaUQzJHJj",
@@ -537,7 +597,7 @@
         "quotes": 1,
         "replies": 1,
         "reposts": 0,
-        "views": 4037
+        "views": 4052
       },
       "publishedAt": "2026-06-03T16:44:37Z",
       "text": "Ansem: \"Zcash is 100% a better trade than Bitcoin right now.\" \n\nMay 7th\nhttps://t.co/djT188VA9G",
@@ -574,12 +634,12 @@
         "https://pbs.twimg.com/media/HJ5yLEXW0AATpF9?format=jpg&name=orig"
       ],
       "metrics": {
-        "bookmarks": 86,
-        "likes": 304,
+        "bookmarks": 88,
+        "likes": 306,
         "quotes": 3,
         "replies": 27,
         "reposts": 12,
-        "views": 189627
+        "views": 190189
       },
       "publishedAt": "2026-06-03T16:44:36Z",
       "text": "Ansem is up +115% and goes 5 for 5 with his calls in crypto the last month.\n\nHe’s held no $BTC or $SOL, but rather $HYPE, $ZEC & $VVV.\n\nHe is making one of the more difficult markets look easy. All you had to do was watch the show.\n\nProof below 👇",
@@ -597,7 +657,7 @@
         "quotes": 12,
         "replies": 39,
         "reposts": 14,
-        "views": 705158
+        "views": 705256
       },
       "publishedAt": "2026-06-03T01:29:36Z",
       "text": "Lacy gave us a top signal in a bear market, impressive",
@@ -619,7 +679,7 @@
         "quotes": 4,
         "replies": 6,
         "reposts": 18,
-        "views": 76329
+        "views": 76369
       },
       "publishedAt": "2026-06-02T21:35:04Z",
       "text": "Now loading...\n\nErik Voorhees, Founder of Venice AI\n\nThursday, June 4th, 5:30pm EST",
@@ -637,7 +697,7 @@
         "quotes": 6,
         "replies": 13,
         "reposts": 23,
-        "views": 36168
+        "views": 36325
       },
       "publishedAt": "2026-06-02T19:45:16Z",
       "text": "Greg Osuri on why the GPU shortage is about to get exponentially worse\n\n\"I can't imagine doing things without agents now\" \n\n\"Out of the one billion global AI users, only 2.4 million use agents\" \n\n\"Imagine if that number is 10x.. what kind of demand are you going to see? 2.4M is leading to the current crisis where we have no h100s at all, what will 24M look like?\"",
@@ -657,7 +717,7 @@
         "quotes": 2,
         "replies": 10,
         "reposts": 1,
-        "views": 43262
+        "views": 43266
       },
       "publishedAt": "2026-06-02T16:57:41Z",
       "text": "Ansem on the first ever Market Bubble: “I own zero bitcoin” \n\nReminder that the alpha on the show is free",
@@ -679,7 +739,7 @@
         "quotes": 2,
         "replies": 7,
         "reposts": 2,
-        "views": 49258
+        "views": 49262
       },
       "publishedAt": "2026-06-02T15:56:32Z",
       "text": "bitcoin:native  has ripped through every liquidation level \n\n@blknoiz06 has been 40x max short since $73.3k\n\nThat's my quant.",
@@ -699,7 +759,7 @@
         "quotes": 3,
         "replies": 42,
         "reposts": 10,
-        "views": 11299
+        "views": 11302
       },
       "publishedAt": "2026-06-02T02:55:35Z",
       "text": "Current state of the crypto market",
@@ -713,11 +773,11 @@
       "media": [],
       "metrics": {
         "bookmarks": 12,
-        "likes": 114,
+        "likes": 115,
         "quotes": 0,
         "replies": 14,
-        "reposts": 5,
-        "views": 18571
+        "reposts": 4,
+        "views": 18581
       },
       "publishedAt": "2026-05-29T17:38:45Z",
       "text": "JUST IN: hyperliquid:native reaches all-time high, $67",
@@ -739,7 +799,7 @@
         "quotes": 2,
         "replies": 49,
         "reposts": 6,
-        "views": 21837
+        "views": 21841
       },
       "publishedAt": "2026-05-26T21:49:40Z",
       "text": "NOW HIRING @ Market Bubble\n\nRole: The most lethal X intern in the world\n\nResponsibilities:\n\n- Craft bangers daily\n- Daily show prep with @blknoiz06 & @Banks\n- Grow this account to 250,000 followers\n\n👇 View Full Responsibilities & Apply\nhttps://x.com/i/jobs/2059388409316061285?s=20",
@@ -753,11 +813,11 @@
       "media": [],
       "metrics": {
         "bookmarks": 57,
-        "likes": 186,
+        "likes": 187,
         "quotes": 1,
         "replies": 6,
         "reposts": 12,
-        "views": 108015
+        "views": 108041
       },
       "publishedAt": "2026-05-25T19:22:27Z",
       "text": "Last episode, Ansem shared his analysis on near:native's recent price action and developing narrative...\n\nSince the call last Thursday, near:native is +41%",
@@ -779,7 +839,7 @@
         "quotes": 1,
         "replies": 16,
         "reposts": 3,
-        "views": 36256
+        "views": 36258
       },
       "publishedAt": "2026-05-22T04:04:03Z",
       "text": "THE OFFICIAL TOP 25:  \n\n'THE WORST OF CT' RANKINGS",
@@ -797,7 +857,7 @@
         "quotes": 0,
         "replies": 7,
         "reposts": 2,
-        "views": 9331
+        "views": 9334
       },
       "publishedAt": "2026-05-22T00:54:50Z",
       "text": "Trader Mayne says Ansem is one of the best traders on CT\n\n“I got you in my top five for sure”\n\n“The Solana trade was epic and we had a meme coin cycle and you were early to it”\n\n“You just kept showing up and doing your thing and I got a lot of respect for that and I know you’re a good trader”",
@@ -817,7 +877,7 @@
         "quotes": 0,
         "replies": 9,
         "reposts": 7,
-        "views": 25088
+        "views": 25089
       },
       "publishedAt": "2026-05-21T22:53:20Z",
       "text": "Trader Mayne thinks Flood’s Hyperliquid trade will go down as one of the greatest trades in crypto for a very long time \n\n“The HYPE trade seems obvious but to do it with the size and level of conviction and doubling down that Flood did it with is something I think beyond what most people think”\n\n“A lot of people are like, oh dude, I have a bunch of spot HYPE. This guy has a family office, he’s like 80% HYPE, he’s got an options play on HYPE, he’s farming the airdrop on HYPE”\n\n“He was on every possible avenue and way to be bullish on this asset class like I’ve never seen before”",
@@ -837,7 +897,7 @@
         "quotes": 0,
         "replies": 14,
         "reposts": 10,
-        "views": 22954
+        "views": 22955
       },
       "publishedAt": "2026-05-21T22:26:54Z",
       "text": "Ansem on how to beat inflation\n\n“With your discretionary income that you have, you have to be investing”\n\n“It’s really the only way to keep up with inflation and keep up with the lack of wage growth across the board, is to be investing”\n\n“I think that’s why everybody, like Threadguy’s done a great job of talking about this, everybody’s gonna be a trader”\n\n“Everybody’s gonna learn how to trade, everybody’s gonna put their money into markets. It’s really how you secure wealth over generations and how you combat inflation”",
@@ -857,7 +917,7 @@
         "quotes": 16,
         "replies": 24,
         "reposts": 41,
-        "views": 223081
+        "views": 223117
       },
       "publishedAt": "2026-05-21T21:58:49Z",
       "text": "Ansem shares his thesis on near:native \n\n“So NEAR is focusing on the two areas in crypto that are getting attention, privacy and also AI”\n\n“One of the theses around NEAR is it being a platform for agents to transact on”\n\n“KYC laws make it really difficult for AI agents to transact on traditional rails because all of the banking laws that exist are tailored for humans”\n\n“As we’re rewriting the systems of how we’re gonna transact on a day to day basis, crypto obviously is one of the platforms that’s gonna be able to benefit agents because you won’t need KYC to transact on blockchains”",
@@ -877,7 +937,7 @@
         "quotes": 44,
         "replies": 124,
         "reposts": 32,
-        "views": 228750
+        "views": 228776
       },
       "publishedAt": "2026-05-21T21:27:06Z",
       "text": "Ansem: Ethereum is going to zero\n\nAnsem: “I think it’s gonna go to $1,000 in the next year or so”\n\nBanks: “So fair to say if you’re in a coma for the next 10 years, you’re putting your money in just about anything over Ethereum?”\n\nAnsem: “Literally anything”",
@@ -895,11 +955,11 @@
       ],
       "metrics": {
         "bookmarks": 437,
-        "likes": 710,
+        "likes": 709,
         "quotes": 79,
         "replies": 391,
         "reposts": 45,
-        "views": 461262
+        "views": 461344
       },
       "publishedAt": "2026-05-21T20:30:10Z",
       "text": "THE OFFICIAL TOP 25:\n\n'THE BEST OF CT' RANKINGS\n\n1. Cobie\n2. CL\n3. mert\n4. theadguy\n5. Jeff\n6. Mayne\n7. Flood\n8. based16z\n9. Jesse\n10. shoku\n11. Intern\n12. Meltem\n13. Rhino\n14. Kel\n15. Frank\n16. awawat\n17. tolks\n18. innerdevcrypto\n19. chase\n20. Cold Blooded Shiller\n21. loma\n22. gainzy\n23. yano\n24. rasmr\n25. Alon",
@@ -917,7 +977,7 @@
         "quotes": 0,
         "replies": 0,
         "reposts": 2,
-        "views": 5641
+        "views": 5645
       },
       "publishedAt": "2026-05-21T19:23:10Z",
       "text": "Ansem's $VVV Thesis\n\nMay 7th",
@@ -937,7 +997,7 @@
         "quotes": 0,
         "replies": 1,
         "reposts": 1,
-        "views": 5578
+        "views": 5582
       },
       "publishedAt": "2026-05-21T19:22:52Z",
       "text": "Ansem: \"Zcash is 100% a better trade than Bitcoin right now.\"\n\nMay 7th",
@@ -1019,7 +1079,7 @@
         "quotes": 4,
         "replies": 48,
         "reposts": 26,
-        "views": 153395
+        "views": 153422
       },
       "publishedAt": "2026-05-21T19:21:46Z",
       "text": "Everyone faded Ansem when he shared his crypto portfolio.\n\nHe held no $BTC or $SOL, but rather $HYPE, $ZEC & $VVV.\n\nTruth is, he couldn't have been more right.\n\n👇 Proof below",
@@ -1057,7 +1117,7 @@
         "quotes": 3,
         "replies": 35,
         "reposts": 14,
-        "views": 220185
+        "views": 220213
       },
       "publishedAt": "2026-05-21T03:43:07Z",
       "text": "FaZe Banks & Ansem said HYPE flipping SOL by the end of the year at 12% odds was massively mispriced… They were right.\n\nHyperliquid has officially flipped Solana in fully diluted valuation.",
@@ -1113,12 +1173,12 @@
       "isRetweet": false,
       "media": [],
       "metrics": {
-        "bookmarks": 18,
+        "bookmarks": 17,
         "likes": 97,
         "quotes": 2,
         "replies": 13,
         "reposts": 4,
-        "views": 13004
+        "views": 13005
       },
       "publishedAt": "2026-05-15T16:56:02Z",
       "text": "Ansem reveals he bought $RKLB  at $6 and $7 😭😭",
@@ -1138,7 +1198,7 @@
         "quotes": 0,
         "replies": 3,
         "reposts": 2,
-        "views": 22572
+        "views": 22573
       },
       "publishedAt": "2026-05-15T14:24:18Z",
       "text": "Banks explains why the Swatch AP is genius level marketing\n\n“I think it’s a really stupid take to say ‘I’m selling my AP because now the barrier to entry is lower’”\n\n“We’ve seen Off-White x Nike, Louis Vuitton x Supreme, Porsche x Lego… these collabs work”\n\n“Put a Porsche Lego in front of a 12 year old kid and he becomes obsessed with it. The rest of his life he wants the real thing”\n\n“Now there’s a realistic goal for some kid in high school to buy a $1,500 AP. It doesn’t mean sh*t to us cause we’re millionaires and adults but like for him…”\n\n“He’s thinking I’ve gotta work my ass off for the next 10 years so I can buy the real thing”\n\n“I think it’s genius level marketing”",
@@ -1158,7 +1218,7 @@
         "quotes": 2,
         "replies": 6,
         "reposts": 3,
-        "views": 26072
+        "views": 26073
       },
       "publishedAt": "2026-05-15T04:38:09Z",
       "text": "Ansem’s Always Early",
@@ -1178,7 +1238,7 @@
         "quotes": 0,
         "replies": 6,
         "reposts": 4,
-        "views": 92080
+        "views": 92081
       },
       "publishedAt": "2026-05-15T03:13:44Z",
       "text": "Banks leaked the Drake Polymarket ICEMAN name drop at 1:15pm PST live on air \n\nAlways Early.",
@@ -1233,12 +1293,12 @@
       "isRetweet": false,
       "media": [],
       "metrics": {
-        "bookmarks": 123,
+        "bookmarks": 122,
         "likes": 468,
         "quotes": 13,
         "replies": 42,
         "reposts": 53,
-        "views": 119070
+        "views": 119076
       },
       "publishedAt": "2026-05-15T01:10:32Z",
       "text": "Ansem: Zcash is Swiss banking in your pocket\n\n“Instead of having to look at different bank accounts and different places to store your wealth, Zcash allows you to have access to that at any point in time and take it with you anywhere”\n\n“If you have a billion dollars in Bitcoin and send somebody $100, anybody you sent that to now knows you have a billion dollars in Bitcoin”\n\n“If you have a billion dollars in Zcash and send somebody $100, they don’t know how much you have in your actual address”\n\n“That’s the core reason I think Zcash differentiates from Bitcoin”\n\n“In my opinion, Zcash is the second best store of value behind Bitcoin. Right now it trades at around a $7B market cap, so I think it has a lot of room to do well and a lot of room to grow”\n\n“In 2016, Bitcoin was around $200 and now it trades at $80,000. In 2016, Zcash was around the same price it is right now…”",
@@ -1258,7 +1318,7 @@
         "quotes": 43,
         "replies": 69,
         "reposts": 132,
-        "views": 1973771
+        "views": 1973803
       },
       "publishedAt": "2026-05-14T23:19:32Z",
       "text": "Tristan Thompson explains how he invested in Anthropic \n\n“It was a buddy of mine in Silicon Valley… just going to a couple of these dinners they were doing with the NBA, sitting there talking to these guys and really picking their brains”\n\n“They were telling me about the future of AI and technology… I was like hey man, I like what you’re talking about”\n\n“It was a bunch of SF guys and everyone kept telling me, so I was like alright man, here’s a check. I wanna get in the game”\n\n“From there they just opened up so much for me. I was able to get in early through SPVs and bring in my other buddies to make a bigger check”",
@@ -1278,7 +1338,7 @@
         "quotes": 1,
         "replies": 20,
         "reposts": 9,
-        "views": 28488
+        "views": 28490
       },
       "publishedAt": "2026-05-14T21:58:09Z",
       "text": "Banks reveals he’s lost close to $500,000 on Solana \n\nBanks: “It’s all good though we’re gonna get it back, we love $SOL”\n\nAnsem: “Yeah it’s my favorite asset in Crypto. I hit Solana so many times”\n\nBanks: “Next time you think about hitting buy, whether you hit or not, please think about me and let me know”",
@@ -1293,12 +1353,12 @@
       "isRetweet": false,
       "media": [],
       "metrics": {
-        "bookmarks": 50,
+        "bookmarks": 49,
         "likes": 191,
         "quotes": 1,
         "replies": 10,
-        "reposts": 16,
-        "views": 27166
+        "reposts": 15,
+        "views": 27167
       },
       "publishedAt": "2026-05-14T20:52:55Z",
       "text": "Ansem explains why Coinbase acquiring Hyperliquid’s native stablecoin is bullish\n\n“The entire treasury TVL on Hyperliquid, which is around $5B is now going to be supported by Coinbase and Circle”\n\n“This added an entirely new revenue line to Hyperliquid and also great alignment with Coinbase which is one of the strongest US companies for Crypto”\n\n“People kind of see them as competitors… but this alignment is really crucial”\n\n“This added around $150,000,000 estimated”",
@@ -1320,7 +1380,7 @@
         "quotes": 0,
         "replies": 9,
         "reposts": 3,
-        "views": 11587
+        "views": 11590
       },
       "publishedAt": "2026-05-14T19:51:12Z",
       "text": "LIVE W/ TRISTAN THOMPSON\n\nNBA Champion & Investor\n\nMarket Bubble: Episode 3    \n\nToday @ 3:30PM PST",
@@ -1340,7 +1400,7 @@
         "quotes": 1,
         "replies": 23,
         "reposts": 19,
-        "views": 35309
+        "views": 35311
       },
       "publishedAt": "2026-05-14T17:35:39Z",
       "text": "LIVE W/ ERIK VOORHEES\n\nFounder of Venice AI\n\nMarket Bubble: Episode 3   \n\nToday @ 2:30PM PST",
@@ -1378,7 +1438,7 @@
         "quotes": 4,
         "replies": 21,
         "reposts": 12,
-        "views": 35507
+        "views": 35506
       },
       "publishedAt": "2026-05-09T22:46:12Z",
       "text": "Ansem explains why he’s bullish on $MP\n\n“Right now the US relies on China for a lot of the rare earth metals that we source and they’re important for EVs, magnets and all these electronics”\n\n“We have no real way of getting them except for these very few mining companies… $MP is one of those”",
@@ -1394,11 +1454,11 @@
       "media": [],
       "metrics": {
         "bookmarks": 231,
-        "likes": 672,
+        "likes": 673,
         "quotes": 19,
         "replies": 64,
         "reposts": 76,
-        "views": 141991
+        "views": 142024
       },
       "publishedAt": "2026-05-08T23:47:40Z",
       "text": "Ansem shares his thesis on $VVV \n\n“Venice AI is essentially a private inference platform… you can access all of the top state-of-the-art models, all the best open source models but through Venice, it doesn’t store any of your information”\n\n“They’ve done really well. They have over 2 million users. I think they have 50k daily actives on their app and they’re making money from the subscription”\n\n“One of the cool features of Venice that I thought was interesting is they have a second token that’s called DIEM… if you have 1 DIEM, you get to use $1 of compute per day for that 1 DIEM that you have”\n\n“It’s a really interesting model. I think it’s honestly attracted a lot of people to stake $VVV.  We don’t have a lot of real protocols there in the crypto and AI space that aren’t vapor and are actually doing well”",
@@ -1474,11 +1534,11 @@
       "media": [],
       "metrics": {
         "bookmarks": 28,
-        "likes": 104,
+        "likes": 103,
         "quotes": 0,
         "replies": 7,
         "reposts": 2,
-        "views": 18442
+        "views": 18444
       },
       "publishedAt": "2026-05-08T01:20:16Z",
       "text": "Mizkif reveals he’s made close to $20,000,000 with roughly 70% coming from the stock market\n\nMizkif: “I don’t need money, I’ve made money from Kick and other things but I don’t need more money”\n\nBanks: “Shut the f-ck up. How much money have you made throughout the course of your career?”\n\nMizkif: I’m sitting at close to $20,000,000 but here’s thing… most of that, I would say 70% is made through the stock market, it’s not made through my streams”",
@@ -1498,7 +1558,7 @@
         "quotes": 8,
         "replies": 35,
         "reposts": 8,
-        "views": 77191
+        "views": 77192
       },
       "publishedAt": "2026-05-08T00:19:41Z",
       "text": "Banks gets MOGGED by Ansem 😭 \n\n“That’s bullsh*t, what the f*ck am I chopped? I feel like I look alright”",
@@ -1520,7 +1580,7 @@
         "quotes": 2,
         "replies": 42,
         "reposts": 14,
-        "views": 123017
+        "views": 123023
       },
       "publishedAt": "2026-05-07T16:33:30Z",
       "text": "LIVE W/ MIZKIF\n\nMarket Bubble: Episode 2 \n\nToday @ 1PM PST",
@@ -1538,7 +1598,7 @@
         "quotes": 11,
         "replies": 22,
         "reposts": 16,
-        "views": 48626
+        "views": 48627
       },
       "publishedAt": "2026-05-01T02:10:44Z",
       "text": "Market Bubble: Episode 1 - WELCOME TO THE SHOW",
@@ -1560,7 +1620,7 @@
         "quotes": 2,
         "replies": 36,
         "reposts": 6,
-        "views": 131203
+        "views": 131206
       },
       "publishedAt": "2026-04-30T20:32:31Z",
       "text": "Welcome to Market Bubble",
