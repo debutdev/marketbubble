@@ -26,18 +26,13 @@
 </div>
 
 <p align="center">
-  <video src="./public/readme/watch-demo.mp4" poster="./public/readme/watch-demo-poster.jpg" controls muted loop playsinline width="100%"></video>
-</p>
-
-<p align="center">
   <a href="./public/readme/watch-demo.mp4">
-    <img src="./public/readme/watch-demo-poster.jpg" alt="Watch dashboard demo video preview" width="100%" />
+    <img src="./public/readme/watch-demo-preview.gif" alt="Watch dashboard demo animation" width="100%" />
   </a>
 </p>
 
 <p align="center">
-  <a href="./public/readme/watch-demo.mp4"><strong>Play the demo video</strong></a>
-  if your GitHub client shows the preview image instead of inline video controls.
+  <a href="./public/readme/watch-demo.mp4"><strong>Open the full MP4 demo</strong></a>
 </p>
 
 ---
