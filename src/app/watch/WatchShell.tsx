@@ -16,7 +16,7 @@ import type { CommunityChatEvent } from "@/lib/community-top-chat-types";
 import styles from "./watch.module.css";
 
 const twitchVideoSrc =
-  "https://player.twitch.tv/?channel=xqc&parent=127.0.0.1&parent=localhost&parent=marketbubble.vercel.app&muted=true&autoplay=true";
+  "https://player.twitch.tv/?video=2788673017&parent=127.0.0.1&parent=localhost&parent=marketbubble.vercel.app&muted=true&autoplay=true";
 const collapsedLeftPanelWidth = 44;
 const collapsedChatPanelWidth = 44;
 const expandedChatPanelWidth = 300;
