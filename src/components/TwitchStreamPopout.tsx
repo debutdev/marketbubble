@@ -111,7 +111,13 @@ export function TwitchStreamPopout() {
     }
   }
 
-  if (!pathname || pathname === "/" || dismissed) {
+  if (
+    !pathname ||
+    pathname === "/" ||
+    pathname.startsWith("/dashboard") ||
+    pathname.startsWith("/watch") ||
+    dismissed
+  ) {
     return null;
   }
 

@@ -4824,6 +4824,8 @@ body[data-chat-expanded="true"] .stats-stage {
   color: #e4e4e4;
   font-family: var(--font-geist-sans), Arial, sans-serif;
   animation: chat-message-rise 520ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  content-visibility: auto;
+  contain-intrinsic-size: 4.8rem;
 }
 
 .chat-empty {
@@ -4837,6 +4839,195 @@ body[data-chat-expanded="true"] .stats-stage {
   margin: 0.16rem 0 0;
   font-size: clamp(0.76rem, 0.92vw, 0.95rem);
   line-height: 1.22;
+}
+
+.chat-emote {
+  display: inline-block;
+  width: auto;
+  height: 1.42em;
+  max-width: 4.8em;
+  margin: 0 0.08em;
+  vertical-align: -0.34em;
+  object-fit: contain;
+}
+
+.chat-emote-fallback {
+  color: rgb(228 228 228 / 0.62);
+  font-weight: 700;
+}
+
+.chat-cashtag {
+  color: #8ff0b0;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.92em;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.chat-ticker-cards {
+  display: grid;
+  gap: 0.42rem;
+  margin-top: 0.54rem;
+}
+
+.chat-ticker-card {
+  display: grid;
+  min-width: 0;
+  grid-template-areas:
+    "image title"
+    "chart chart";
+  grid-template-columns: 1.9rem minmax(0, 1fr);
+  align-items: center;
+  gap: 0.42rem 0.54rem;
+  overflow: hidden;
+  border: 1px solid rgb(228 228 228 / 0.12);
+  border-radius: 9px;
+  background:
+    linear-gradient(135deg, rgb(83 252 24 / 0.08), transparent 42%),
+    #181818;
+  color: #e4e4e4;
+  padding: 0.5rem 0.5rem 0.62rem;
+  text-decoration: none;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.chat-ticker-card:hover,
+.chat-ticker-card:focus-visible {
+  border-color: rgb(83 252 24 / 0.34);
+  background:
+    linear-gradient(135deg, rgb(83 252 24 / 0.12), transparent 44%),
+    #1c1c1c;
+  outline: 0;
+}
+
+.chat-ticker-card:focus-visible {
+  box-shadow: 0 0 0 2px rgb(52 132 247 / 0.72);
+}
+
+.chat-ticker-card-image {
+  display: grid;
+  width: 1.9rem;
+  height: 1.9rem;
+  grid-area: image;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgb(22 22 22 / 0.18);
+  border-radius: 8px;
+  background: #e4e4e4;
+  color: #161616;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.54rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.chat-ticker-card-image img,
+.chat-ticker-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chat-ticker-card-title {
+  display: grid;
+  min-width: 0;
+  grid-area: title;
+  gap: 0.24rem;
+}
+
+.chat-ticker-card-title > strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chat-ticker-card-title > strong {
+  color: #f2f2f2;
+  font-size: 0.78rem;
+  font-weight: 850;
+  line-height: 1;
+}
+
+.chat-ticker-card-meta {
+  display: flex;
+  min-width: max-content;
+  align-items: baseline;
+  gap: 0.32rem;
+  overflow: hidden;
+  color: rgb(228 228 228 / 0.58);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.66rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.chat-ticker-card-meta > span:first-child {
+  flex: 0 0 auto;
+}
+
+.chat-ticker-card-meta strong {
+  min-width: 0;
+  overflow: hidden;
+  color: #ffffff;
+  font-size: 0.68rem;
+  font-weight: 850;
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chat-ticker-card-meta span[data-direction] {
+  flex: 0 0 auto;
+  font-size: 0.64rem;
+  font-weight: 850;
+  line-height: 1;
+}
+
+.chat-ticker-card-meta span[data-direction="up"] {
+  color: #53fc18;
+}
+
+.chat-ticker-card-meta span[data-direction="down"] {
+  color: #ff5f68;
+}
+
+.chat-ticker-card-meta span[data-direction="flat"] {
+  color: rgb(228 228 228 / 0.52);
+}
+
+.chat-ticker-card-chart {
+  display: block;
+  min-width: 0;
+  height: 1.45rem;
+  grid-area: chart;
+  color: #00d084;
+  overflow: visible;
+}
+
+.chat-ticker-card-chart .chat-ticker-chart,
+.chat-ticker-card-chart .chat-ticker-chart-empty {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.chat-ticker-card[data-loading="true"] .chat-ticker-card-chart,
+.chat-ticker-card[data-unavailable="true"] .chat-ticker-card-chart {
+  opacity: 0.36;
+}
+
+.chat-ticker-card-placeholder {
+  display: inline-flex;
+  min-height: 1.9rem;
+  align-items: center;
+  color: #8ff0b0;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.72rem;
+  font-weight: 900;
 }
 
 .chat-message-meta {

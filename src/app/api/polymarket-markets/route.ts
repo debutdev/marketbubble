@@ -22,6 +22,7 @@ type GammaMarket = {
   lastTradePrice?: number | string;
   liquidity?: number | string;
   liquidityNum?: number | string;
+  oneDayPriceChange?: number | string;
   outcomePrices?: string | string[];
   outcomes?: string | string[];
   question?: string;
@@ -39,7 +40,7 @@ type GammaEvent = {
   liquidity?: number | string;
   liquidityClob?: number | string;
   markets?: GammaMarket[];
-  slug: string;
+  slug?: string;
   tags?: GammaTag[];
   title: string;
   volume?: number | string;
@@ -146,41 +147,140 @@ function getCategories(event: GammaEvent) {
   );
 }
 
-function chooseMarket(event: GammaEvent) {
-  const markets = event.markets ?? [];
+function cleanMarketLabel(value: string) {
+  return value.replace(/\s+/g, " ").trim();
+}
 
-  return (
-    markets.find((market) => market.active && !market.closed && market.acceptingOrders) ??
-    markets.find((market) => market.active && !market.closed) ??
-    markets[0]
+function fillBlank(title: string, strike: string) {
+  const cleanTitle = cleanMarketLabel(title);
+  const cleanStrike = cleanMarketLabel(strike);
+
+  if (!cleanStrike) {
+    return cleanTitle;
+  }
+
+  if (/_{2,}|\.{3}|\u2026/.test(cleanTitle)) {
+    return cleanTitle.replace(/_{2,}|\.{3}|\u2026/, cleanStrike);
+  }
+
+  return `${cleanTitle} - ${cleanStrike}`;
+}
+
+function getActiveMarkets(event: GammaEvent) {
+  return (event.markets ?? []).filter(
+    (market) => market.active && !market.closed && parseJsonArray(market.outcomePrices).length > 0,
   );
 }
 
-function getProbability(market?: GammaMarket) {
-  const outcomes = parseJsonArray(market?.outcomes);
-  const prices = parseJsonArray(market?.outcomePrices).map(Number);
+function toProbabilityPoints(value: number | null) {
+  if (value === null) {
+    return null;
+  }
+
+  const points = value > 1 ? value : value * 100;
+
+  return Number.isFinite(points) ? Math.min(100, Math.max(0, Number(points.toFixed(1)))) : null;
+}
+
+function getYesProbability(market: GammaMarket) {
+  const outcomes = parseJsonArray(market.outcomes);
+  const prices = parseJsonArray(market.outcomePrices).map(Number);
   const yesIndex = Math.max(
     0,
     outcomes.findIndex((outcome) => outcome.toLowerCase() === "yes"),
   );
-  const probability = Number.isFinite(prices[yesIndex]) ? prices[yesIndex] : null;
+  const probability = toProbabilityPoints(Number.isFinite(prices[yesIndex]) ? prices[yesIndex] : null);
 
   if (probability !== null) {
-    return {
-      label: outcomes[yesIndex] ?? "Yes",
-      value: Number((probability * 100).toFixed(1)),
-    };
+    return probability;
   }
 
   const fallback =
-    toNumber(market?.lastTradePrice) ?? toNumber(market?.bestBid) ?? toNumber(market?.bestAsk);
+    toNumber(market.lastTradePrice) ?? toNumber(market.bestBid) ?? toNumber(market.bestAsk);
 
-  return fallback === null
-    ? null
-    : {
+  return toProbabilityPoints(fallback);
+}
+
+function getDayChange(market: GammaMarket) {
+  const change = toNumber(market.oneDayPriceChange);
+
+  return change === null ? 0 : Number((change * 100).toFixed(1));
+}
+
+function selectEventMarket(event: GammaEvent) {
+  const markets = getActiveMarkets(event);
+
+  if (!markets.length) {
+    return null;
+  }
+
+  const binary = markets.length === 1;
+
+  if (binary) {
+    const market = markets[0];
+    const yesValue = getYesProbability(market);
+
+    if (yesValue === null) {
+      return null;
+    }
+
+    return {
+      binary,
+      dayChange: getDayChange(market),
+      market,
+      probability: {
         label: "Yes",
-        value: Number((fallback * 100).toFixed(1)),
+        value: yesValue,
+      },
+      question: cleanMarketLabel(market.question ?? event.title),
+    };
+  }
+
+  let selected:
+    | {
+        distance: number;
+        market: GammaMarket;
+        probability: number;
+        question: string;
+      }
+    | null = null;
+
+  for (const market of markets) {
+    const yesValue = getYesProbability(market);
+
+    if (yesValue === null) {
+      continue;
+    }
+
+    const distance = Math.abs(yesValue - 50);
+    const question = market.groupItemTitle
+      ? fillBlank(event.title, market.groupItemTitle)
+      : cleanMarketLabel(market.question ?? event.title);
+
+    if (!selected || distance < selected.distance) {
+      selected = {
+        distance,
+        market,
+        probability: yesValue,
+        question,
       };
+    }
+  }
+
+  if (!selected) {
+    return null;
+  }
+
+  return {
+    binary,
+    dayChange: getDayChange(selected.market),
+    market: selected.market,
+    probability: {
+      label: "Yes",
+      value: selected.probability,
+    },
+    question: selected.question,
+  };
 }
 
 function normalizeEvent(event: GammaEvent) {
@@ -190,8 +290,13 @@ function normalizeEvent(event: GammaEvent) {
     return null;
   }
 
-  const market = chooseMarket(event);
-  const probability = getProbability(market);
+  const selectedMarket = selectEventMarket(event);
+
+  if (!selectedMarket) {
+    return null;
+  }
+
+  const { market, probability } = selectedMarket;
   const volume24h = toNumber(market?.volume24hr) ?? toNumber(event.volume24hr) ?? 0;
   const volume = toNumber(market?.volumeNum) ?? toNumber(market?.volume) ?? toNumber(event.volume) ?? 0;
   const liquidity =
@@ -200,28 +305,37 @@ function normalizeEvent(event: GammaEvent) {
     toNumber(event.liquidityClob) ??
     toNumber(event.liquidity) ??
     0;
+  const slug = event.slug ?? event.id;
 
   return {
+    binary: selectedMarket.binary,
     categories,
     closesAt: market?.endDate ?? event.endDate ?? null,
-    id: event.id,
-    image: safeExternalUrl(market?.image ?? event.image ?? event.icon ?? market?.icon),
+    dayChange: selectedMarket.dayChange,
+    id: slug,
+    image: safeExternalUrl(event.icon ?? event.image ?? market?.icon ?? market?.image),
     liquidity,
     primaryCategory: categories[0],
     probability,
-    question: market?.question ?? event.title,
-    slug: event.slug,
+    question: selectedMarket.question,
+    slug,
     title: event.title,
-    url: `https://polymarket.com/event/${encodeURIComponent(event.slug)}`,
+    url: `https://polymarket.com/event/${encodeURIComponent(slug)}`,
     volume,
     volume24h,
   };
 }
 
+function getLiveMarketScore(market: NonNullable<ReturnType<typeof normalizeEvent>>) {
+  const probability = market.probability?.value;
+
+  return probability !== undefined && probability >= 5 && probability <= 95 ? 1 : 0;
+}
+
 export async function GET() {
   try {
     const response = await fetch(
-      "https://gamma-api.polymarket.com/events?active=true&closed=false&order=volume_24hr&ascending=false&limit=500",
+      "https://gamma-api.polymarket.com/events?active=true&closed=false&order=volume24hr&ascending=false&limit=500",
       {
         cache: "no-store",
         headers: {
@@ -240,8 +354,14 @@ export async function GET() {
     const events = (await response.json()) as GammaEvent[];
     const markets = events
       .map(normalizeEvent)
-      .filter((market) => market !== null)
-      .sort((a, b) => b.volume24h - a.volume24h || b.volume - a.volume)
+      .filter((market): market is NonNullable<ReturnType<typeof normalizeEvent>> => market !== null)
+      .sort(
+        (a, b) =>
+          getLiveMarketScore(b) - getLiveMarketScore(a) ||
+          Number(b.binary) - Number(a.binary) ||
+          b.volume24h - a.volume24h ||
+          b.volume - a.volume,
+      )
       .slice(0, 48);
 
     return NextResponse.json({

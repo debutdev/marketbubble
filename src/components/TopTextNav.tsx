@@ -7,9 +7,9 @@ import { useState } from "react";
 
 const navItems = [
   { href: "/", label: "Home", key: "home" },
+  { href: "/watch", label: "Watch", key: "watch" },
   { href: "/market", label: "Market", key: "market" },
   { href: "/content", label: "Content", key: "content" },
-  { href: "/community", label: "Community", key: "community" },
   { href: "/leaderboard", label: "Leaderboard", key: "leaderboard" },
 ] as const;
 
@@ -18,12 +18,12 @@ type TopTextNavProps = {
 };
 
 function getKeyForPathname(pathname: string) {
-  if (pathname.startsWith("/leaderboard")) {
-    return "leaderboard";
+  if (pathname.startsWith("/watch")) {
+    return "watch";
   }
 
-  if (pathname.startsWith("/community")) {
-    return "community";
+  if (pathname.startsWith("/leaderboard")) {
+    return "leaderboard";
   }
 
   if (pathname.startsWith("/content")) {

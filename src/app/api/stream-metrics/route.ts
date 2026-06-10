@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
+import { getKickChannelsBySlug, getKickLivestreamsByBroadcasterId } from "@/lib/kick-api";
+import { getTwitchStreamsByLogin } from "@/lib/twitch-api";
 
 const defaultKickChannels = ["ansem"];
 const defaultTwitchChannels: string[] = [];
@@ -9,6 +11,7 @@ const twitchClientId = "kimne78kx3ncx6brgo4mv6wki5h1ko";
 const execFileAsync = promisify(execFile);
 const maxRequestedChannels = 8;
 const fallbackKickChatroomIds: Record<string, number> = {
+  ansem: 108796898,
   solomission: 2218947,
 };
 
@@ -84,6 +87,24 @@ async function getTwitchChannelMetrics(twitchChannel: string): Promise<ChannelMe
 }
 
 async function getTwitchMetrics(twitchChannels: string[]) {
+  const officialStreams = await getTwitchStreamsByLogin(twitchChannels);
+
+  if (officialStreams) {
+    return Object.fromEntries(
+      twitchChannels.map((twitchChannel) => {
+        const stream = officialStreams[twitchChannel.toLowerCase()];
+
+        return [
+          twitchChannel,
+          {
+            online: Boolean(stream),
+            viewers: Number(stream?.viewer_count ?? 0),
+          },
+        ];
+      }),
+    ) as Record<string, ChannelMetrics>;
+  }
+
   const channelMetrics = await Promise.all(
     twitchChannels.map(async (twitchChannel) => [
       twitchChannel,
@@ -163,6 +184,37 @@ async function getKickChannelMetricsWithCurl(
 }
 
 async function getKickMetrics(kickChannels: string[]) {
+  const officialChannels = await getKickChannelsBySlug(kickChannels);
+
+  if (officialChannels) {
+    const broadcasterUserIds = Object.values(officialChannels)
+      .map((channel) => Number(channel.broadcaster_user_id))
+      .filter((id) => Number.isFinite(id) && id > 0);
+    const officialLivestreams =
+      broadcasterUserIds.length > 0
+        ? await getKickLivestreamsByBroadcasterId(broadcasterUserIds)
+        : null;
+
+    return Object.fromEntries(
+      kickChannels.map((kickChannel) => {
+        const officialChannel = officialChannels[kickChannel.toLowerCase()];
+        const officialLivestream = officialChannel?.broadcaster_user_id
+          ? officialLivestreams?.[String(officialChannel.broadcaster_user_id)]
+          : undefined;
+        const stream = officialChannel?.stream;
+
+        return [
+          kickChannel,
+          {
+            chatroomId: fallbackKickChatroomIds[kickChannel],
+            online: Boolean(officialLivestream || stream?.is_live),
+            viewers: Number(officialLivestream?.viewer_count ?? stream?.viewer_count ?? 0),
+          },
+        ];
+      }),
+    ) as Record<string, ChannelMetrics>;
+  }
+
   const channelMetrics = await Promise.all(
     kickChannels.map(async (kickChannel) => [
       kickChannel,

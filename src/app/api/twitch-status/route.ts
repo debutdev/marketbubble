@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { getTwitchStreamsByLogin } from "@/lib/twitch-api";
 
 const twitchClientId = "kimne78kx3ncx6brgo4mv6wki5h1ko";
 
@@ -11,6 +12,15 @@ export async function GET(request: Request) {
   const twitchChannel = normalizeTwitchChannel(searchParams.get("twitchChannel") ?? "arky") || "arky";
 
   try {
+    const officialStreams = await getTwitchStreamsByLogin([twitchChannel]);
+
+    if (officialStreams) {
+      return NextResponse.json(
+        { online: Boolean(officialStreams[twitchChannel.toLowerCase()]) },
+        { headers: { "Cache-Control": "no-store" } },
+      );
+    }
+
     const response = await fetch("https://gql.twitch.tv/gql", {
       method: "POST",
       headers: {

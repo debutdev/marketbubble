@@ -5,8 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "env:check-live": "node scripts/check-live-env.mjs",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "kick:subscribe-chat": "node scripts/register-kick-events.mjs",
+    "x:collect-broadcasts": "node collectors/x-broadcast-chat-collector/collector.mjs"
   },
   "dependencies": {
     "@upstash/redis": "^1.38.0",
@@ -14,7 +17,8 @@
     "next": "16.2.7",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "react-icons": "^5.6.0"
+    "react-icons": "^5.6.0",
+    "ws": "^8.21.0"
   },
   "overrides": {
     "postcss": "^8.5.15"

@@ -6,6 +6,7 @@ export const dynamic = "force-dynamic";
 type AssetConfig = {
   description: string;
   displayTicker: string;
+  imageUrl?: string;
   name: string;
   newsSymbol: string;
   yahooSymbol?: string;
@@ -22,8 +23,10 @@ type YahooChartResponse = {
       meta?: {
         chartPreviousClose?: number;
         currency?: string;
+        longName?: string;
         previousClose?: number;
         regularMarketPrice?: number;
+        shortName?: string;
       };
       timestamp?: number[];
     }>;
@@ -57,6 +60,7 @@ const assetConfigs: Record<string, AssetConfig> = {
   BTC: {
     description: "Bitcoin is the largest crypto asset by market value and is commonly tracked as the benchmark for crypto risk appetite.",
     displayTicker: "BTC",
+    imageUrl: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png",
     name: "Bitcoin",
     newsSymbol: "BTC-USD",
     yahooSymbol: "BTC-USD",
@@ -64,6 +68,7 @@ const assetConfigs: Record<string, AssetConfig> = {
   ETH: {
     description: "Ethereum is a smart-contract network whose token price is widely used as a gauge for crypto application and infrastructure demand.",
     displayTicker: "ETH",
+    imageUrl: "https://assets.coingecko.com/coins/images/279/large/ethereum.png",
     name: "Ethereum",
     newsSymbol: "ETH-USD",
     yahooSymbol: "ETH-USD",
@@ -119,6 +124,7 @@ const assetConfigs: Record<string, AssetConfig> = {
   SOL: {
     description: "Solana is a high-throughput smart-contract network whose token is often watched for crypto beta and application activity.",
     displayTicker: "SOL",
+    imageUrl: "https://assets.coingecko.com/coins/images/4128/large/solana.png",
     name: "Solana",
     newsSymbol: "SOL-USD",
     yahooSymbol: "SOL-USD",
@@ -189,6 +195,7 @@ function normalizeYahooChart(payload: YahooChartResponse) {
     changePercent: getChangePercent(price, previousClose),
     chart,
     currency: result?.meta?.currency ?? "USD",
+    name: result?.meta?.shortName ?? result?.meta?.longName ?? null,
     price,
   };
 }
@@ -240,6 +247,7 @@ async function fetchCoinGeckoChart(id: string) {
     changePercent: getChangePercent(price, previousClose),
     chart,
     currency: "USD",
+    name: null,
     price,
   };
 }
@@ -312,7 +320,8 @@ export async function GET(request: Request) {
   return NextResponse.json({
     asset: {
       description: config.description,
-      name: config.name,
+      ...(config.imageUrl ? { imageUrl: config.imageUrl } : {}),
+      name: chartSource?.name ?? config.name,
       ticker: config.displayTicker,
     },
     chart: chartSource?.chart ?? [],

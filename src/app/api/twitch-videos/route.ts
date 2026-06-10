@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { getTwitchVideosByLogin } from "@/lib/twitch-api";
 
 const twitchClientId = "kimne78kx3ncx6brgo4mv6wki5h1ko";
 const maxVideos = 8;
@@ -34,7 +35,35 @@ function normalizeLimit(value: string | null) {
 }
 
 function normalizeThumbnail(url: string | undefined) {
-  return (url ?? "").replace("{width}", "320").replace("{height}", "180");
+  return (url ?? "")
+    .replace("{width}", "320")
+    .replace("{height}", "180")
+    .replace("%{width}", "320")
+    .replace("%{height}", "180");
+}
+
+function parseTwitchDuration(duration: string | undefined) {
+  if (!duration) {
+    return 0;
+  }
+
+  const matches = duration.matchAll(/(\d+)(h|m|s)/g);
+  let seconds = 0;
+
+  for (const match of matches) {
+    const value = Number(match[1]);
+    const unit = match[2];
+
+    if (unit === "h") {
+      seconds += value * 60 * 60;
+    } else if (unit === "m") {
+      seconds += value * 60;
+    } else {
+      seconds += value;
+    }
+  }
+
+  return seconds;
 }
 
 export async function GET(request: Request) {
@@ -43,6 +72,31 @@ export async function GET(request: Request) {
   const limit = normalizeLimit(searchParams.get("limit"));
 
   try {
+    const officialVideos = await getTwitchVideosByLogin(channel, limit);
+
+    if (officialVideos) {
+      const videos = officialVideos
+        .map((video) => ({
+          channel,
+          creator: video.user_name ?? channel,
+          durationSeconds: parseTwitchDuration(video.duration),
+          game: "Just Chatting",
+          id: video.id ?? "",
+          publishedAt: video.published_at ?? video.created_at ?? null,
+          thumbnailUrl: normalizeThumbnail(video.thumbnail_url),
+          title: video.title ?? "Recent stream",
+          url: video.url ?? `https://www.twitch.tv/videos/${video.id}`,
+          viewCount: Number(video.view_count ?? 0),
+        }))
+        .filter((video) => video.id)
+        .slice(0, limit);
+
+      return NextResponse.json(
+        { channel, fetchedAt: new Date().toISOString(), source: "twitch-helix", videos },
+        { headers: { "Cache-Control": "no-store" } },
+      );
+    }
+
     const response = await fetch("https://gql.twitch.tv/gql", {
       method: "POST",
       headers: {

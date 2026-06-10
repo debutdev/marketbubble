@@ -1,0 +1,2 @@
+asqlite @ git+https://github.com/Rapptz/asqlite.git
+twitchio @ git+https://github.com/TwitchIO/TwitchIO.git
