@@ -67,9 +67,9 @@ body {
   z-index: 20;
   isolation: isolate;
   display: grid;
-  width: clamp(430px, 42vw, 610px);
+  width: clamp(520px, 50vw, 720px);
   max-width: calc(100vw - (var(--site-inset) * 2) - 28px);
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: var(--top-nav-gap);
   overflow: hidden;
   border: 1px solid rgb(228 228 228 / 0.12);
@@ -94,7 +94,7 @@ body {
   top: var(--top-nav-padding);
   bottom: var(--top-nav-padding);
   left: var(--top-nav-padding);
-  width: calc((100% - (var(--top-nav-padding) * 2) - (var(--top-nav-gap) * 4)) / 5);
+  width: calc((100% - (var(--top-nav-padding) * 2) - (var(--top-nav-gap) * 5)) / 6);
   border-radius: 999px;
   background: #e4e4e4;
   content: "";

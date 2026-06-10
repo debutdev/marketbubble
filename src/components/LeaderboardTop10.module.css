@@ -66,8 +66,8 @@
 .cardGrid {
   display: grid;
   min-height: 0;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-auto-rows: clamp(320px, 35.5vh, 390px);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 390px), 1fr));
+  grid-auto-rows: minmax(224px, auto);
   gap: clamp(8px, 0.9vw, 12px);
   overflow-x: hidden;
   overflow-y: auto;
@@ -83,14 +83,15 @@
   position: relative;
   display: grid;
   min-width: 0;
-  min-height: 0;
+  min-height: 224px;
   overflow: hidden;
   border: 1px solid rgb(228 228 228 / 0.1);
-  border-radius: 8px;
+  border-radius: 12px;
   background: #101010;
   color: inherit;
   cursor: pointer;
-  grid-template-rows: minmax(130px, 0.95fr) minmax(0, 1.05fr);
+  grid-template-columns: clamp(98px, 8.5vw, 132px) minmax(0, 1fr);
+  gap: 0;
   isolation: isolate;
   text-decoration: none;
 }
@@ -141,9 +142,15 @@
 
 .media {
   position: relative;
+  align-self: start;
+  aspect-ratio: 1;
   min-height: 0;
   overflow: hidden;
+  border: 1px solid rgb(228 228 228 / 0.08);
+  border-radius: 10px;
   background: #151515;
+  margin: clamp(0.62rem, 0.78vw, 0.82rem) 0 clamp(0.62rem, 0.78vw, 0.82rem)
+    clamp(0.62rem, 0.78vw, 0.82rem);
 }
 
 .media img,
@@ -153,6 +160,7 @@
   height: 100%;
   place-items: center;
   object-fit: cover;
+  object-position: center;
 }
 
 .avatarFallback {
@@ -166,8 +174,8 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, transparent 28%, rgb(0 0 0 / 0.5)),
-    linear-gradient(90deg, rgb(0 0 0 / 0.28), transparent 42%, rgb(0 0 0 / 0.16));
+    linear-gradient(180deg, transparent 34%, rgb(0 0 0 / 0.56)),
+    linear-gradient(90deg, rgb(0 0 0 / 0.18), transparent 48%, rgb(0 0 0 / 0.12));
 }
 
 .rankLabel,
@@ -176,57 +184,45 @@
   z-index: 3;
   display: inline-flex;
   align-items: center;
-  min-height: 2.08rem;
-  background: var(--background);
+  min-height: 1.46rem;
+  border: 1px solid rgb(228 228 228 / 0.1);
+  border-radius: 999px;
+  background: rgb(16 16 16 / 0.84);
   color: rgb(228 228 228 / 0.84);
-  font-size: 0.62rem;
+  font-size: 0.58rem;
   font-weight: 950;
   line-height: 1;
   text-transform: uppercase;
+  backdrop-filter: blur(10px);
 }
 
 .rankLabel {
-  bottom: 0;
-  left: 0;
-  border-top-right-radius: 18px;
-  padding: 0 0.88rem;
+  bottom: 8px;
+  left: 8px;
+  padding: 0 0.58rem;
 }
 
 .pin {
-  top: 0;
-  right: 0;
-  max-width: 56%;
-  border-bottom-left-radius: 18px;
-  padding: 0 0.78rem;
+  top: 8px;
+  right: 8px;
+  max-width: 72%;
+  overflow: hidden;
+  padding: 0 0.58rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .rankLabel i,
 .pin i {
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  color: var(--background);
-}
-
-.rankLabel i {
-  right: -18px;
-  bottom: 0;
-  border-bottom-left-radius: 18px;
-  box-shadow: -7px 7px 0 7px currentColor;
-}
-
-.pin i {
-  left: -18px;
-  top: 0;
-  border-top-right-radius: 18px;
-  box-shadow: 7px -7px 0 7px currentColor;
+  display: none;
 }
 
 .content {
   display: grid;
   min-height: 0;
-  gap: 0.55rem;
-  padding: clamp(0.74rem, 0.92vw, 0.95rem);
+  align-content: start;
+  gap: 0.48rem;
+  padding: clamp(0.82rem, 1vw, 1rem);
 }
 
 .identity {
@@ -239,7 +235,7 @@
   overflow: hidden;
   color: #ffffff;
   font-family: var(--font-playfair-display), Georgia, serif;
-  font-size: clamp(1.12rem, 1.45vw, 1.55rem);
+  font-size: clamp(1.04rem, 1.18vw, 1.32rem);
   font-weight: 400;
   line-height: 1;
   text-overflow: ellipsis;
@@ -258,11 +254,10 @@
 
 .content p {
   display: -webkit-box;
-  min-height: 2.55rem;
   margin: 0;
   overflow: hidden;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   color: rgb(228 228 228 / 0.64);
   font-size: clamp(0.68rem, 0.8vw, 0.82rem);
   font-weight: 650;
@@ -282,14 +277,19 @@
 
 .signal {
   display: grid;
-  min-height: 4rem;
-  gap: 0.38rem;
-  border-top: 1px solid rgb(228 228 228 / 0.08);
-  padding-top: 0.62rem;
+  gap: 0.42rem;
+  border: 1px solid rgb(120 231 165 / 0.18);
+  border-radius: 12px;
+  background: rgb(120 231 165 / 0.055);
+  padding: 0.58rem 0.68rem 0.62rem;
+}
+
+.card[data-tone="bearish"] .signal {
+  border-color: rgb(255 143 143 / 0.18);
+  background: rgb(255 143 143 / 0.05);
 }
 
 .signal span {
-  width: max-content;
   color: #78e7a5;
   font-size: 0.62rem;
   font-weight: 950;
@@ -307,7 +307,7 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   color: rgb(228 228 228 / 0.72);
-  font-size: clamp(0.66rem, 0.76vw, 0.78rem);
+  font-size: clamp(0.64rem, 0.72vw, 0.76rem);
   font-style: normal;
   font-weight: 800;
   line-height: 1.28;
@@ -374,7 +374,7 @@
   }
 
   .cardGrid {
-    grid-auto-rows: 350px;
+    grid-auto-rows: minmax(224px, auto);
   }
 }
 
@@ -391,7 +391,11 @@
 @media (max-width: 640px) {
   .cardGrid {
     grid-template-columns: minmax(0, 1fr);
-    grid-auto-rows: 360px;
+    grid-auto-rows: minmax(214px, auto);
+  }
+
+  .card {
+    grid-template-columns: 92px minmax(0, 1fr);
   }
 
   .panelHeader {

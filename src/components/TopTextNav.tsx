@@ -10,6 +10,7 @@ const navItems = [
   { href: "/watch", label: "Watch", key: "watch" },
   { href: "/market", label: "Market", key: "market" },
   { href: "/content", label: "Content", key: "content" },
+  { href: "/schedule", label: "Schedule", key: "schedule" },
   { href: "/leaderboard", label: "Leaderboard", key: "leaderboard" },
 ] as const;
 
@@ -30,6 +31,10 @@ function getKeyForPathname(pathname: string) {
     return "content";
   }
 
+  if (pathname.startsWith("/schedule")) {
+    return "schedule";
+  }
+
   if (pathname.startsWith("/market")) {
     return "market";
   }
@@ -40,7 +45,11 @@ function getKeyForPathname(pathname: string) {
 export function TopTextNav({ current }: TopTextNavProps) {
   const pathname = usePathname();
   const routeKey = current ?? getKeyForPathname(pathname);
-  const [activeKey, setActiveKey] = useState(routeKey);
+  const [pendingActive, setPendingActive] = useState<{
+    key: (typeof navItems)[number]["key"];
+    routeKey: (typeof navItems)[number]["key"];
+  } | null>(null);
+  const activeKey = pendingActive?.routeKey === routeKey ? pendingActive.key : routeKey;
   const activeIndex = Math.max(0, navItems.findIndex((item) => item.key === activeKey));
   const navStyle = {
     "--top-nav-active-offset":
@@ -58,8 +67,8 @@ export function TopTextNav({ current }: TopTextNavProps) {
             className="top-text-nav-link"
             data-active={activeKey === item.key ? "true" : undefined}
             href={item.href}
-            onClick={() => setActiveKey(item.key)}
-            onPointerDown={() => setActiveKey(item.key)}
+            onClick={() => setPendingActive({ key: item.key, routeKey })}
+            onPointerDown={() => setPendingActive({ key: item.key, routeKey })}
           >
             {item.label}
           </Link>
