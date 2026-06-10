@@ -1,11 +1,51 @@
-# Market Bubble
+<div align="center">
+  <img src="./public/readme/market-bubble-intro.svg" alt="Market Bubble animated intro" width="100%" />
+
+  <h1>Market Bubble</h1>
+
+  <p>
+    <strong>Live stream intelligence for crypto, markets, prediction markets, and creator chat.</strong>
+  </p>
+
+  <p>
+    <a href="https://marketbubble.vercel.app"><strong>Live App</strong></a>
+    &nbsp;&middot;&nbsp;
+    <a href="https://marketbubble.vercel.app/watch"><strong>Watch Dashboard</strong></a>
+    &nbsp;&middot;&nbsp;
+    <a href="#watch-dashboard"><strong>Features</strong></a>
+    &nbsp;&middot;&nbsp;
+    <a href="#local-development"><strong>Run Locally</strong></a>
+  </p>
+
+  <p>
+    <img alt="Next.js" src="https://img.shields.io/badge/Next.js-16-111111?style=for-the-badge&logo=nextdotjs&logoColor=white" />
+    <img alt="React" src="https://img.shields.io/badge/React-19-1c1c1c?style=for-the-badge&logo=react&logoColor=61DAFB" />
+    <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-Ready-1c1c1c?style=for-the-badge&logo=typescript&logoColor=3178C6" />
+    <img alt="Vercel" src="https://img.shields.io/badge/Vercel-Deployed-111111?style=for-the-badge&logo=vercel&logoColor=white" />
+  </p>
+</div>
+
+<p align="center">
+  <video src="./public/readme/watch-demo.mp4" poster="./public/readme/watch-demo-poster.jpg" controls muted loop playsinline width="100%"></video>
+</p>
+
+<p align="center">
+  <a href="./public/readme/watch-demo.mp4">
+    <img src="./public/readme/watch-demo-poster.jpg" alt="Watch dashboard demo video preview" width="100%" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="./public/readme/watch-demo.mp4"><strong>Play the demo video</strong></a>
+  if your GitHub client shows the preview image instead of inline video controls.
+</p>
+
+---
 
 Market Bubble is a stream-first market intelligence app for crypto, finance,
 prediction markets, and live creator communities. It combines live video,
 aggregated chat, market context, sentiment, news, and social feeds into a dark
 broadcast dashboard built with Next.js.
-
-Production site: https://marketbubble.vercel.app
 
 This project is for informational and demo purposes only. It is not financial
 advice.
@@ -24,6 +64,16 @@ UI flows are built for Banks and Ansem's platforms across Twitch, Kick, and X.
 Point the configured Twitch channels, Kick slugs, X handles, and X broadcast
 URLs at the live Banks/Ansem sources and the dashboard works against those
 streams instead of the test streams.
+
+## Signal Stack
+
+| Surface | What it shows |
+| --- | --- |
+| **Watch** | Stream embed, aggregated Twitch/Kick/X chat, live stats, sentiment, top words, news, and Polymarket. |
+| **Market** | Global markets, ticker context, asset detail modals, heatmaps, news, and smart-money views. |
+| **Chat Intelligence** | First-time chatters, top chatters, ticker cards, emotes, search, persistence, and platform filters. |
+| **Collectors** | Optional Twitch, Kick, and X ingestion paths for production-grade live community data. |
+| **Fallbacks** | Public/browser data paths keep the dashboard usable without paid API access. |
 
 ## Pages
 
@@ -44,7 +94,8 @@ community chat, news, and prediction-market context at the same time.
 
 Current development/test sources:
 
-- Twitch stream and Twitch chat: `xqc`
+- Stream video: Banks' previous Twitch VOD from the home page.
+- Twitch chat: `xqc`
 - Kick chat: `deenthegreat`
 - X/social feed: configured handles and archives through the app's X routes
 
