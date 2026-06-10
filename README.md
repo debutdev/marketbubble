@@ -1,6 +1,4 @@
 <div align="center">
-  <img src="./public/readme/market-bubble-intro.svg" alt="Market Bubble animated intro" width="100%" />
-
   <h1>Market Bubble</h1>
 
   <p>
