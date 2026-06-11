@@ -10,6 +10,8 @@
     &nbsp;&middot;&nbsp;
     <a href="https://marketbubble.vercel.app/watch"><strong>Watch Dashboard</strong></a>
     &nbsp;&middot;&nbsp;
+    <a href="#obs-overlays"><strong>OBS Overlays</strong></a>
+    &nbsp;&middot;&nbsp;
     <a href="#watch-dashboard"><strong>Features</strong></a>
     &nbsp;&middot;&nbsp;
     <a href="#local-development"><strong>Run Locally</strong></a>
@@ -133,6 +135,47 @@ Watch dashboard features:
 - Live news cards for popular crypto and finance social/news accounts.
 - Live Polymarket cards with close date, question, Yes/No odds, and an animated
   probability bar.
+
+### OBS Overlays
+
+Market Bubble includes OBS-ready browser-source pages for stream scenes. They
+reuse the same Watch dashboard chat, news, and Polymarket sources, but render as
+transparent overlay surfaces without the site navigation or Twitch popout.
+
+Use these URLs as OBS browser sources:
+
+```text
+https://marketbubble.vercel.app/obs/chat?source=both
+https://marketbubble.vercel.app/obs/news?limit=8
+https://marketbubble.vercel.app/obs/polymarket?limit=6
+```
+
+Local development URLs:
+
+```text
+http://localhost:3000/obs/chat?source=both
+http://localhost:3000/obs/news?limit=8
+http://localhost:3000/obs/polymarket?limit=6
+```
+
+Overlay options:
+
+- `source=ansem`, `source=banks`, or `source=both` switches the creator source
+  set. `source=watch-test` uses the current public test Twitch/Kick chat setup.
+- `platforms=twitch,kick,x` filters the chat overlay by platform. Use any
+  comma-separated subset, for example `platforms=twitch,kick`.
+- `limit=12` changes the number of chat messages, news cards, or market cards.
+- `mock=1` enables mock chat data for quick scene layout testing.
+- `framed=0` removes the glass panel frame from news and Polymarket overlays.
+
+Recommended OBS setup:
+
+- Add each overlay as a Browser Source.
+- Enable transparent background.
+- Use `1920x1080` for full-scene overlays, or a smaller custom width for side
+  rails.
+- Crop and scale the source in OBS rather than editing the app dimensions for
+  every scene.
 
 ### Market
 

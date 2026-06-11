@@ -115,6 +115,7 @@ export function TwitchStreamPopout() {
     !pathname ||
     pathname === "/" ||
     pathname.startsWith("/dashboard") ||
+    pathname.startsWith("/obs") ||
     pathname.startsWith("/watch") ||
     dismissed
   ) {
