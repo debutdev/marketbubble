@@ -6,21 +6,21 @@ export const channelOptions: ChannelOption[] = [
     label: "Ansem",
     twitchChannels: [],
     value: "ansem",
-    xHandles: ["blknoiz06"],
+    xHandles: ["blknoiz06", "Ansem"],
   },
   {
     kickChannels: [],
     label: "Banks",
     twitchChannels: ["fazebanks"],
     value: "banks",
-    xHandles: ["Banks"],
+    xHandles: ["Banks", "fazebanks"],
   },
   {
     kickChannels: [{ channel: "ansem", chatroomId: 108796898 }],
     label: "Both",
     twitchChannels: ["fazebanks"],
     value: "both",
-    xHandles: ["blknoiz06", "Banks"],
+    xHandles: ["blknoiz06", "Ansem", "Banks", "fazebanks"],
   },
 ];
 

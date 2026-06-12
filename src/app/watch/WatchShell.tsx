@@ -16,7 +16,7 @@ import type { CommunityChatEvent } from "@/lib/community-top-chat-types";
 import styles from "./watch.module.css";
 
 const twitchVideoSrc =
-  "https://player.twitch.tv/?video=2788673017&parent=127.0.0.1&parent=localhost&parent=marketbubble.vercel.app&muted=true&autoplay=true";
+  "https://player.twitch.tv/?channel=fazebanks&parent=127.0.0.1&parent=localhost&parent=marketbubble.vercel.app&muted=true&autoplay=true";
 const collapsedLeftPanelWidth = 44;
 const collapsedChatPanelWidth = 44;
 const expandedChatPanelWidth = 300;
@@ -26,9 +26,10 @@ const minExpandedLeftPanelWidth = 120;
 const maxLeftPanelWidth = 250;
 const streamChatOverlayInset = 14;
 const resizeStep = 16;
-const watchTwitchChannels = ["xqc"];
-const watchKickChannels = ["deenthegreat"];
-const watchChannelValue = "watch-test";
+const watchTwitchChannels = ["fazebanks"];
+const watchKickChannels = ["ansem"];
+const watchXHandles = ["Banks", "fazebanks", "blknoiz06", "Ansem"];
+const watchChannelValue = "both";
 const watchPlatforms: Platform[] = ["X", "Twitch", "Kick"];
 const watchStatsSourceOptions = [
   { label: "Ansem", value: "kick" },
@@ -171,7 +172,10 @@ const chatTrendStopWords = new Set([
   "why",
   "with",
   "would",
-  "xqc",
+  "ansem",
+  "banks",
+  "blknoiz06",
+  "fazebanks",
   "yeah",
   "yes",
   "you",
@@ -182,7 +186,7 @@ const bearPattern = compileSentimentPattern(bearWords);
 const emptyWatchSources: SourceSet = {
   kickChannels: [],
   twitchChannels: watchTwitchChannels,
-  xHandles: [],
+  xHandles: watchXHandles,
 };
 
 function ignoreChannelChange() {}
@@ -897,7 +901,7 @@ export function WatchShell() {
             return chatroomId ? [{ channel, chatroomId }] : [];
           }),
           twitchChannels: watchTwitchChannels,
-          xHandles: [],
+          xHandles: watchXHandles,
         });
       } catch {
         if (active) {

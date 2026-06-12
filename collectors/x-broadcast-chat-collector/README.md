@@ -57,5 +57,6 @@ MARKETBUBBLE_INGEST_URL=http://127.0.0.1:3000/api/community-live-events npm run 
 - `X_BROADCAST_URLS` is the dependable setup for real live chat.
 - `X_BROADCAST_HANDLES` can only discover broadcasts that appear as public links
   in the configured handle feeds.
-- The website already displays X posts from handles through `/api/x-live-chat`;
-  this collector is specifically for viewer messages inside active X broadcasts.
+- The website only displays X messages in live chat when they come from this
+  collector as `x-broadcast:*` events. Profile posts belong in news/social
+  surfaces, not the live chat rail.

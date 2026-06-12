@@ -2054,6 +2054,10 @@ function AggregatedChatComponent({
     function eventMatchesSources(event: CommunityChatEvent) {
       const channel = event.channel?.toLowerCase();
 
+      if (event.platform === "X" && !event.sourceId.startsWith("x-broadcast:")) {
+        return false;
+      }
+
       if (!channel) {
         return (
           (event.platform === "Twitch" && activeTwitchChannels.length > 0) ||
@@ -2183,7 +2187,10 @@ function AggregatedChatComponent({
 
             const channel = event.channel?.toLowerCase();
 
-            return !channel || activeXHandleSet.has(channel);
+            return (
+              event.sourceId.startsWith("x-broadcast:") &&
+              (!channel || activeXHandleSet.has(channel))
+            );
           })
           .filter((event) => {
             if (seenLiveSourceIdsRef.current.has(event.sourceId)) {
@@ -2213,7 +2220,7 @@ function AggregatedChatComponent({
 
         appendMessages(liveMessages);
       } catch {
-        // Public X feeds are best-effort and can be rate-limited by upstream mirrors.
+        // X broadcast chat is optional and only appears after collector ingest.
       }
     };
 

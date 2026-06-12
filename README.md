@@ -53,12 +53,10 @@ Twitch, Kick, and X activity, highlights tickers and cashtags, tracks audience
 sentiment, and surfaces the market context around what the community is talking
 about.
 
-The current Watch page is configured with public test streams so the dashboard
-has live data during development and review. The same adapters, collectors, and
-UI flows are built for Banks and Ansem's platforms across Twitch, Kick, and X.
-Point the configured Twitch channels, Kick slugs, X handles, and X broadcast
-URLs at the live Banks/Ansem sources and the dashboard works against those
-streams instead of the test streams.
+The current Watch page is configured for the real Banks and Ansem accounts:
+Banks on Twitch and X, plus Ansem on Kick and X. The same adapters, collectors,
+and UI flows can be pointed at additional Twitch channels, Kick slugs, X handles,
+and X broadcast URLs when more sources are needed.
 
 ## Signal Stack
 
@@ -87,21 +85,23 @@ The homepage is the main branded entry point for Market Bubble.
 The Watch page is the live operations dashboard for monitoring a stream,
 community chat, news, and prediction-market context at the same time.
 
-Current development/test sources:
+Current Watch sources:
 
-- Stream video: Banks' previous Twitch VOD from the home page.
-- Twitch chat: `xqc`
-- Kick chat: `deenthegreat`
-- X/social feed: configured handles and archives through the app's X routes
+- Stream video: `https://www.twitch.tv/fazebanks`
+- Twitch chat: `fazebanks`
+- Kick chat: `ansem`
+- X broadcast chat: `Banks` and `blknoiz06` when active broadcast chat events
+  are ingested by the X broadcast collector.
 
 Production creator use:
 
-- Banks can be monitored through Twitch, X posts, and X broadcast chat when a
-  broadcast URL is available.
-- Ansem can be monitored through Kick, Twitch if enabled, and X posts/broadcasts
+- Banks can be monitored through Twitch and X broadcast chat when a broadcast URL
+  is available.
+- Ansem can be monitored through Kick, Twitch if enabled, and X broadcast chat
   when configured.
-- The page is not hard-coded to the test creators; the sources are isolated in
-  the Watch source configuration and collector environment variables.
+- The sources are isolated in the Watch source configuration and collector
+  environment variables, so additional accounts can be added without changing
+  the chat rendering stack.
 
 Watch dashboard features:
 
@@ -112,7 +112,8 @@ Watch dashboard features:
 - Fullscreen stream mode with a movable chat overlay.
 - Chat overlay can be disabled and restored while the stream is fullscreen.
 - Twitch embed in the center stream panel.
-- Aggregated live chat from Twitch, Kick, and X in the right panel.
+- Aggregated live chat from Twitch, Kick, and X broadcast chat in the right
+  panel.
 - Platform filter buttons to toggle which chat sources are visible.
 - Chat search across users and message text.
 - Chat messages populate from the bottom and move upward like a live stream chat.
@@ -126,8 +127,8 @@ Watch dashboard features:
   and top chatter data survive refreshes and stream transitions.
 - Stream stats under the video: total viewers, active chatters, messages per
   minute, and per-platform viewer share.
-- Stats toggle for Ansem, Banks, or Both. In the test setup, Ansem maps to the
-  Kick source and Banks maps to the Twitch source.
+- Stats toggle for Ansem, Banks, or Both. Ansem maps to the Kick source, Banks
+  maps to the Twitch source, and Both combines the active Banks/Ansem sources.
 - Bullish/bearish chat sentiment panel.
 - Top live chat-word cards above the sentiment bar.
 - Sentiment percentage bar styled to match the app's compact stats aesthetic.
@@ -161,7 +162,7 @@ http://localhost:3000/obs/polymarket?limit=6
 Overlay options:
 
 - `source=ansem`, `source=banks`, or `source=both` switches the creator source
-  set. `source=watch-test` uses the current public test Twitch/Kick chat setup.
+  set.
 - `platforms=twitch,kick,x` filters the chat overlay by platform. Use any
   comma-separated subset, for example `platforms=twitch,kick`.
 - `limit=12` changes the number of chat messages, news cards, or market cards.
@@ -229,10 +230,10 @@ Supported sources:
 - Optional Twitch collector for server-side ingestion.
 - Kick Developer API for official channel metadata and livestream status.
 - Kick webhook ingestion for official `chat.message.sent` events.
-- Kick websocket fallback for current public test channels.
-- X public feed/archive normalization.
+- Kick websocket fallback for public channel chat display.
+- X public feed/archive normalization for news, content, and social surfaces.
 - Optional X broadcast collector for livestream chat when exact broadcast URLs
-  are available.
+  are available. X profile posts are intentionally not treated as live chat.
 
 Server routes:
 
@@ -244,6 +245,10 @@ POST /api/community-live-events
 POST /api/kick-events
 GET  /api/x-live-chat
 ```
+
+`/api/x-live-chat` only returns normalized X broadcast chat messages from the
+collector-backed live-event store. It does not convert profile tweets into chat
+messages.
 
 Chat events are deduped by provider message id before counts are incremented.
 That prevents multiple open clients from multiplying the same message.
@@ -344,8 +349,8 @@ STREAM_EVENT_INGEST_SECRET=shared_random_collector_secret
 MARKETBUBBLE_INGEST_URL=https://marketbubble.vercel.app/api/community-live-events
 
 # X broadcast collector
-X_BROADCAST_URLS=Banks=https://x.com/i/broadcasts/...,Ansem=https://x.com/i/broadcasts/...
-X_BROADCAST_HANDLES=Banks,Ansem,MarketBubble
+X_BROADCAST_URLS=Banks=https://x.com/i/broadcasts/...,blknoiz06=https://x.com/i/broadcasts/...
+X_BROADCAST_HANDLES=Banks,blknoiz06
 X_BROADCAST_DISCOVERY_SITE_URL=https://marketbubble.vercel.app
 X_BROADCAST_HANDLE_POLL_MS=60000
 
@@ -363,9 +368,9 @@ In production, set secrets in Vercel project environment variables. Do not put
 real keys in source control.
 
 The site still runs without Twitch/Kick/X credentials. In that mode, the live UI
-uses public/browser fallbacks and configured test streams. Once official Twitch,
-Kick, Redis, and collector credentials are configured, server-ingested live events
-become the preferred path.
+uses public/browser fallbacks for the configured Banks and Ansem sources. Once
+official Twitch, Kick, Redis, and collector credentials are configured,
+server-ingested live events become the preferred path.
 
 ## Collectors
 

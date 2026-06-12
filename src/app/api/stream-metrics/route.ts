@@ -12,7 +12,6 @@ const execFileAsync = promisify(execFile);
 const maxRequestedChannels = 8;
 const fallbackKickChatroomIds: Record<string, number> = {
   ansem: 108796898,
-  deenthegreat: 5389830,
   solomission: 2218947,
 };
 

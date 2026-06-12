@@ -4,7 +4,6 @@
 import type { CSSProperties, ReactNode } from "react";
 import { useEffect, useMemo, useState } from "react";
 import { AggregatedChat } from "@/components/AggregatedChat";
-import type { ChannelOption, SourceSet } from "@/components/AggregatedChat";
 import { channelOptions, getChannelOption } from "@/lib/channel-options";
 import type { OverlayKind, OverlaySettings } from "./overlay-settings";
 import styles from "./obs.module.css";
@@ -54,13 +53,7 @@ type PolymarketResponse = {
   markets: PolymarketMarket[];
 };
 
-type StreamMetricsResponse = {
-  kickChannelChatroomIds?: Record<string, number>;
-};
-
 const defaultPollMs = 25_000;
-const watchTestTwitchChannels = ["xqc"];
-const watchTestKickChannels = ["deenthegreat"];
 const newsSourceAvatarHandles: Record<string, string> = {
   "BeInCrypto": "beincrypto",
   "Bitcoin Magazine": "BitcoinMagazine",
@@ -70,12 +63,6 @@ const newsSourceAvatarHandles: Record<string, string> = {
   "CryptoSlate": "CryptoSlate",
   "Decrypt": "DecryptMedia",
   "The Block": "TheBlock__",
-};
-
-const emptyWatchTestSources: SourceSet = {
-  kickChannels: [],
-  twitchChannels: watchTestTwitchChannels,
-  xHandles: [],
 };
 
 function haveSameIds<T extends { id: string }>(first: T[] | undefined, second: T[] | undefined) {
@@ -201,29 +188,6 @@ function getShellClassName(kind: OverlayKind) {
     .join(" ");
 }
 
-async function resolveWatchTestSources() {
-  const metricsUrl = new URL("/api/stream-metrics", window.location.origin);
-
-  for (const channel of watchTestKickChannels) {
-    metricsUrl.searchParams.append("kickChannel", channel);
-  }
-
-  const response = await fetch(metricsUrl, { cache: "no-store" });
-  const payload = (await response.json()) as StreamMetricsResponse;
-
-  return {
-    kickChannels: watchTestKickChannels.flatMap((channel) => {
-      const chatroomId = Number(payload.kickChannelChatroomIds?.[channel]);
-
-      return Number.isFinite(chatroomId) && chatroomId > 0
-        ? [{ channel, chatroomId }]
-        : [];
-    }),
-    twitchChannels: watchTestTwitchChannels,
-    xHandles: [],
-  } satisfies SourceSet;
-}
-
 function useOverlayDocumentClass() {
   useEffect(() => {
     document.documentElement.classList.add("obs-overlay-root");
@@ -329,47 +293,12 @@ function usePolymarket(limit: number) {
 }
 
 function useChatConfig(settings: OverlaySettings) {
-  const [watchTestSources, setWatchTestSources] =
-    useState<SourceSet>(emptyWatchTestSources);
-
-  useEffect(() => {
-    if (settings.source !== "watch-test") {
-      return;
-    }
-
-    let active = true;
-
-    resolveWatchTestSources()
-      .then((sources) => {
-        if (active) {
-          setWatchTestSources(sources);
-        }
-      })
-      .catch(() => {
-        if (active) {
-          setWatchTestSources(emptyWatchTestSources);
-        }
-      });
-
-    return () => {
-      active = false;
+  return useMemo(() => {
+    return {
+      options: channelOptions,
+      selected: getChannelOption(settings.source),
     };
   }, [settings.source]);
-
-  return useMemo(() => {
-    const watchTestOption: ChannelOption = {
-      ...watchTestSources,
-      label: "Watch Test",
-      value: "watch-test",
-    };
-    const options = [...channelOptions, watchTestOption];
-    const selected =
-      settings.source === "watch-test"
-        ? watchTestOption
-        : getChannelOption(settings.source);
-
-    return { options, selected };
-  }, [settings.source, watchTestSources]);
 }
 
 function OverlayChrome({
