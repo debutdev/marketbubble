@@ -1,10 +1,10 @@
 {
-  "fetchedAt": "2026-06-17T21:25:28.228567Z",
+  "fetchedAt": "2026-06-18T11:58:41.655581Z",
   "members": [
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/1955773696565719040/zVpm_8at.jpg",
       "description": "@echodotxyz @coinbase @uponlytv",
-      "followers": 1023802,
+      "followers": 1025262,
       "handle": "cobie",
       "name": "Cobie",
       "profileUrl": "https://x.com/cobie",
@@ -25,7 +25,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/1868745836777312256/XsNk1YlU.jpg",
       "description": "ex trading desk @ hokkaido ginko\n\nuser @googlemaps\n\nmid and small cap asset mentions in reply = blocked\n\nno check dm, no telegram, no ai or nsfw fan art ❌",
-      "followers": 276333,
+      "followers": 276327,
       "handle": "CL207",
       "name": "CL",
       "profileUrl": "https://x.com/CL207",
@@ -46,7 +46,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/1975912876243095552/YlVLO4Oz.jpg",
       "description": "ceo @helius @heliusprivacy — Solana RPCs, APIs & data: http://helius.dev — cyphercapitalist — il faut cultiver notre jardin",
-      "followers": 1012375,
+      "followers": 1002191,
       "handle": "mert",
       "name": "mert",
       "profileUrl": "https://x.com/mert",
@@ -67,7 +67,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/2062220989379825665/ergNEj5z.jpg",
       "description": "streaming everyday at 330pm est. working on @counterpartytv | @phantom @polymarket",
-      "followers": 375354,
+      "followers": 375526,
       "handle": "notthreadguy",
       "name": "threadguy",
       "profileUrl": "https://x.com/notthreadguy",
@@ -88,7 +88,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/1972330511361314816/6CB8R60R.jpg",
       "description": "@hyperliquidx building a pretty good house for all finance",
-      "followers": 131112,
+      "followers": 131206,
       "handle": "chameleon_jeff",
       "name": "jeff.hl",
       "profileUrl": "https://x.com/chameleon_jeff",
@@ -109,7 +109,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/2005767506175127552/B7WiObIW.jpg",
       "description": "@breakoutprop acq by @krakenfx | @orderbookshow",
-      "followers": 561136,
+      "followers": 561151,
       "handle": "Tradermayne",
       "name": "Mayne",
       "profileUrl": "https://x.com/Tradermayne",
@@ -130,7 +130,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/1966620097277038593/U364MS6H.jpg",
       "description": "Bitcoin class of 2014 // CEO: @fullstack_trade",
-      "followers": 284058,
+      "followers": 284076,
       "handle": "ThinkingUSD",
       "name": "Flood",
       "profileUrl": "https://x.com/ThinkingUSD",
@@ -151,7 +151,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/1995052359068553216/hkPROmXA.jpg",
       "description": "Offseason",
-      "followers": 119411,
+      "followers": 119415,
       "handle": "based16z",
       "name": "based16z",
       "profileUrl": "https://x.com/based16z",
@@ -168,7 +168,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/1879556312822120448/QngrqCSC.jpg",
       "description": "@base builder #001 | DM @jessexbt_ai to get building",
-      "followers": 353918,
+      "followers": 353935,
       "handle": "jessepollak",
       "name": "jesse.base.eth",
       "profileUrl": "https://x.com/jessepollak",
@@ -187,23 +187,14 @@
       "verified": false
     },
     {
-      "avatarUrl": "https://pbs.twimg.com/profile_images/2049703022029103104/L-FgPQFQ.jpg",
+      "avatarUrl": null,
       "description": "",
-      "followers": 51613,
+      "followers": 0,
       "handle": "sershokunin",
-      "name": "s",
+      "name": "sershokunin",
       "profileUrl": "https://x.com/sershokunin",
       "rank": 10,
-      "recentTweets": [
-        "#NewProfilePic",
-        "Every NFT Flipper:",
-        "The people’s coin deserves to be on the people’s chain. Proud that @unitxyz now enables spl20 native integrations into @HyperliquidX. High demand spot listings are no longer just for the cexs \n\nHot air rises",
-        "Friend txted me this today. \n\nFinally time to build the stuff we used to dream about?",
-        "At this point, If you want to trade spot $pump it is irresponsible to not do so on @HyperliquidX via @unitxyz . Volumes just crossed 100m in the first 8 hours and has the deepest liquidity of any venue. \n\nThis is also the first implementation of a day 0 token launch on HL.  Users should expect for this to gradually be the norm on a go forward basis for all major token listings.",
-        "“Last mover advantage” is one of the most under appreciated concepts in business. There is enormous value in creating the final great development in an established and profitable market. Start with a very deep wedge in a product with high pmf, and then scale far and wide until you reach the end game. Too many examples to list but some very obvious ones. \n\nBlackBerry -> Apple\nNetscape -> Google\nTaxis -> Uber \nMySpace -> Facebook\nIBM -> Microsoft\nBlockbuster -> Netflix\nBinance -> Hyperliquid \n\n-Study Hyper fucking liquid",
-        "Xmas test net shenanigans; the path to on chain Binance must continue…\n\nJOB AINT FINISHED",
-        "Units branding has always been legendary, and the run continues at token."
-      ],
+      "recentTweets": [],
       "tag": null,
       "verified": false
     }
