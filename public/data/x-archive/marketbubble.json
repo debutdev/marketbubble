@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-22T19:25:45.220556Z",
+  "fetchedAt": "2026-07-22T20:39:49.224025Z",
   "handle": "MarketBubble",
   "profileImageUrl": "https://pbs.twimg.com/profile_images/2049931777729609728/48E45qmE.jpg",
   "profileTitle": "Market Bubble / @MarketBubble",
@@ -449,12 +449,12 @@
         "https://pbs.twimg.com/media/HN2bchHWsAAgYEO?format=jpg&name=orig"
       ],
       "metrics": {
-        "bookmarks": 10,
-        "likes": 318,
-        "quotes": 23,
-        "replies": 82,
-        "reposts": 28,
-        "views": 23956
+        "bookmarks": 22,
+        "likes": 444,
+        "quotes": 33,
+        "replies": 106,
+        "reposts": 40,
+        "views": 42156
       },
       "publishedAt": "2026-07-22T18:00:47Z",
       "text": "Now loading…\n\nBrian Armstrong, CEO of Coinbase\n\nThursday, July 23rd, 3:30pm PST",
@@ -467,12 +467,12 @@
       "isRetweet": false,
       "media": [],
       "metrics": {
-        "bookmarks": 31,
-        "likes": 119,
+        "bookmarks": 38,
+        "likes": 142,
         "quotes": 1,
-        "replies": 18,
-        "reposts": 6,
-        "views": 9922
+        "replies": 20,
+        "reposts": 8,
+        "views": 12108
       },
       "publishedAt": "2026-07-22T16:09:41Z",
       "text": "Ansem breaks down the two ways to make a lot of money trading\n\n\"In trading, there are two ways you make a lot of money. The first is by seeing around corners, finding a fundamental thesis the market doesn't see yet, where the general consensus is against it, and betting on that early and with size\"\n\n\"Once the market shifts from something being non-consensus to consensus, that's when everybody who wasn't allocated starts allocating towards that idea. You make a lot of money because you were one of the first to have it\"\n\n\"The second way is learning to ride momentum and trade the consensus ideas before they top. When an idea becomes consensus, it usually stays consensus for a certain amount of time\"\n\n\"Don't try to buy the bottom, don't try to sell the top, try to catch the meat in the middle\"",
@@ -487,12 +487,12 @@
       "isRetweet": false,
       "media": [],
       "metrics": {
-        "bookmarks": 3,
-        "likes": 53,
-        "quotes": 1,
-        "replies": 30,
-        "reposts": 7,
-        "views": 6633
+        "bookmarks": 6,
+        "likes": 68,
+        "quotes": 3,
+        "replies": 34,
+        "reposts": 9,
+        "views": 17685
       },
       "publishedAt": "2026-07-22T15:00:56Z",
       "text": "Our full conversation with Jesse Pollak\n\n0:56 Who is Jesse Pollak\n2:22 Why Base shifted focus\n4:44 Handing the Base app to Cobie\n5:32 Taking big bets\n7:53 Creator coins\n9:39 The DeFi mullet\n16:05 Why builders choose Base\n18:30 Venice and tokenized inference\n20:40 Brian Armstrong's culture of innovation\n26:18 Talking to the trenches\n29:44 Where creators fit in global finance\n34:06 The role model Jesse wants to be",
@@ -532,7 +532,7 @@
         "quotes": 1,
         "replies": 7,
         "reposts": 5,
-        "views": 13156
+        "views": 13281
       },
       "publishedAt": "2026-07-21T17:45:42Z",
       "text": "Ansem & FaZe Banks discuss why the closed AI labs could be in trouble\n\nFaZe Banks: \"Is China putting OpenAI out of business?\"\n\nAnsem: \"I think they could. All the open source models coming out of China and the Chinese labs, if they get good enough to the point where the usage of the main lab is too expensive, and you can use an open source model for 80% of the cost\"\n\nFaZe Banks: \"A million AI tokens cost 50 cents from China versus $56 from Anthropic. That's bad. That's a little scary\"\n\nAnsem: \"This is really bad because the labs and the return on investing in the labs, is like 90% of what's driving the stock market return. So when those investments don't make sense anymore, then what?\"",
@@ -554,7 +554,7 @@
         "quotes": 0,
         "replies": 9,
         "reposts": 4,
-        "views": 6934
+        "views": 6974
       },
       "publishedAt": "2026-07-21T15:39:19Z",
       "text": "JUST IN: Google $GOOGL releases three new AI models built to be faster and more token efficient\n\n- Gemini 3.6 Flash\n- Gemini 3.5 Flash-Lite\n- Gemini 3.5 Flash Cyber",
@@ -572,7 +572,7 @@
         "quotes": 7,
         "replies": 19,
         "reposts": 15,
-        "views": 16468
+        "views": 16545
       },
       "publishedAt": "2026-07-21T14:59:00Z",
       "text": "Ansem explains how memecoins could fix the social media model\n\n\"It's discounted a lot, how large that group of people is that will invest or buy memes, but won't invest in stocks\"\n\n\"The reason Meta has value is because all the people on Instagram are spending a ton of time on that app, contributing a lot of value to the network with their time, their attention, etc\"\n\n\"But the people who are determining the value of this network typically don't have a stake in the upside\"\n\n\"If you can figure out a way to flip the social media model on its head, where the people who are the reason the network has value also have upside in the value of the network, there's a complete regime change on how all these things operate. One of the ways to do that is through memes\"",
@@ -592,7 +592,7 @@
         "quotes": 7,
         "replies": 22,
         "reposts": 15,
-        "views": 24506
+        "views": 24556
       },
       "publishedAt": "2026-07-20T18:40:36Z",
       "text": "Jesse Pollak on the ecosystem forming around tokenized inference\n\n\"There's this really cool tokenized inference market that Venice has innovated, where they've taken inference and turned it into a token called DIEM where you can buy it and you get $1 of inference per day\"\n\n\"That innovation of tokenizing inference has unlocked a ton of innovation around it, where people are using that tokenized inference to do things\"\n\n\"There's other projects that let people sell their tokenized inference at a discount so other people can get cheaper inference and the whole system works more efficiently\"\n\n\"I feel like that's the first time we're really seeing the intersection of AI plus markets plus crypto and it's thanks to Venice and it's happening on Base\"",
@@ -612,7 +612,7 @@
         "quotes": 0,
         "replies": 15,
         "reposts": 5,
-        "views": 14105
+        "views": 14119
       },
       "publishedAt": "2026-07-20T17:13:15Z",
       "text": "Jesse Pollak explains why bringing Cobie into Coinbase was a huge win\n\n\"One thing that's been a huge win for Coinbase is bringing Cobie into the business. That guy gets crypto Twitter, he gets trading, he gets the culture more than basically anyone. That's not just legitimizing Coinbase, he actually makes Coinbase better\"\n\n\"It's been a bit of a firestorm on Twitter around Base for the last week and a half. I knew I had to say something\" \n\n\"I wrote an initial version and Cobie called me and he was like: Jesse just say what is authentic to you. They don't want to hear something polished. Just say what's authentic to you\"\n\n\"He has an uncanny ability to get it and then be unafraid to tell you like it is. I'm just grateful for him\"",
@@ -634,7 +634,7 @@
         "quotes": 3,
         "replies": 40,
         "reposts": 9,
-        "views": 13487
+        "views": 13501
       },
       "publishedAt": "2026-07-20T16:05:21Z",
       "text": "Welcome to the world of Market Bubble",
@@ -652,7 +652,7 @@
         "quotes": 1,
         "replies": 22,
         "reposts": 8,
-        "views": 11289
+        "views": 11302
       },
       "publishedAt": "2026-07-20T15:15:12Z",
       "text": "Ansem explains why buybacks don't work the way people think\n\n\"People think if a company directs a portion of revenue to buying back the token, it'll definitely go up. That's not necessarily true\"\n\n\"What Hyperliquid's buybacks signify to their user base is more a social alignment and trust thing than the actual dollar value of what they're buying back\"\n\n\"Other companies do buybacks where it doesn't have as big an impact. One, they could spend that money more effectively with better hiring, better marketing, expanding business lines. Second, they don't have as high a trust score as Hyperliquid\"",
@@ -672,7 +672,7 @@
         "quotes": 1,
         "replies": 14,
         "reposts": 12,
-        "views": 14102
+        "views": 14106
       },
       "publishedAt": "2026-07-17T21:46:05Z",
       "text": "Ansem breaks down the Robinhood thesis\n\n\"The RWA and tokenized stock thesis makes a ton of sense. They dominate retail stock trading and options. The only things they don't have are perps which is why they're partnering with Lighter, & 24/7 trading which is why they're doing tokenized stocks\"\n\n\"All that retail volume originates onchain first before it hits a CEX. So they're like: we want to own the entire stack, not just the exchange but our own chain. And it adds value to their other business lines\"\n\n\"I do think Robinhood's a net positive for crypto. But I don't think they're doing anything other L2s haven't. I wouldn't say they're breaking any innovation yet\"\n\n\"Vlad being directly bullish on everything happening onchain is a really good thing to see for traders\"",
@@ -692,7 +692,7 @@
         "quotes": 1,
         "replies": 11,
         "reposts": 7,
-        "views": 11612
+        "views": 11615
       },
       "publishedAt": "2026-07-17T19:57:32Z",
       "text": "Jesse Pollak explains why tokenization is coming for the creator economy\n\n\"Over the next decade, just like finance is upgraded, I think social is going to get upgraded by crypto too. I think tokenization is going to be a huge part of it\"\n\n\"Creators have a raw deal right now. They make all the content in the world, and it gets basically taken by big platforms that monetize it and give a small cut back to creators\"\n\n\"There's definitely a lot of fixing that can come there, and we'll get to it after we upgrade finance\"",
@@ -714,7 +714,7 @@
         "quotes": 2,
         "replies": 37,
         "reposts": 34,
-        "views": 14483
+        "views": 14486
       },
       "publishedAt": "2026-07-17T18:09:31Z",
       "text": "Defy the odds 🐂🀄️",
@@ -732,7 +732,7 @@
         "quotes": 0,
         "replies": 21,
         "reposts": 16,
-        "views": 18086
+        "views": 18092
       },
       "publishedAt": "2026-07-17T16:00:11Z",
       "text": "Jesse Pollak shares the story of how he started Base\n\n\"I feel like it's my job to just show up every single day, and there's always going to be haters. Sometimes you regret taking a big bet. But I don't want to get into a place where we're stopping to take big bets\"\n\n\"Starting Base at Coinbase was a big bet. I spent a year failing, falling on my face. People basically telling me you're not doing anything right. They shut down my team\"\n\n\"Then out of the ashes I was like, give me one more go. And that's what turned into Base. At the time, no one really took us seriously. We had people working nights and weekends. I don't think anyone thought it was going to be a thing\"\n\n\"Three years of making mistakes and people hating on us. And the attitude is always: keep taking big bets, keep showing up, keep eating the shit even when it doesn't taste so good, and just keep trying to change the world\"",
@@ -752,7 +752,7 @@
         "quotes": 0,
         "replies": 14,
         "reposts": 4,
-        "views": 9761
+        "views": 9765
       },
       "publishedAt": "2026-07-17T14:42:02Z",
       "text": "Guap predicts Mbappé will win the Golden Boot\n\n“Honestly, the only thing I'm gonna go on is probably Kylian Mbappé to score simply because he still has something to play for”\n\n“If he scores one goal, he's gonna take the Golden Boot away from Messi. Right now they're currently tied”\n\n“If I were to choose something, it's definitely gotta be a Kylian Mbappé goal. He doesn't care if it's a third place game. He's gonna try scoring five goals. He's a demon”",
@@ -772,7 +772,7 @@
         "quotes": 0,
         "replies": 13,
         "reposts": 1,
-        "views": 9271
+        "views": 9281
       },
       "publishedAt": "2026-07-17T01:24:25Z",
       "text": "Guap predicts Spain will win the World Cup\n\n“I'm not gonna lie, this Spain team is super slept on”\n\n“Their best player, Lamine Yamal, still hasn't even performed this World Cup. If there's a time and place for him to finally do it, it's definitely gotta be the World Cup final”\n\n“I've got Spain to take it the entire way. That's also me being a hater on Argentina and Messi but I just think this Spain team is a lot better and way more balanced”\n\n“Argentina play with a lot more passion and grit. Sometimes that gets you across the finish line but I think with a super composed team like Spain, that's not gonna happen”\n\n“I think this entire tournament they've only conceded one goal, which is absolutely insane”",
@@ -792,7 +792,7 @@
         "quotes": 1,
         "replies": 8,
         "reposts": 5,
-        "views": 10272
+        "views": 10276
       },
       "publishedAt": "2026-07-17T00:07:00Z",
       "text": "Lucas Bruder shares the vision for JTX\n\n“You can really feel how good Solana is. The transactions confirm super fast and you get really tight quotes”\n\n“But I think there's a lot of room for improvement at the application layer. The current applications are not really something I would want to get my friends and family onboard with”\n\n“We're taking a more professional approach, trying to curate the assets more and focus on really good trade execution”\n\n“I think it kind of ties back to the Jito airdrop like we're so tied to the success of Solana. There's only so much we can do at the infrastructure layer. We want to bring new people onchain and take a different approach to the way people trade”",
@@ -812,7 +812,7 @@
         "quotes": 1,
         "replies": 20,
         "reposts": 7,
-        "views": 10289
+        "views": 10295
       },
       "publishedAt": "2026-07-16T23:36:17Z",
       "text": "Ansem explains why trading streams will onboard the next wave into crypto\n\n\"The current meta with streaming is entertainment but I think the finance streams are going to flip them because a streamer who's entertaining and can also teach you how to trade? That's not easily replicable\"\n\n\"Guys who made a lot of money on Solana onchain  last cycle, they started with $1,000 or $10,000 and flipped it into millions. There's nobody else doing that who can also stream and teach people how to do it\"\n\n\"We have infinite Zoomer brain rot slop, but not enough streams of the self-made millionaires who learned how to trade with $1,000 and a phone, laptop, and internet connection. If I could long any kind of media, it would be this exact thing\"",
@@ -832,7 +832,7 @@
         "quotes": 1,
         "replies": 19,
         "reposts": 9,
-        "views": 16112
+        "views": 16114
       },
       "publishedAt": "2026-07-16T23:03:25Z",
       "text": "Jesse Pollak explains Coinbase's culture of innovation\n\n“Coinbase's mission is to increase economic freedom globally and that's the thing that's guiding us. I've never met someone as mission-aligned as Brian Armstrong”\n\n“He'll show up on the worst day, the best day, whatever it is and he's relentlessly focused on what we're doing right now to give more people around the world access to economic freedom”\n\n“For five years he kept pushing Coinbase Developer Platform even when people questioned whether Coinbase needed to be a developer company. He believed enabling developers was key to the mission”\n\n“It's not that Coinbase thinks it has to do everything. Brian has created a culture of innovation where people are given the freedom to take bets, iterate and build. Sometimes those bets become something massive”\n\n“I've never experienced anything like the freedom and entrepreneurial energy I've had in my role at Base. I'm super, super grateful for that”",
@@ -852,7 +852,7 @@
         "quotes": 3,
         "replies": 23,
         "reposts": 10,
-        "views": 63676
+        "views": 63710
       },
       "publishedAt": "2026-07-16T22:34:02Z",
       "text": "Ansem turns into the Black Bull live on stream",
@@ -872,7 +872,7 @@
         "quotes": 9,
         "replies": 52,
         "reposts": 35,
-        "views": 45893
+        "views": 45904
       },
       "publishedAt": "2026-07-16T22:02:06Z",
       "text": "Jesse Pollak explains why he handed the Base app to Cobie\n\n“We made the call about a month ago to let me fully focus on the chain and fully focus on this mission of building the blockchain for global finance”\n\n“That meant taking the consumer product, the Base app and shifting it back to the mothership, where Cobie is now going to run it”\n\n“I think that's awesome for the Base app, it's awesome for Base and it's awesome for Coinbase because Cobie’s a beast”\n\n“It's been awesome watching the impact he's had already in the nine months he's been at the company and I think he's going to do really big things for us”",
@@ -892,7 +892,7 @@
         "quotes": 4,
         "replies": 55,
         "reposts": 28,
-        "views": 31333
+        "views": 31340
       },
       "publishedAt": "2026-07-16T21:31:47Z",
       "text": "Ansem on why he's calling the crypto bottom early\n\n\"You saw cash heavy TradFi buyers step in and start to allocate towards crypto with $BTC, $ETH, and $SOL. $HYPE has been outperforming on its own, but the majors have been lagging behind\"\n\n\"The CT sentiment is really poor and typically when you have a divergence like that, it's a great place for a bottom\"\n\n\"You haven't seen that momentum shift happen yet on any of the majors. But I think if you see Solana back over $100, Bitcoin back over $80K, a lot of those traders will probably flip back\"",
@@ -914,7 +914,7 @@
         "quotes": 3,
         "replies": 31,
         "reposts": 25,
-        "views": 20644
+        "views": 20648
       },
       "publishedAt": "2026-07-16T20:48:02Z",
       "text": "We are pleased to announce @AskVenice as the official AI partner of Market Bubble",
@@ -934,7 +934,7 @@
         "quotes": 5,
         "replies": 37,
         "reposts": 12,
-        "views": 21770
+        "views": 21781
       },
       "publishedAt": "2026-07-16T15:07:52Z",
       "text": "Now loading...\n\nLucas Bruder, CEO of Jito Labs\n\nToday at 3:00pm PST",
@@ -954,7 +954,7 @@
         "quotes": 12,
         "replies": 70,
         "reposts": 45,
-        "views": 46172
+        "views": 46179
       },
       "publishedAt": "2026-07-15T20:12:11Z",
       "text": "Now loading...\n\nJesse Pollak, Creator of Base\n\nThursday, July 16th, 2:30pm PST",
@@ -972,7 +972,7 @@
         "quotes": 2,
         "replies": 17,
         "reposts": 11,
-        "views": 12733
+        "views": 12734
       },
       "publishedAt": "2026-07-15T17:34:00Z",
       "text": "Our full conversation with Luca Netz\n\n0:54 Meeting at the Clout House\n3:40 Being young is a superpower\n8:25 $PENGU Airdrop\n13:24 Watching The Black Bull\n16:08 The token flywheel\n19:08 Revolutionizing the clipping meta\n27:05 Advice for Pumpfun\n29:20 Buybacks vs marketing\n31:40 Why SpaceX is worth trillions\n33:27 The founder premium\n40:00 NFTs are still undervalued\n53:45 Hoops and trash talk\n55:53 We need cooler crypto events",
@@ -1072,7 +1072,7 @@
         "quotes": 1,
         "replies": 35,
         "reposts": 11,
-        "views": 21504
+        "views": 21507
       },
       "publishedAt": "2026-07-14T14:29:25Z",
       "text": "Who is your GOAT?\n\nAnd you can’t say everybody 😂",
@@ -1092,7 +1092,7 @@
         "quotes": 29,
         "replies": 95,
         "reposts": 43,
-        "views": 176617
+        "views": 176626
       },
       "publishedAt": "2026-07-13T22:43:00Z",
       "text": "WE NEED MORE COOL CRYPTO EVENTS\n\nAnsem: \"we should do more cool crypto events\"\n\nBanks: \"yeah actual cool ones. Even hearing you say 'crypto event' makes me want to stay home\"\n\nLuca: \"If I was Solana CMO I'd take a quarter million dollars in Solana, bring everybody together for a basketball tournament. Top team makes $250K, Solana sponsored, logos everywhere\"\n\nAnsem: \"Solana basketball tournament. Let's make this happen right now. I feel like we can manifest that. And we get Polymarket to run the markets on it\"",
@@ -1112,7 +1112,7 @@
         "quotes": 12,
         "replies": 72,
         "reposts": 78,
-        "views": 58236
+        "views": 58240
       },
       "publishedAt": "2026-07-13T19:38:02Z",
       "text": "solana:9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump IS A MOVEMENT \n\n\"If I'm doing all the marketing, yeah it can work. I tweet a ton and I can direct attention. But if I have 100K people going out and doing stuff like this, that's different\"\n\n\"I think it can be a culture, a movement, a community thing that hasn't really existed in crypto and been done well at scale\"\n\n\"I want to get it in as many people's hands as possible. That's the whole idea\"",
@@ -1132,7 +1132,7 @@
         "quotes": 15,
         "replies": 81,
         "reposts": 45,
-        "views": 44112
+        "views": 44171
       },
       "publishedAt": "2026-07-13T17:18:04Z",
       "text": "Market Bubble $5,000 Commercial Competition\n\nMake a commercial for the show 🎬\n\n5 winners will win $1,000 each\n\nDeadline: Thursday, July 23rd\n\nSubmit: Post your commercial and tag @MarketBubble",
@@ -1154,7 +1154,7 @@
         "quotes": 28,
         "replies": 189,
         "reposts": 137,
-        "views": 44252
+        "views": 44253
       },
       "publishedAt": "2026-07-13T16:04:50Z",
       "text": "Society when solana:9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump flips $PUMP",
@@ -1272,7 +1272,7 @@
         "quotes": 5,
         "replies": 23,
         "reposts": 23,
-        "views": 81260
+        "views": 81268
       },
       "publishedAt": "2026-07-10T17:27:51Z",
       "text": "Ansem explains why Solana will win the AI race\n\n\"For AI it makes a ton of sense that Solana is the L1 that gets the most interest. It's the cheapest, most performant, and they do a good job bringing in people external to crypto\"\n\n\"The open-source AI community is only going to grow faster and get bigger. Right now you have these large private labs that dominate but the design space for open-source AI, building products and protocols there, is where the smaller startups do well\"\n\n\"Mert said Solana wants to be the home for entrepreneurs to come and thrive, and I think they're going to keep building a chain that enables that\"\n\n\"The tech plays and infra plays on $SOL are kind of underlooked right now. That's actually one of the interesting spots that's going to be good this cycle\"",
@@ -1332,7 +1332,7 @@
         "quotes": 3,
         "replies": 25,
         "reposts": 21,
-        "views": 47844
+        "views": 47845
       },
       "publishedAt": "2026-07-10T01:38:53Z",
       "text": "FaZe Banks explains why there's never been a better time to be young and broke\n\nFaZe Banks: \"I personally think it's never been a better time in human history to be a broke young person with an internet connection and all the time in the world\"\n\nAnsem: \"By far. You can do anything bro. With infinite time, you can build anything\"\n\nFaZe Banks: \"You're almost in a better spot than somebody tied to their rent, who has to make payments, who's forced to work their 9-to-5 because they have overhead and families\"\n\nFaZe Banks: \"To be a person with nothing to lose in 2026 is a really good spot to be in. Go sit on Claude all day, sit on GPT-Live all day, go build shit, learn how to leverage AI, watch shows like this, learn about attention, learn about markets\"",
@@ -1392,7 +1392,7 @@
         "quotes": 11,
         "replies": 23,
         "reposts": 20,
-        "views": 19746
+        "views": 19747
       },
       "publishedAt": "2026-07-09T23:42:37Z",
       "text": "How solana:9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump could supercharge the clipping meta\n\nLuca: \"Replace the clipping budget with a token reward pool and then the clippers make more money as the token goes up, which goes up as they clip more\"\n\nBanks: \"Yeah that's their bag work and it's happening automatically. That's crazy\"\n\nLuca: \"This isn't a conversation of how you build a brand like we built Pudgy Penguins. This is how you make yourself the Kanye West of finance\"",
@@ -1534,7 +1534,7 @@
         "quotes": 14,
         "replies": 125,
         "reposts": 72,
-        "views": 34391
+        "views": 34393
       },
       "publishedAt": "2026-07-09T15:44:18Z",
       "text": "Now loading...\n\nLuca Netz, CEO of Pudgy Penguins\n\nToday at 2:30pm PST",
@@ -1572,7 +1572,7 @@
         "quotes": 18,
         "replies": 82,
         "reposts": 72,
-        "views": 64555
+        "views": 64562
       },
       "publishedAt": "2026-07-08T15:23:45Z",
       "text": "Blowing bubbles every Thursday @ 1pm PST",
@@ -1692,7 +1692,7 @@
         "quotes": 10,
         "replies": 77,
         "reposts": 43,
-        "views": 47730
+        "views": 47731
       },
       "publishedAt": "2026-07-06T22:19:37Z",
       "text": "Market Bubble.\n\nComing soon to a theater near you.",
@@ -1714,7 +1714,7 @@
         "quotes": 12,
         "replies": 134,
         "reposts": 67,
-        "views": 94020
+        "views": 94023
       },
       "publishedAt": "2026-07-06T20:30:02Z",
       "text": "Ansem's social metrics through the last week \n\nAnnualized: 4.8 Billion Impressions",
@@ -1812,7 +1812,7 @@
         "quotes": 5,
         "replies": 38,
         "reposts": 20,
-        "views": 39219
+        "views": 39220
       },
       "publishedAt": "2026-07-04T19:03:02Z",
       "text": "Banks explains why he has never bought and will never buy solana:9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump",
@@ -1832,7 +1832,7 @@
         "quotes": 6,
         "replies": 56,
         "reposts": 65,
-        "views": 48807
+        "views": 48811
       },
       "publishedAt": "2026-07-03T22:30:14Z",
       "text": "Ansem on tokenized attention\n\n\"What people miss is the tokenized attention piece. a lot of people say it's valueless and I think that's really untrue\"\n\n\"Last cycle Solana was trying to sell their first round of phones and weren't doing a great job. Then BONK airdropped tokens to people holding those phones\"\n\n\"When the tokens started going up, the airdrop was worth more than the phone cost. So people just started buying the phone and it sold out immediately\"\n\n\"Attention is very intangible, but tokens are one of the only ways you can ascribe value to attention in markets\"",
@@ -1912,7 +1912,7 @@
         "quotes": 13,
         "replies": 84,
         "reposts": 123,
-        "views": 65188
+        "views": 65191
       },
       "publishedAt": "2026-07-03T15:25:25Z",
       "text": "Ansem reacts to the odds of solana:9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump flipping solana:pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn \n\n\"This is free bro, its only like a 3x to flip right now\"\n\n\"If Solana makes a new ATH past where it was last cycle, i think the onchain coins are going to go higher than last cycle\"",
@@ -2052,7 +2052,7 @@
         "quotes": 13,
         "replies": 85,
         "reposts": 94,
-        "views": 58381
+        "views": 58382
       },
       "publishedAt": "2026-07-02T21:33:46Z",
       "text": "Ansem tells the origin story of solana:9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump The Black Bull\n\n\"People kept claiming that this random wallet was mine... so i made a Pumpfun account I was like no, this is my wallet, this is my account. if you guys wanna direct stuff to me direct it here\"\n\n\"I posted the wallet and go away for an hour and come back and check... and there was this coin. one was doing really well, like $8 mil market cap\"\n\n\"i can't just ignore this coin. it's called Ansem, it's called the Black Bull. people are trading it, people are asking if i'm gonna associate myself with it\"\n\n\"I got 65% of supply. i'm going to give that to people too... i've been doing it all this week. If pumpfun wont airdrop people, I will\"",
@@ -2212,7 +2212,7 @@
         "quotes": 2,
         "replies": 21,
         "reposts": 12,
-        "views": 19548
+        "views": 19549
       },
       "publishedAt": "2026-06-30T19:12:29Z",
       "text": "Our full conversation with Mert\n\n0:00 Tech vs sentiment\n3:42 SOL's monetary glow up\n11:30 His top bags\n21:15 Crypto is a game\n26:11 Global Silicon Valley\n37:05 SOL vs Hyperliquid\n44:24 AI x crypto\n54:50 Advice for entrepreneurs\n1:11:32 The privacy case\n1:23:15 Stocks",
@@ -2254,7 +2254,7 @@
         "quotes": 2,
         "replies": 72,
         "reposts": 34,
-        "views": 55980
+        "views": 55981
       },
       "publishedAt": "2026-06-30T15:57:35Z",
       "text": "Ansem on solana:So11111111111111111111111111111111111111112 vs hyperliquid:native \n\n\"You should hold both. I don't think it's one or the other. They're both great assets and both will do well long term\"\n\n\"Hyperliquid has proven itself with one singular application. But what Solana is much better at is being an L1 where a ton of applications can build on top\"\n\n\"There could be a perp exchange that competes with Hyperliquid, but also Pumpfun, Collector Crypt, and a bunch of other consumer apps doing well at the same time\"\n\n\"Right now sentiment on Hyperliquid is super high and sentiment on Solana is super low. That's where the divergence is\"",
@@ -2274,7 +2274,7 @@
         "quotes": 5,
         "replies": 21,
         "reposts": 10,
-        "views": 49251
+        "views": 49252
       },
       "publishedAt": "2026-06-30T14:04:18Z",
       "text": "Did he just say 67k?",
@@ -2336,7 +2336,7 @@
         "quotes": 13,
         "replies": 175,
         "reposts": 94,
-        "views": 142729
+        "views": 142730
       },
       "publishedAt": "2026-06-29T17:41:28Z",
       "text": "Never fade Ansem",
@@ -2374,7 +2374,7 @@
         "quotes": 0,
         "replies": 10,
         "reposts": 6,
-        "views": 16116
+        "views": 16117
       },
       "publishedAt": "2026-06-27T19:17:29Z",
       "text": "Ansem breaks down how to trade social trends\n\n\"AI's gotten so much attention, but there are a lot of other sectors that haven't gotten as much attention\"\n\n\"It's like how do I find the narratives that aren't popular yet, and benefit before they pop?\"\n\n\"There are social trends happening all around you and there's always a company benefiting from them. The skill is figuring out which company is attached to that trend and how to make money on it\"",
@@ -2396,7 +2396,7 @@
         "quotes": 1,
         "replies": 17,
         "reposts": 7,
-        "views": 21837
+        "views": 21838
       },
       "publishedAt": "2026-06-27T15:02:55Z",
       "text": "BREAKING: CT legend Ansem has hit 1,000,000 followers",
@@ -3330,11 +3330,11 @@
       "media": [],
       "metrics": {
         "bookmarks": 1,
-        "likes": 18,
+        "likes": 17,
         "quotes": 0,
         "replies": 2,
         "reposts": 1,
-        "views": 75589
+        "views": 75618
       },
       "publishedAt": "2026-06-19T02:53:30Z",
       "text": "Cobie vs Choose Rich Nick",
@@ -3434,7 +3434,7 @@
         "quotes": 3,
         "replies": 20,
         "reposts": 17,
-        "views": 30470
+        "views": 30471
       },
       "publishedAt": "2026-06-18T23:03:46Z",
       "text": "Ansem reveals the most slept on play in crypto right now\n\n\"It might be $CARDS. The platform's called Collector Crypt and they've done something like $640M in revenue, a lot of which gets returned back to the people using the platform\"\n\n\"It's a TCG platform with rare cards you pull from gachas. They even buy the cards back from you at a slight discount if you don't want them\"\n\n\"Everyone knows pump fun is one of the biggest apps this cycle. Collector Crypt just flipped it on daily revenue recently, and it's not even talked about as much\"",
@@ -3516,7 +3516,7 @@
         "quotes": 1,
         "replies": 29,
         "reposts": 13,
-        "views": 97879
+        "views": 97896
       },
       "publishedAt": "2026-06-18T19:29:58Z",
       "text": "Now loading...\n\nCamilla Araujo\n\nToday at 4pm PST",
@@ -3874,7 +3874,7 @@
         "quotes": 4,
         "replies": 23,
         "reposts": 30,
-        "views": 54831
+        "views": 54835
       },
       "publishedAt": "2026-06-12T16:22:38Z",
       "text": "Ansem explains why now is the time to be doing your research in crypto\n\n\"When a lot of people have a negative perception of crypto is usually when the best opportunities arise, and when you should be doing the most research\"\n\n\"When people aren't expecting things to do well, that's when the smart people are building, before the marketing happens\"\n\n\"Once the marketing happens is when the average person finds out. But there are people who've been building these things for years\"\n\n\"Even with AI people were working at OpenAI for years before ChatGPT had its breakout moment. As an average person you had no idea anyone was solving those problems. The same thing is happening in crypto right now\"",
@@ -4274,7 +4274,7 @@
         "quotes": 2,
         "replies": 22,
         "reposts": 9,
-        "views": 63239
+        "views": 63260
       },
       "publishedAt": "2026-06-06T18:59:10Z",
       "text": "Ansem breaks down how to start investing from zero\n\n\"First thing is figure out your profits and your expenses. Whatever's left after you pay everything, that's what you invest with\"\n\n\"Think of it as three buckets. Your cash bucket for emergencies, low risk. Your long term bucket for 10-year stuff, basic ETFs like SPY and QQQ, plus large successful companies. And your active trading bucket for high risk, high conviction plays\"\n\n\"People always discount how much compound interest impacts a portfolio. Hit ~10% and keep compounding year over year over a long period, that grows a lot\"\n\n\"You don't wanna go all in on the risky plays. If you go all in leveraged and lose it, you start from zero and you don't wanna be in that position\"",
@@ -4536,7 +4536,7 @@
         "quotes": 3,
         "replies": 38,
         "reposts": 3,
-        "views": 80136
+        "views": 80137
       },
       "publishedAt": "2026-06-03T23:32:16Z",
       "text": "Now loading...  \n\nMike Majlak, Co-host of Impaulsive\n\nThursday, June 4th, 6:30pm EST",
@@ -4634,7 +4634,7 @@
         "quotes": 0,
         "replies": 1,
         "reposts": 0,
-        "views": 2504
+        "views": 2505
       },
       "publishedAt": "2026-06-03T16:44:37Z",
       "text": "Ansem: “I think Hyperliquid is one of the most important applications not just in Crypto but also globally right now.”\n\nBanks: “I own a ton of HYPE too, Jeff is the goat.”  \n\nApril 30th\nhttps://t.co/Q9HvYOsghC",
@@ -4676,7 +4676,7 @@
         "quotes": 3,
         "replies": 32,
         "reposts": 11,
-        "views": 199025
+        "views": 199026
       },
       "publishedAt": "2026-06-03T16:44:36Z",
       "text": "Ansem is up +115% and goes 5 for 5 with his calls in crypto the last month.\n\nHe’s held no $BTC or $SOL, but rather $HYPE, $ZEC & $VVV.\n\nHe is making one of the more difficult markets look easy. All you had to do was watch the show.\n\nProof below 👇",
@@ -4710,11 +4710,11 @@
       "media": [],
       "metrics": {
         "bookmarks": 49,
-        "likes": 461,
+        "likes": 460,
         "quotes": 12,
         "replies": 38,
         "reposts": 14,
-        "views": 706245
+        "views": 706246
       },
       "publishedAt": "2026-06-03T01:29:36Z",
       "text": "Lacy gave us a top signal in a bear market, impressive",
@@ -4874,7 +4874,7 @@
         "quotes": 1,
         "replies": 6,
         "reposts": 12,
-        "views": 111925
+        "views": 111932
       },
       "publishedAt": "2026-05-25T19:22:27Z",
       "text": "Last episode, Ansem shared his analysis on near:native's recent price action and developing narrative...\n\nSince the call last Thursday, near:native is +41%",
@@ -4994,7 +4994,7 @@
         "quotes": 45,
         "replies": 125,
         "reposts": 33,
-        "views": 232352
+        "views": 232353
       },
       "publishedAt": "2026-05-21T21:27:06Z",
       "text": "Ansem: Ethereum is going to zero\n\nAnsem: “I think it’s gonna go to $1,000 in the next year or so”\n\nBanks: “So fair to say if you’re in a coma for the next 10 years, you’re putting your money in just about anything over Ethereum?”\n\nAnsem: “Literally anything”",
@@ -5016,7 +5016,7 @@
         "quotes": 79,
         "replies": 388,
         "reposts": 45,
-        "views": 467805
+        "views": 467808
       },
       "publishedAt": "2026-05-21T20:30:10Z",
       "text": "THE OFFICIAL TOP 25:\n\n'THE BEST OF CT' RANKINGS\n\n1. Cobie\n2. CL\n3. mert\n4. theadguy\n5. Jeff\n6. Mayne\n7. Flood\n8. based16z\n9. Jesse\n10. shoku\n11. Intern\n12. Meltem\n13. Rhino\n14. Kel\n15. Frank\n16. awawat\n17. tolks\n18. innerdevcrypto\n19. chase\n20. Cold Blooded Shiller\n21. loma\n22. gainzy\n23. yano\n24. rasmr\n25. Alon",
@@ -5136,7 +5136,7 @@
         "quotes": 4,
         "replies": 48,
         "reposts": 27,
-        "views": 157286
+        "views": 157289
       },
       "publishedAt": "2026-05-21T19:21:46Z",
       "text": "Everyone faded Ansem when he shared his crypto portfolio.\n\nHe held no $BTC or $SOL, but rather $HYPE, $ZEC & $VVV.\n\nTruth is, he couldn't have been more right.\n\n👇 Proof below",
@@ -5217,7 +5217,7 @@
         "quotes": 6,
         "replies": 39,
         "reposts": 14,
-        "views": 221084
+        "views": 221087
       },
       "publishedAt": "2026-05-15T19:38:11Z",
       "text": "coldest nigga breathing 🧊🥶",
@@ -5391,11 +5391,11 @@
       "media": [],
       "metrics": {
         "bookmarks": 29,
-        "likes": 161,
+        "likes": 162,
         "quotes": 1,
         "replies": 22,
         "reposts": 10,
-        "views": 29077
+        "views": 29079
       },
       "publishedAt": "2026-05-14T21:58:09Z",
       "text": "Banks reveals he’s lost close to $500,000 on Solana \n\nBanks: “It’s all good though we’re gonna get it back, we love $SOL”\n\nAnsem: “Yeah it’s my favorite asset in Crypto. I hit Solana so many times”\n\nBanks: “Next time you think about hitting buy, whether you hit or not, please think about me and let me know”",
@@ -5415,7 +5415,7 @@
         "quotes": 1,
         "replies": 10,
         "reposts": 15,
-        "views": 27295
+        "views": 27297
       },
       "publishedAt": "2026-05-14T20:52:55Z",
       "text": "Ansem explains why Coinbase acquiring Hyperliquid’s native stablecoin is bullish\n\n“The entire treasury TVL on Hyperliquid, which is around $5B is now going to be supported by Coinbase and Circle”\n\n“This added an entirely new revenue line to Hyperliquid and also great alignment with Coinbase which is one of the strongest US companies for Crypto”\n\n“People kind of see them as competitors… but this alignment is really crucial”\n\n“This added around $150,000,000 estimated”",
@@ -5491,11 +5491,11 @@
       "media": [],
       "metrics": {
         "bookmarks": 97,
-        "likes": 129,
+        "likes": 130,
         "quotes": 4,
         "replies": 20,
         "reposts": 13,
-        "views": 35762
+        "views": 35764
       },
       "publishedAt": "2026-05-09T22:46:12Z",
       "text": "Ansem explains why he’s bullish on $MP\n\n“Right now the US relies on China for a lot of the rare earth metals that we source and they’re important for EVs, magnets and all these electronics”\n\n“We have no real way of getting them except for these very few mining companies… $MP is one of those”",
@@ -5515,7 +5515,7 @@
         "quotes": 19,
         "replies": 62,
         "reposts": 77,
-        "views": 143119
+        "views": 143121
       },
       "publishedAt": "2026-05-08T23:47:40Z",
       "text": "Ansem shares his thesis on $VVV \n\n“Venice AI is essentially a private inference platform… you can access all of the top state-of-the-art models, all the best open source models but through Venice, it doesn’t store any of your information”\n\n“They’ve done really well. They have over 2 million users. I think they have 50k daily actives on their app and they’re making money from the subscription”\n\n“One of the cool features of Venice that I thought was interesting is they have a second token that’s called DIEM… if you have 1 DIEM, you get to use $1 of compute per day for that 1 DIEM that you have”\n\n“It’s a really interesting model. I think it’s honestly attracted a lot of people to stake $VVV.  We don’t have a lot of real protocols there in the crypto and AI space that aren’t vapor and are actually doing well”",
@@ -5531,11 +5531,11 @@
       "media": [],
       "metrics": {
         "bookmarks": 54,
-        "likes": 201,
+        "likes": 202,
         "quotes": 3,
         "replies": 12,
         "reposts": 18,
-        "views": 23165
+        "views": 23167
       },
       "publishedAt": "2026-05-08T04:24:21Z",
       "text": "Ansem explains why he sees Zcash as a better trade than Bitcoin right now\n\n“I like Zcash a lot. I think that Zcash is in a really good position for a few different reasons”\n\n“One of the main reasons I think is that Bitcoin currently has an issue with the quantum situation”\n\n“One of the ways that I think Zcash is a good trade right now is it’s quantum resistant, it’s also private” \n\n“Another issue that Bitcoin has had and does have currently is it’s so institutionalized now”\n\n“One of the core principles of crypto and one of the core principles of a lot of the OG cypherpunks was they wanted money that could not be co-opted by any one nation state or any one party or any one person”\n\n“I think Zcash is very reflective of that in that it hasn’t been institutionalized in that way yet”\n\n“There was nobody who was concerned about Zcash until maybe like last year”\n\n“Past crypto cycles, Zcash was laughed at because it underperformed so aggressively”",
@@ -5555,7 +5555,7 @@
         "quotes": 2,
         "replies": 16,
         "reposts": 8,
-        "views": 26045
+        "views": 26047
       },
       "publishedAt": "2026-05-08T03:30:22Z",
       "text": "Ansem announces $100,000 Bullpen Competition \n\n- 4 weeks\n- $25,000 bankroll\n- Self-funded",
@@ -5575,7 +5575,7 @@
         "quotes": 0,
         "replies": 18,
         "reposts": 10,
-        "views": 19991
+        "views": 19993
       },
       "publishedAt": "2026-05-08T02:15:03Z",
       "text": "Ansem explains why you need to learn AI right now\n\n“AI is going to make everybody 10x more efficient at whatever it is that they’re doing”\n\n“If you’re concerned about your job… you need to get up to speed and become an expert at using AI as fast as possible”\n\n“There’s going to be people who choose not to do that and people who do. In a few years, people are going to look at AI the same way as being able to use the internet”\n\n“Obviously someone who knows how to use the internet is a way better candidate than someone who doesn’t, it’s going to be the same with AI”\n\n“Whenever you have these technological breakthroughs happen, you create more jobs that didn’t even exist before. I think AI is going to do that more so than displace people”",
@@ -5595,7 +5595,7 @@
         "quotes": 0,
         "replies": 7,
         "reposts": 2,
-        "views": 18510
+        "views": 18511
       },
       "publishedAt": "2026-05-08T01:20:16Z",
       "text": "Mizkif reveals he’s made close to $20,000,000 with roughly 70% coming from the stock market\n\nMizkif: “I don’t need money, I’ve made money from Kick and other things but I don’t need more money”\n\nBanks: “Shut the f-ck up. How much money have you made throughout the course of your career?”\n\nMizkif: I’m sitting at close to $20,000,000 but here’s thing… most of that, I would say 70% is made through the stock market, it’s not made through my streams”",
@@ -5615,7 +5615,7 @@
         "quotes": 8,
         "replies": 35,
         "reposts": 8,
-        "views": 77293
+        "views": 77294
       },
       "publishedAt": "2026-05-08T00:19:41Z",
       "text": "Banks gets MOGGED by Ansem 😭 \n\n“That’s bullsh*t, what the f*ck am I chopped? I feel like I look alright”",
@@ -5637,7 +5637,7 @@
         "quotes": 2,
         "replies": 42,
         "reposts": 14,
-        "views": 123749
+        "views": 123750
       },
       "publishedAt": "2026-05-07T16:33:30Z",
       "text": "LIVE W/ MIZKIF\n\nMarket Bubble: Episode 2 \n\nToday @ 1PM PST",
