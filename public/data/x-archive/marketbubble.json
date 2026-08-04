@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-04T20:52:00.954883Z",
+  "fetchedAt": "2026-08-04T22:16:03.873710Z",
   "handle": "MarketBubble",
   "profileImageUrl": "https://pbs.twimg.com/profile_images/2049931777729609728/48E45qmE.jpg",
   "profileTitle": "Market Bubble / @MarketBubble",
@@ -443,6 +443,26 @@
   "tweets": [
     {
       "author": "@MarketBubble",
+      "id": "2084760400596222321",
+      "isRetweet": false,
+      "media": [
+        "https://pbs.twimg.com/media/HO6OfFLWkAA-IzP?format=jpg&name=orig"
+      ],
+      "metrics": {
+        "bookmarks": 0,
+        "likes": 70,
+        "quotes": 1,
+        "replies": 23,
+        "reposts": 2,
+        "views": 3664
+      },
+      "publishedAt": "2026-08-04T21:56:27Z",
+      "text": "Generational bottom",
+      "title": "Generational bottom",
+      "url": "https://x.com/MarketBubble/status/2084760400596222321"
+    },
+    {
+      "author": "@MarketBubble",
       "id": "2084719457369485416",
       "isRetweet": false,
       "media": [
@@ -451,11 +471,11 @@
       ],
       "metrics": {
         "bookmarks": 3,
-        "likes": 136,
+        "likes": 182,
         "quotes": 2,
-        "replies": 48,
-        "reposts": 9,
-        "views": 13694
+        "replies": 52,
+        "reposts": 11,
+        "views": 16675
       },
       "publishedAt": "2026-08-04T19:13:45Z",
       "text": "Grim Reaper Mode",
@@ -471,11 +491,11 @@
       ],
       "metrics": {
         "bookmarks": 6,
-        "likes": 70,
+        "likes": 76,
         "quotes": 1,
-        "replies": 16,
+        "replies": 19,
         "reposts": 2,
-        "views": 6382
+        "views": 6920
       },
       "publishedAt": "2026-08-04T17:19:41Z",
       "text": "Surely this can’t keep running\n\nS&P 500:",
@@ -490,12 +510,12 @@
         "https://pbs.twimg.com/media/HO4P5GUWEAAvggL?format=jpg&name=orig"
       ],
       "metrics": {
-        "bookmarks": 8,
-        "likes": 317,
+        "bookmarks": 9,
+        "likes": 331,
         "quotes": 11,
-        "replies": 65,
-        "reposts": 32,
-        "views": 11572
+        "replies": 71,
+        "reposts": 33,
+        "views": 12144
       },
       "publishedAt": "2026-08-04T12:43:57Z",
       "text": "You will retire your bloodline.",
@@ -511,11 +531,11 @@
       ],
       "metrics": {
         "bookmarks": 28,
-        "likes": 617,
+        "likes": 618,
         "quotes": 17,
-        "replies": 50,
+        "replies": 51,
         "reposts": 47,
-        "views": 91922
+        "views": 92342
       },
       "publishedAt": "2026-08-04T02:43:00Z",
       "text": "JUST IN: Telegram messaging app is back on the Apple App Store.",
@@ -532,11 +552,11 @@
       ],
       "metrics": {
         "bookmarks": 12,
-        "likes": 241,
+        "likes": 243,
         "quotes": 3,
-        "replies": 38,
-        "reposts": 10,
-        "views": 18152
+        "replies": 39,
+        "reposts": 11,
+        "views": 18297
       },
       "publishedAt": "2026-08-03T21:51:33Z",
       "text": "Just a few button clicks away from changing your life.\n\nLock in.",
@@ -549,12 +569,12 @@
       "isRetweet": false,
       "media": [],
       "metrics": {
-        "bookmarks": 57,
-        "likes": 297,
+        "bookmarks": 58,
+        "likes": 298,
         "quotes": 3,
         "replies": 54,
         "reposts": 11,
-        "views": 75245
+        "views": 76015
       },
       "publishedAt": "2026-08-03T18:59:05Z",
       "text": "Spiderman: Brand New Day FULL Movie",
@@ -572,11 +592,11 @@
       ],
       "metrics": {
         "bookmarks": 2,
-        "likes": 206,
+        "likes": 207,
         "quotes": 2,
         "replies": 40,
         "reposts": 6,
-        "views": 21996
+        "views": 22065
       },
       "publishedAt": "2026-08-03T16:03:52Z",
       "text": "X is cool because I can post a picture of a chart and some guy named Ansem will comment \"Nice\"",
@@ -592,11 +612,11 @@
       ],
       "metrics": {
         "bookmarks": 1,
-        "likes": 120,
+        "likes": 121,
         "quotes": 0,
         "replies": 22,
         "reposts": 13,
-        "views": 9846
+        "views": 9886
       },
       "publishedAt": "2026-08-03T14:12:40Z",
       "text": "",
@@ -616,7 +636,7 @@
         "quotes": 7,
         "replies": 33,
         "reposts": 14,
-        "views": 21956
+        "views": 22219
       },
       "publishedAt": "2026-08-03T01:17:00Z",
       "text": "",
@@ -636,7 +656,7 @@
         "quotes": 4,
         "replies": 48,
         "reposts": 18,
-        "views": 17089
+        "views": 17115
       },
       "publishedAt": "2026-08-02T21:18:57Z",
       "text": "You're one good month away from changing your entire life.\n\nLock in bro.",
@@ -654,9 +674,9 @@
         "bookmarks": 22,
         "likes": 514,
         "quotes": 18,
-        "replies": 100,
-        "reposts": 53,
-        "views": 18292
+        "replies": 101,
+        "reposts": 54,
+        "views": 18317
       },
       "publishedAt": "2026-08-01T16:55:34Z",
       "text": "Repeat after me.\n\nIt is August and I will win.",
@@ -696,7 +716,7 @@
         "quotes": 11,
         "replies": 49,
         "reposts": 29,
-        "views": 20307
+        "views": 20327
       },
       "publishedAt": "2026-07-31T20:13:10Z",
       "text": "Balls in your court rocket man.",
@@ -716,7 +736,7 @@
         "quotes": 4,
         "replies": 37,
         "reposts": 8,
-        "views": 21744
+        "views": 21770
       },
       "publishedAt": "2026-07-31T18:40:58Z",
       "text": "Leopold's current view of the market.",
@@ -734,7 +754,7 @@
         "quotes": 1,
         "replies": 19,
         "reposts": 11,
-        "views": 19295
+        "views": 19311
       },
       "publishedAt": "2026-07-31T16:23:52Z",
       "text": "Austin Barack on why he's bullish on @AskVenice\n\n\"Allows you to use any consumer AI model in a completely private way.\"\n\n\"They've grown from, my estimate, in January being $15M ARR to now being about $90M ARR.\"\n\n\"They have a couple million users, 45,000 monthly paid subscribers, and about $45M in annual revenue from credit purchases.\"\n\n\"This is a team that's been around the block and have been building in crypto for 15 years.\"",
@@ -754,7 +774,7 @@
         "quotes": 5,
         "replies": 189,
         "reposts": 134,
-        "views": 24317
+        "views": 24336
       },
       "publishedAt": "2026-07-30T23:42:27Z",
       "text": "Thank you for 100K followers.",
@@ -776,7 +796,7 @@
         "quotes": 4,
         "replies": 128,
         "reposts": 56,
-        "views": 22555
+        "views": 22579
       },
       "publishedAt": "2026-07-30T23:16:17Z",
       "text": "Motion\n(MOH-shuhn)\nnoun\n\nThe act of breaking 100,000+ live viewers during one show. Up only.",
@@ -794,7 +814,7 @@
         "quotes": 6,
         "replies": 139,
         "reposts": 161,
-        "views": 27382
+        "views": 27386
       },
       "publishedAt": "2026-07-30T22:41:12Z",
       "text": "CEO of Moonpay books a flight using only the AI chatbot \"Paybox\" by @Moonpay",
@@ -814,7 +834,7 @@
         "quotes": 4,
         "replies": 60,
         "reposts": 154,
-        "views": 19547
+        "views": 19553
       },
       "publishedAt": "2026-07-30T21:37:44Z",
       "text": "Ansem and Banks talk state of the market:\n\n\"Bottom is in, onchain is back.\"\n\n\"For the first time in several months, we're starting to see coins run from like 0 to 100M+ market cap.\"\n\n\"We're not just seeing coins run, we're also seeing devs and builders build innovative things on chain that are actually novel, actually attracting attention, and are new things. That's what I'm most excited about.\"\n\n\"That's how bullish I am. I'm that bullish on crypto right now that I'm even bullish Ethereum right now.\"",
@@ -834,7 +854,7 @@
         "quotes": 3,
         "replies": 27,
         "reposts": 42,
-        "views": 66461
+        "views": 66481
       },
       "publishedAt": "2026-07-30T21:20:52Z",
       "text": "Ansem and FaZe Banks react to @notthreadguy calling the Leopold crisis.\n\nGive this man his 💐",
@@ -854,7 +874,7 @@
         "quotes": 9,
         "replies": 45,
         "reposts": 53,
-        "views": 41689
+        "views": 41702
       },
       "publishedAt": "2026-07-30T21:09:22Z",
       "text": "Kimchi, the trader who made $40M on $TRUMP mogs FaZe Banks.",
@@ -874,7 +894,7 @@
         "quotes": 0,
         "replies": 18,
         "reposts": 14,
-        "views": 15795
+        "views": 15803
       },
       "publishedAt": "2026-07-30T19:07:39Z",
       "text": "Leopold at his wedding this weekend after his wife says it looks like he’s not having fun.",
@@ -896,7 +916,7 @@
         "quotes": 3,
         "replies": 8,
         "reposts": 14,
-        "views": 11010
+        "views": 11016
       },
       "publishedAt": "2026-07-30T18:23:46Z",
       "text": "Now loading... \n\nAustin Barack, Founder of Relayer Capital \n\nToday @ 3:00pm PST",
@@ -916,7 +936,7 @@
         "quotes": 0,
         "replies": 25,
         "reposts": 7,
-        "views": 9409
+        "views": 9412
       },
       "publishedAt": "2026-07-30T16:47:48Z",
       "text": "How that one bro who doesn't lock in on todays Market Bubble stream kisses his girl.",
@@ -936,7 +956,7 @@
         "quotes": 1,
         "replies": 15,
         "reposts": 16,
-        "views": 10974
+        "views": 10979
       },
       "publishedAt": "2026-07-30T15:37:42Z",
       "text": "I loved her bro.",
@@ -956,7 +976,7 @@
         "quotes": 0,
         "replies": 12,
         "reposts": 12,
-        "views": 7870
+        "views": 7873
       },
       "publishedAt": "2026-07-30T14:25:43Z",
       "text": "We are buying from willing sellers at the current fair market price",
@@ -1016,7 +1036,7 @@
         "quotes": 3,
         "replies": 33,
         "reposts": 10,
-        "views": 17958
+        "views": 17960
       },
       "publishedAt": "2026-07-29T17:08:07Z",
       "text": "When she hears you sniped pipedog.",
@@ -1134,7 +1154,7 @@
         "quotes": 5,
         "replies": 10,
         "reposts": 18,
-        "views": 16347
+        "views": 16351
       },
       "publishedAt": "2026-07-24T14:49:23Z",
       "text": "Cash Prizes: $100,000\nVenice Credits: 10,000,000\nEternal glory to the champions: Priceless\n\n📽️Submissions to Lumara Film Festival now open",
@@ -1156,7 +1176,7 @@
         "quotes": 2,
         "replies": 35,
         "reposts": 15,
-        "views": 26130
+        "views": 26132
       },
       "publishedAt": "2026-07-24T00:49:15Z",
       "text": "Best live show on the internet",
@@ -1254,7 +1274,7 @@
         "quotes": 4,
         "replies": 38,
         "reposts": 20,
-        "views": 91823
+        "views": 91826
       },
       "publishedAt": "2026-07-23T21:55:01Z",
       "text": "Cirrus explains the trade that let him quit his job\n\n\"I started out mostly in NFTs. I took a really small ETH balance to a big one by essentially just playing the spread on NFTs\"\n\n\"What most people were doing during that time was chasing the new hot collection, trying to buy a bunch of it and ride it up. I was just playing this huge spread that was in NFTs, mostly because OpenSea was the only place you could trade them\"\n\n\"There's like a 10% spread plus a 5% royalty fee you had to pay. So I would buy on OpenSea at the bid, go into these Discords and sell OTC for 15% a couple dozen times a day\"\n\n\"It quickly compounded my bankroll up. That's what led me to quit my job and do crypto full time\"",
@@ -1374,7 +1394,7 @@
         "quotes": 4,
         "replies": 32,
         "reposts": 22,
-        "views": 38870
+        "views": 38872
       },
       "publishedAt": "2026-07-23T20:58:50Z",
       "text": "Congrats to the winners of the Market Bubble Commercial Contest\n\n$1,000 airdrop to each winner\n\nThanks for participating, more to come\n\nCheck them out 👇",
@@ -1476,7 +1496,7 @@
         "quotes": 99,
         "replies": 154,
         "reposts": 70,
-        "views": 253632
+        "views": 253641
       },
       "publishedAt": "2026-07-22T18:00:47Z",
       "text": "Now loading…\n\nBrian Armstrong, CEO of Coinbase\n\nThursday, July 23rd, 3:30pm PST",
@@ -1554,7 +1574,7 @@
         "quotes": 1,
         "replies": 7,
         "reposts": 5,
-        "views": 15437
+        "views": 15438
       },
       "publishedAt": "2026-07-21T17:45:42Z",
       "text": "Ansem & FaZe Banks discuss why the closed AI labs could be in trouble\n\nFaZe Banks: \"Is China putting OpenAI out of business?\"\n\nAnsem: \"I think they could. All the open source models coming out of China and the Chinese labs, if they get good enough to the point where the usage of the main lab is too expensive, and you can use an open source model for 80% of the cost\"\n\nFaZe Banks: \"A million AI tokens cost 50 cents from China versus $56 from Anthropic. That's bad. That's a little scary\"\n\nAnsem: \"This is really bad because the labs and the return on investing in the labs, is like 90% of what's driving the stock market return. So when those investments don't make sense anymore, then what?\"",
@@ -1576,7 +1596,7 @@
         "quotes": 0,
         "replies": 9,
         "reposts": 4,
-        "views": 7789
+        "views": 7790
       },
       "publishedAt": "2026-07-21T15:39:19Z",
       "text": "JUST IN: Google $GOOGL releases three new AI models built to be faster and more token efficient\n\n- Gemini 3.6 Flash\n- Gemini 3.5 Flash-Lite\n- Gemini 3.5 Flash Cyber",
@@ -1814,7 +1834,7 @@
         "quotes": 1,
         "replies": 8,
         "reposts": 4,
-        "views": 10519
+        "views": 10520
       },
       "publishedAt": "2026-07-17T00:07:00Z",
       "text": "Lucas Bruder shares the vision for JTX\n\n“You can really feel how good Solana is. The transactions confirm super fast and you get really tight quotes”\n\n“But I think there's a lot of room for improvement at the application layer. The current applications are not really something I would want to get my friends and family onboard with”\n\n“We're taking a more professional approach, trying to curate the assets more and focus on really good trade execution”\n\n“I think it kind of ties back to the Jito airdrop like we're so tied to the success of Solana. There's only so much we can do at the infrastructure layer. We want to bring new people onchain and take a different approach to the way people trade”",
@@ -1874,7 +1894,7 @@
         "quotes": 3,
         "replies": 23,
         "reposts": 9,
-        "views": 64290
+        "views": 64292
       },
       "publishedAt": "2026-07-16T22:34:02Z",
       "text": "Ansem turns into the Black Bull live on stream",
@@ -1914,7 +1934,7 @@
         "quotes": 4,
         "replies": 55,
         "reposts": 28,
-        "views": 76203
+        "views": 76211
       },
       "publishedAt": "2026-07-16T21:31:47Z",
       "text": "Ansem on why he's calling the crypto bottom early\n\n\"You saw cash heavy TradFi buyers step in and start to allocate towards crypto with $BTC, $ETH, and $SOL. $HYPE has been outperforming on its own, but the majors have been lagging behind\"\n\n\"The CT sentiment is really poor and typically when you have a divergence like that, it's a great place for a bottom\"\n\n\"You haven't seen that momentum shift happen yet on any of the majors. But I think if you see Solana back over $100, Bitcoin back over $80K, a lot of those traders will probably flip back\"",
@@ -1956,7 +1976,7 @@
         "quotes": 5,
         "replies": 37,
         "reposts": 11,
-        "views": 22138
+        "views": 22139
       },
       "publishedAt": "2026-07-16T15:07:52Z",
       "text": "Now loading...\n\nLucas Bruder, CEO of Jito Labs\n\nToday at 3:00pm PST",
@@ -1976,7 +1996,7 @@
         "quotes": 12,
         "replies": 70,
         "reposts": 48,
-        "views": 47211
+        "views": 47215
       },
       "publishedAt": "2026-07-15T20:12:11Z",
       "text": "Now loading...\n\nJesse Pollak, Creator of Base\n\nThursday, July 16th, 2:30pm PST",
@@ -2094,7 +2114,7 @@
         "quotes": 1,
         "replies": 35,
         "reposts": 11,
-        "views": 21932
+        "views": 21936
       },
       "publishedAt": "2026-07-14T14:29:25Z",
       "text": "Who is your GOAT?\n\nAnd you can’t say everybody 😂",
@@ -2114,7 +2134,7 @@
         "quotes": 29,
         "replies": 95,
         "reposts": 43,
-        "views": 178008
+        "views": 178013
       },
       "publishedAt": "2026-07-13T22:43:00Z",
       "text": "WE NEED MORE COOL CRYPTO EVENTS\n\nAnsem: \"we should do more cool crypto events\"\n\nBanks: \"yeah actual cool ones. Even hearing you say 'crypto event' makes me want to stay home\"\n\nLuca: \"If I was Solana CMO I'd take a quarter million dollars in Solana, bring everybody together for a basketball tournament. Top team makes $250K, Solana sponsored, logos everywhere\"\n\nAnsem: \"Solana basketball tournament. Let's make this happen right now. I feel like we can manifest that. And we get Polymarket to run the markets on it\"",
@@ -2134,7 +2154,7 @@
         "quotes": 11,
         "replies": 72,
         "reposts": 78,
-        "views": 58406
+        "views": 58407
       },
       "publishedAt": "2026-07-13T19:38:02Z",
       "text": "solana:9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump IS A MOVEMENT \n\n\"If I'm doing all the marketing, yeah it can work. I tweet a ton and I can direct attention. But if I have 100K people going out and doing stuff like this, that's different\"\n\n\"I think it can be a culture, a movement, a community thing that hasn't really existed in crypto and been done well at scale\"\n\n\"I want to get it in as many people's hands as possible. That's the whole idea\"",
@@ -2254,7 +2274,7 @@
         "quotes": 1,
         "replies": 43,
         "reposts": 26,
-        "views": 41531
+        "views": 41533
       },
       "publishedAt": "2026-07-10T22:23:35Z",
       "text": "Ansem on why he thinks ethereum:0x232ce3bd40fcd6f80f3d55a522d03f25df784ee2 is a good trade\n\n\"Lighter's partnership with Robinhood is pretty underdiscussed on the timeline so far. Hasn't been talked about a lot its kind of crazy\"\n\n\"Lighter is a fraction of Hyperliquid's size right now, they're obviously not as successful, don't make as much money. But if crypto assets keep showing relative strength we could see a lot of momentum pretty quickly\"",
@@ -2274,7 +2294,7 @@
         "quotes": 12,
         "replies": 35,
         "reposts": 34,
-        "views": 15910
+        "views": 15912
       },
       "publishedAt": "2026-07-10T19:58:13Z",
       "text": "Ansem on why attention is currency\n\n\"One reason I'm doing airdrops to holders and to people creating content on X is because if I have an army of 100,000 people posting about solana:9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump and aligned in the community, that's more marketing than i could ever do on my own\"\n\n\"Imagine 100,000 people tweeting and aligned on the vision of giving back this much money. We're going to give back more than $200 million in the next 6 months just by being bullish. That's exponential, that's multiplicative\"\n\n\"We want to be net positive for crypto, use all these different protocols, and be bullish on all these new things getting built onchain\"",
@@ -2434,7 +2454,7 @@
         "quotes": 10,
         "replies": 92,
         "reposts": 87,
-        "views": 42661
+        "views": 42663
       },
       "publishedAt": "2026-07-09T23:12:27Z",
       "text": "Ansem on building the $ANSEM flywheel\n\n\"I have all of this supply, and we have 100K+ holders of people who want more of the supply. I can direct them to essentially anything. I want to make it a net positive for crypto\"\n\n\"Get people to use these protocols, help with marketing, do IRL stuff, teaching people, do educational stuff etc\"\n\n\"If I can get people to learn how to trade well, manage their portfolio, manage their risk, and that's all connected to this one coin, then it's not just me doing the marketing. Now I have over 100K people doing the marketing\"\n\n\"Because I have a lot of the supply, I can drip this out as long as I want. And I'm doing it from first principles. I've never done it before, I'm not copying anybody's playbook\"",
@@ -2474,7 +2494,7 @@
         "quotes": 6,
         "replies": 59,
         "reposts": 59,
-        "views": 44155
+        "views": 44156
       },
       "publishedAt": "2026-07-09T22:06:13Z",
       "text": "Luca Netz shares his advice for the younger generation\n\n\"Understand that your age and being young is such a superpower, because as you get older your tolerance to take risk is exponentially smaller\"\n\n\"My claim to fame is that I tested out of school when i was 15. So when people look at my success they're like, dude you're so successful. I'm like, yeah but i've been doing this for 13 years. I'm 28 now\"\n\n\"The people listening don't really understand how important it is to take the information here and take risks\"\n\n\"If you're not paying rent, you're in such an amazing situation. Now's the time you can take risks and lose it all and keep running it back until you find something\"",
@@ -2574,7 +2594,7 @@
         "quotes": 2,
         "replies": 25,
         "reposts": 15,
-        "views": 15070
+        "views": 15072
       },
       "publishedAt": "2026-07-08T16:45:35Z",
       "text": "Ansem and Banks on why trust is the one thing AI can't replicate\n\nAnsem: \"When you have all this AI generated media online, all these AI agents, trust is the one thing AI cannot replicate. The only way you gain trust is by being consistent online and building your personal brand over years\"\n\nBanks: \"Elon's success comes from his ability to tell stories and people taking bets on him as a founder. That's all just attention at the end of the day\"\n\nAnsem: \"The trust in him as an operator holds so much weight. SpaceX is negative net income right now and valued at like $2 trillion because they believe he's going to deliver on what he's saying in the future\"",
@@ -2736,7 +2756,7 @@
         "quotes": 12,
         "replies": 134,
         "reposts": 67,
-        "views": 95540
+        "views": 95547
       },
       "publishedAt": "2026-07-06T20:30:02Z",
       "text": "Ansem's social metrics through the last week \n\nAnnualized: 4.8 Billion Impressions",
@@ -2854,7 +2874,7 @@
         "quotes": 5,
         "replies": 56,
         "reposts": 65,
-        "views": 49551
+        "views": 49553
       },
       "publishedAt": "2026-07-03T22:30:14Z",
       "text": "Ansem on tokenized attention\n\n\"What people miss is the tokenized attention piece. a lot of people say it's valueless and I think that's really untrue\"\n\n\"Last cycle Solana was trying to sell their first round of phones and weren't doing a great job. Then BONK airdropped tokens to people holding those phones\"\n\n\"When the tokens started going up, the airdrop was worth more than the phone cost. So people just started buying the phone and it sold out immediately\"\n\n\"Attention is very intangible, but tokens are one of the only ways you can ascribe value to attention in markets\"",
@@ -2914,7 +2934,7 @@
         "quotes": 12,
         "replies": 53,
         "reposts": 55,
-        "views": 46911
+        "views": 46913
       },
       "publishedAt": "2026-07-03T16:56:03Z",
       "text": "Ansem explains how one big PvE event can change the whole market\n\n\"When you have a PvE event onchain that a lot of people make money on, it always flows down to everything else\" \n\n\"Look at what the Uniswap/Jito/Jupiter airdrops did. Onchain activity spiked a ton after that\"\n\n\"Right now there's not a lot of attention in crypto. BUT if some positive energy comes out and people see the fundamentally good things going on, coins start going up, people make money onchain then that's an influx of new capital and attention\"\n\n\"That's what i'm betting on happening. That's what i was betting on in 2023 and I think it's going to happen again\"",
@@ -2934,7 +2954,7 @@
         "quotes": 13,
         "replies": 82,
         "reposts": 115,
-        "views": 65281
+        "views": 65283
       },
       "publishedAt": "2026-07-03T15:25:25Z",
       "text": "Ansem reacts to the odds of solana:9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump flipping solana:pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn \n\n\"This is free bro, its only like a 3x to flip right now\"\n\n\"If Solana makes a new ATH past where it was last cycle, i think the onchain coins are going to go higher than last cycle\"",
@@ -3010,7 +3030,7 @@
       "media": [],
       "metrics": {
         "bookmarks": 28,
-        "likes": 643,
+        "likes": 644,
         "quotes": 17,
         "replies": 85,
         "reposts": 109,
@@ -3074,7 +3094,7 @@
         "quotes": 12,
         "replies": 85,
         "reposts": 93,
-        "views": 58624
+        "views": 58625
       },
       "publishedAt": "2026-07-02T21:33:46Z",
       "text": "Ansem tells the origin story of solana:9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump The Black Bull\n\n\"People kept claiming that this random wallet was mine... so i made a Pumpfun account I was like no, this is my wallet, this is my account. if you guys wanna direct stuff to me direct it here\"\n\n\"I posted the wallet and go away for an hour and come back and check... and there was this coin. one was doing really well, like $8 mil market cap\"\n\n\"i can't just ignore this coin. it's called Ansem, it's called the Black Bull. people are trading it, people are asking if i'm gonna associate myself with it\"\n\n\"I got 65% of supply. i'm going to give that to people too... i've been doing it all this week. If pumpfun wont airdrop people, I will\"",
@@ -3173,8 +3193,8 @@
         "likes": 209,
         "quotes": 1,
         "replies": 18,
-        "reposts": 30,
-        "views": 42995
+        "reposts": 29,
+        "views": 42996
       },
       "publishedAt": "2026-07-01T17:32:49Z",
       "text": "Ansem explains how memes can onboard retail into everything else onchain\n\n\"You're going to have productive assets in crypto, and you're going to have the memetic assets. But retail is going to trade both\"\n\n\"It's like Vegas. Casinos do really well and bring revenue to the city. Same way pump fun brings revenue and attention to Solana\" \n\n\"But then you also have productive assets, perps, apps like Collector Crypt. Memes are the gateway into all of it\"",
@@ -3358,7 +3378,7 @@
         "quotes": 13,
         "replies": 175,
         "reposts": 93,
-        "views": 143025
+        "views": 143027
       },
       "publishedAt": "2026-06-29T17:41:28Z",
       "text": "Never fade Ansem",
@@ -3476,7 +3496,7 @@
         "quotes": 7,
         "replies": 20,
         "reposts": 18,
-        "views": 73647
+        "views": 73648
       },
       "publishedAt": "2026-06-26T19:13:45Z",
       "text": "Mert wants Solana to be the global Silicon Valley for entrepreneurs\n\n\"No matter who you are or where you are, a kid in Bangladesh, Estonia, wherever. If you have an idea, we want you to come to Solana and bring it to the entire world\"\n\n\"It's a whole network of founders. Me, Toly, Lucas from Jito, Armani from Backpack, all here to help you build better things and scale entrepreneurship onchain\"\n\n\"You focus on the business: getting PMF and giving the best-in-class product experience. We take care of the rest\"",
@@ -4538,7 +4558,7 @@
         "quotes": 1,
         "replies": 29,
         "reposts": 13,
-        "views": 101279
+        "views": 101297
       },
       "publishedAt": "2026-06-18T19:29:58Z",
       "text": "Now loading...\n\nCamilla Araujo\n\nToday at 4pm PST",
@@ -5018,7 +5038,7 @@
         "quotes": 0,
         "replies": 5,
         "reposts": 0,
-        "views": 28262
+        "views": 28263
       },
       "publishedAt": "2026-06-11T16:56:43Z",
       "text": "Now loading...\n\nMTVJesse, Founder of Sunday\n\nToday at 6:30pm EST",
@@ -5272,7 +5292,7 @@
       "media": [],
       "metrics": {
         "bookmarks": 76,
-        "likes": 532,
+        "likes": 533,
         "quotes": 12,
         "replies": 39,
         "reposts": 13,
@@ -5296,7 +5316,7 @@
         "quotes": 2,
         "replies": 22,
         "reposts": 9,
-        "views": 64432
+        "views": 64435
       },
       "publishedAt": "2026-06-06T18:59:10Z",
       "text": "Ansem breaks down how to start investing from zero\n\n\"First thing is figure out your profits and your expenses. Whatever's left after you pay everything, that's what you invest with\"\n\n\"Think of it as three buckets. Your cash bucket for emergencies, low risk. Your long term bucket for 10-year stuff, basic ETFs like SPY and QQQ, plus large successful companies. And your active trading bucket for high risk, high conviction plays\"\n\n\"People always discount how much compound interest impacts a portfolio. Hit ~10% and keep compounding year over year over a long period, that grows a lot\"\n\n\"You don't wanna go all in on the risky plays. If you go all in leveraged and lose it, you start from zero and you don't wanna be in that position\"",
@@ -5596,7 +5616,7 @@
         "quotes": 3,
         "replies": 6,
         "reposts": 4,
-        "views": 11931
+        "views": 11932
       },
       "publishedAt": "2026-06-03T20:09:57Z",
       "text": "Greg Osuri on the supply chain crisis hiding behind the AI boom\n\n\"Most new data centers are using LNG. There's no other way to power these systems\"\n\n\"Now we have a 4-year lead time to get a transformer and a 14-year lead time to get a turbine\"\n\n\"Every part of the supply chain is constrained right now\"",
@@ -5776,7 +5796,7 @@
         "quotes": 7,
         "replies": 13,
         "reposts": 23,
-        "views": 38013
+        "views": 38015
       },
       "publishedAt": "2026-06-02T19:45:16Z",
       "text": "Greg Osuri on why the GPU shortage is about to get exponentially worse\n\n\"I can't imagine doing things without agents now\" \n\n\"Out of the one billion global AI users, only 2.4 million use agents\" \n\n\"Imagine if that number is 10x.. what kind of demand are you going to see? 2.4M is leading to the current crisis where we have no h100s at all, what will 24M look like?\"",
@@ -5896,7 +5916,7 @@
         "quotes": 1,
         "replies": 6,
         "reposts": 12,
-        "views": 112991
+        "views": 112993
       },
       "publishedAt": "2026-05-25T19:22:27Z",
       "text": "Last episode, Ansem shared his analysis on near:native's recent price action and developing narrative...\n\nSince the call last Thursday, near:native is +41%",
@@ -6016,7 +6036,7 @@
         "quotes": 46,
         "replies": 123,
         "reposts": 33,
-        "views": 234601
+        "views": 234602
       },
       "publishedAt": "2026-05-21T21:27:06Z",
       "text": "Ansem: Ethereum is going to zero\n\nAnsem: “I think it’s gonna go to $1,000 in the next year or so”\n\nBanks: “So fair to say if you’re in a coma for the next 10 years, you’re putting your money in just about anything over Ethereum?”\n\nAnsem: “Literally anything”",
@@ -6239,7 +6259,7 @@
         "quotes": 6,
         "replies": 39,
         "reposts": 14,
-        "views": 221180
+        "views": 221181
       },
       "publishedAt": "2026-05-15T19:38:11Z",
       "text": "coldest nigga breathing 🧊🥶",
@@ -6397,7 +6417,7 @@
         "quotes": 48,
         "replies": 168,
         "reposts": 305,
-        "views": 2105181
+        "views": 2105186
       },
       "publishedAt": "2026-05-14T23:19:32Z",
       "text": "Tristan Thompson explains how he invested in Anthropic \n\n“It was a buddy of mine in Silicon Valley… just going to a couple of these dinners they were doing with the NBA, sitting there talking to these guys and really picking their brains”\n\n“They were telling me about the future of AI and technology… I was like hey man, I like what you’re talking about”\n\n“It was a bunch of SF guys and everyone kept telling me, so I was like alright man, here’s a check. I wanna get in the game”\n\n“From there they just opened up so much for me. I was able to get in early through SPVs and bring in my other buddies to make a bigger check”",
@@ -6677,7 +6697,7 @@
         "quotes": 11,
         "replies": 21,
         "reposts": 16,
-        "views": 48895
+        "views": 48896
       },
       "publishedAt": "2026-05-01T02:10:44Z",
       "text": "Market Bubble: Episode 1 - WELCOME TO THE SHOW",
