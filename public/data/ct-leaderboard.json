@@ -1,10 +1,10 @@
 {
-  "fetchedAt": "2026-08-12T02:11:00.500198Z",
+  "fetchedAt": "2026-08-12T04:22:32.770873Z",
   "members": [
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/1955773696565719040/zVpm_8at.jpg",
       "description": "@echodotxyz @coinbase @uponlytv",
-      "followers": 1150992,
+      "followers": 1151302,
       "handle": "cobie",
       "name": "Cobie",
       "profileUrl": "https://x.com/cobie",
@@ -25,7 +25,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/1868745836777312256/XsNk1YlU.jpg",
       "description": "ex academia, ex trading desk, now google maps enjoyer\n\nno telegram or discord\n\nreply containing ai, nsfw, small cap asset mentions = blocked",
-      "followers": 279507,
+      "followers": 279495,
       "handle": "CL207",
       "name": "CL",
       "profileUrl": "https://x.com/CL207",
@@ -46,7 +46,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/1975912876243095552/YlVLO4Oz.jpg",
       "description": "ceo @helius — Solana RPCs, APIs & data: http://helius.dev — cyphercapitalist",
-      "followers": 1831102,
+      "followers": 1832568,
       "handle": "mert",
       "name": "mert",
       "profileUrl": "https://x.com/mert",
@@ -67,7 +67,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/2062220989379825665/ergNEj5z.jpg",
       "description": "i go live at 8:30a est. working on @counterpartytv | @phantom @polymarket",
-      "followers": 395415,
+      "followers": 395475,
       "handle": "notthreadguy",
       "name": "threadguy",
       "profileUrl": "https://x.com/notthreadguy",
@@ -88,7 +88,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/1972330511361314816/6CB8R60R.jpg",
       "description": "@hyperliquidx building a pretty good house for all finance",
-      "followers": 133141,
+      "followers": 133138,
       "handle": "chameleon_jeff",
       "name": "jeff.hl",
       "profileUrl": "https://x.com/chameleon_jeff",
@@ -109,7 +109,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/2005767506175127552/B7WiObIW.jpg",
       "description": "@breakoutprop acq by @krakenfx | @orderbookshow",
-      "followers": 561936,
+      "followers": 561946,
       "handle": "Tradermayne",
       "name": "Mayne",
       "profileUrl": "https://x.com/Tradermayne",
@@ -128,21 +128,30 @@
       "verified": false
     },
     {
-      "avatarUrl": null,
-      "description": "",
-      "followers": 0,
+      "avatarUrl": "https://pbs.twimg.com/profile_images/1966620097277038593/U364MS6H.jpg",
+      "description": "Bitcoin class of 2014 // CEO: @fullstack_trade",
+      "followers": 287522,
       "handle": "ThinkingUSD",
-      "name": "ThinkingUSD",
+      "name": "Flood",
       "profileUrl": "https://x.com/ThinkingUSD",
       "rank": 7,
-      "recentTweets": [],
+      "recentTweets": [
+        "If you're suicidal you can always just 50x long your net worth and see if life improves.",
+        "Life is a simulation, a cosmic joke played by our technological overlords",
+        "yeah buddy",
+        "It's just like Hyperliquid except it's Chinese and it doesn't work",
+        "ETH Denver is absolutely POPPING 🔥🔥🔥",
+        "this guy will be the richest man in the entire world soon",
+        "Talk about conviction, this wallet turned $434 ETH into $80,000,000 with $SHIB",
+        "Fearless leader @cz_binance taking one for the team and trying to lock us all down again so we can run it back one last time"
+      ],
       "tag": null,
       "verified": false
     },
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/1995052359068553216/hkPROmXA.jpg",
       "description": "anticlimactic",
-      "followers": 120308,
+      "followers": 120318,
       "handle": "based16z",
       "name": "based16z",
       "profileUrl": "https://x.com/based16z",
@@ -159,7 +168,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/1879556312822120448/QngrqCSC.jpg",
       "description": "@base builder #001 | DM @jessexbt_ai to get building",
-      "followers": 355619,
+      "followers": 355612,
       "handle": "jessepollak",
       "name": "jesse.base.eth",
       "profileUrl": "https://x.com/jessepollak",
