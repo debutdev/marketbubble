@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-13T14:38:23.181628Z",
+  "fetchedAt": "2026-08-13T16:01:14.797321Z",
   "handle": "MarketBubble",
   "profileImageUrl": "https://pbs.twimg.com/profile_images/2049931777729609728/48E45qmE.jpg",
   "profileTitle": "Market Bubble / @MarketBubble",
@@ -443,6 +443,46 @@
   "tweets": [
     {
       "author": "@MarketBubble",
+      "id": "2087924469264257253",
+      "isRetweet": false,
+      "media": [
+        "https://pbs.twimg.com/media/HPnLNACXoAA7eTb?format=jpg&name=orig"
+      ],
+      "metrics": {
+        "bookmarks": 4,
+        "likes": 155,
+        "quotes": 3,
+        "replies": 27,
+        "reposts": 37,
+        "views": 5417
+      },
+      "publishedAt": "2026-08-13T15:29:19Z",
+      "text": "Now loading...\n\nSimpleFarmer, Founder of Stonk Brokers\n\nToday @ 3:00pm PST",
+      "title": "Now loading...",
+      "url": "https://x.com/MarketBubble/status/2087924469264257253"
+    },
+    {
+      "author": "@MarketBubble",
+      "id": "2087914208172138618",
+      "isRetweet": false,
+      "media": [
+        "https://pbs.twimg.com/media/HPnCrXXWoAA_Oz7?format=jpg&name=orig"
+      ],
+      "metrics": {
+        "bookmarks": 2,
+        "likes": 141,
+        "quotes": 13,
+        "replies": 39,
+        "reposts": 18,
+        "views": 9796
+      },
+      "publishedAt": "2026-08-13T14:48:33Z",
+      "text": "Now loading...\n\nMike Dudas, Partner of 6th Man Ventures\n\nToday @ 2:30pm PST",
+      "title": "Now loading...",
+      "url": "https://x.com/MarketBubble/status/2087914208172138618"
+    },
+    {
+      "author": "@MarketBubble",
       "id": "2087228623119925459",
       "isRetweet": false,
       "media": [],
@@ -452,7 +492,7 @@
         "quotes": 7,
         "replies": 26,
         "reposts": 24,
-        "views": 21695
+        "views": 21860
       },
       "publishedAt": "2026-08-11T17:24:17Z",
       "text": "when your friend sells on the entire groupchat",
@@ -474,7 +514,7 @@
         "quotes": 3,
         "replies": 32,
         "reposts": 22,
-        "views": 16798
+        "views": 16883
       },
       "publishedAt": "2026-08-11T16:29:37Z",
       "text": "\"Are you a responsible trader?\"\n\nMe:",
@@ -492,7 +532,7 @@
         "quotes": 11,
         "replies": 26,
         "reposts": 25,
-        "views": 46222
+        "views": 46270
       },
       "publishedAt": "2026-08-11T01:08:12Z",
       "text": "FaZe Banks asks a billionaire for his best advice to young people\n\nTushar Jain: “I don't think how smart you are is going to matter”\n\n“I don't think intelligence matters anymore. I don't think it's economically an important input for humans”\n\n“Between the Industrial Revolution and the AI revolution, how smart you were was a major input into how much money you were going to make”\n\n“I think it's going to be agents. It's your ability to make up your own mind and then be relentless in the pursuit of the thing that you want”\n\n“You have intelligence for free... but you know what's not free is motivation. You know what's not free is being relentless and dedicated”\n\nFaZe Banks: “AI has replaced IQ”",
