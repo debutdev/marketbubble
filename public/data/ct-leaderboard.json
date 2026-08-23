@@ -1,10 +1,10 @@
 {
-  "fetchedAt": "2026-08-23T14:26:48.368194Z",
+  "fetchedAt": "2026-08-23T14:51:55.076507Z",
   "members": [
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/1955773696565719040/zVpm_8at.jpg",
       "description": "@echodotxyz @coinbase @uponlytv",
-      "followers": 1189969,
+      "followers": 1190024,
       "handle": "cobie",
       "name": "Cobie",
       "profileUrl": "https://x.com/cobie",
@@ -25,7 +25,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/1868745836777312256/XsNk1YlU.jpg",
       "description": "ex academia, ex trading desk, now google maps enjoyer\n\nno telegram or discord\n\nreply containing ai, nsfw, small cap asset mentions = blocked",
-      "followers": 279972,
+      "followers": 279970,
       "handle": "CL207",
       "name": "CL",
       "profileUrl": "https://x.com/CL207",
@@ -46,7 +46,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/1975912876243095552/YlVLO4Oz.jpg",
       "description": "ceo @helius — Solana RPCs, APIs & data: http://helius.dev — cyphercapitalist",
-      "followers": 2015931,
+      "followers": 2016403,
       "handle": "mert",
       "name": "mert",
       "profileUrl": "https://x.com/mert",
@@ -67,7 +67,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/2062220989379825665/ergNEj5z.jpg",
       "description": "i go live at 8:30a est. working on @counterpartytv | @phantom @polymarket",
-      "followers": 404675,
+      "followers": 404685,
       "handle": "notthreadguy",
       "name": "threadguy",
       "profileUrl": "https://x.com/notthreadguy",
@@ -88,7 +88,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/1972330511361314816/6CB8R60R.jpg",
       "description": "@hyperliquidx building a pretty good house for all finance",
-      "followers": 136046,
+      "followers": 136077,
       "handle": "chameleon_jeff",
       "name": "jeff.hl",
       "profileUrl": "https://x.com/chameleon_jeff",
@@ -109,7 +109,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/2005767506175127552/B7WiObIW.jpg",
       "description": "@breakoutprop acq by @krakenfx | @orderbookshow",
-      "followers": 563049,
+      "followers": 563044,
       "handle": "Tradermayne",
       "name": "Mayne",
       "profileUrl": "https://x.com/Tradermayne",
@@ -130,7 +130,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/1966620097277038593/U364MS6H.jpg",
       "description": "Bitcoin class of 2014 // CEO: @fullstack_trade",
-      "followers": 292195,
+      "followers": 292197,
       "handle": "ThinkingUSD",
       "name": "Flood",
       "profileUrl": "https://x.com/ThinkingUSD",
@@ -151,7 +151,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/1995052359068553216/hkPROmXA.jpg",
       "description": "anticlimactic",
-      "followers": 121452,
+      "followers": 121456,
       "handle": "based16z",
       "name": "based16z",
       "profileUrl": "https://x.com/based16z",
@@ -166,23 +166,14 @@
       "verified": false
     },
     {
-      "avatarUrl": "https://pbs.twimg.com/profile_images/1879556312822120448/QngrqCSC.jpg",
-      "description": "@base builder #001 | DM @jessexbt_ai to get building",
-      "followers": 356499,
+      "avatarUrl": null,
+      "description": "",
+      "followers": 0,
       "handle": "jessepollak",
-      "name": "jesse.base.eth",
+      "name": "jessepollak",
       "profileUrl": "https://x.com/jessepollak",
       "rank": 9,
-      "recentTweets": [
-        "will give my X earnings to someone who likes this post and replies with their basename. \n\nsending USDC on @base, so everyone, everywhere is eligible. winner chosen sunday PM. \n\nif this gets traction, I'll do it every time — need more viral giveaways to bring people onchain.",
-        "some personal news: we're having our first baby\n\nwe expect him (!!) to come in early march and i'll be more offline than not for the month after, then reducing travel this year. excited to bring another builder into the world.\n\nthe @base core team is full steam ahead.",
-        "today is a good day to get rewarded for using the onchain economy. \n\nreply with your basename and like this tweet for a chance to win my X creator earnings — sent instantly, for free on @base.",
-        "excuse me ma'am, do you have a minute to get onchain?",
-        "I voted for @ewarren in the 2020 primary and am a lifelong Democrat. \n\nThe idea of building an \"army\" to fight the creation of an open, transparent financial system that increases economic freedom globally is beyond the pale. \n\nI am against any politician with this stance.",
-        "NEW: I unboxed the @freedomfactory and it's sick",
-        "two agents just collaborated to buy me pizza on @base",
-        "it's a good day to get paid for being onchain \n\nreply with your basename or address and like this tweet for a chance to win my @X creator earnings — sent instantly, globally, for free on @base."
-      ],
+      "recentTweets": [],
       "tag": null,
       "verified": false
     },
