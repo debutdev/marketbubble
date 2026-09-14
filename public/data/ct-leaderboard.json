@@ -1,10 +1,10 @@
 {
-  "fetchedAt": "2026-09-14T19:04:53.169091Z",
+  "fetchedAt": "2026-09-14T22:21:50.415107Z",
   "members": [
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/1955773696565719040/zVpm_8at.jpg",
       "description": "@echodotxyz @coinbase @uponlytv",
-      "followers": 1228513,
+      "followers": 1228585,
       "handle": "cobie",
       "name": "Cobie",
       "profileUrl": "https://x.com/cobie",
@@ -25,7 +25,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/1868745836777312256/XsNk1YlU.jpg",
       "description": "ex academia, ex trading desk, now google maps enjoyer\n\nno telegram or discord\n\nreply containing ai, nsfw, small cap asset mentions = blocked",
-      "followers": 280669,
+      "followers": 280674,
       "handle": "CL207",
       "name": "CL",
       "profileUrl": "https://x.com/CL207",
@@ -46,7 +46,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/1975912876243095552/YlVLO4Oz.jpg",
       "description": "ceo @helius — Solana RPCs, APIs & data: http://helius.dev — cyphercapitalist",
-      "followers": 2242896,
+      "followers": 2243731,
       "handle": "mert",
       "name": "mert",
       "profileUrl": "https://x.com/mert",
@@ -67,7 +67,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/2062220989379825665/ergNEj5z.jpg",
       "description": "i go live at 8:30a est. working on @counterpartytv | @phantom @polymarket",
-      "followers": 412130,
+      "followers": 412116,
       "handle": "notthreadguy",
       "name": "threadguy",
       "profileUrl": "https://x.com/notthreadguy",
@@ -88,20 +88,13 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/1972330511361314816/6CB8R60R.jpg",
       "description": "@hyperliquidx building a pretty good house for all finance",
-      "followers": 139717,
+      "followers": 139720,
       "handle": "chameleon_jeff",
       "name": "jeff.hl",
       "profileUrl": "https://x.com/chameleon_jeff",
       "rank": 5,
       "recentTweets": [
-        "Hyperliquid’s fully onchain liquidations cannot be compared with underreported CEX liquidations\n\nHyperliquid is a blockchain where every order, trade, and liquidation happens onchain. Anyone can permissionlessly verify the chain’s execution, including all liquidations and their fair execution for all users. Furthermore, anyone can verify the solvency of the entire system in real time. Transparency and neutrality are key reasons that fully onchain defi is the ideal infrastructure for global finance.\n\nSome CEXs publicly document that they dramatically underreport user liquidations. For example on Binance, even if there are thousands of liquidation orders in the same second, only one is reported. Because liquidations happen in bursts, this could easily be 100x under-reporting under some conditions. Source below.\n\nHopefully the industry will see transparency and neutrality as important features of the new financial system, and others will follow.",
-        "During extreme volatility like today, @HyperliquidX is often the most liquid venue across DEXs and CEXs. Even on majors like ETH perps.\n\nLiquidity has a reputation for disappearing when users need it the most. The more efficient the market, the more pronounced this effect. It's a fair pricing of adverse selection by toxic takers. Conventional wisdom says it's an unavoidable side effect of the order book model.\n\nBut this is lazy thinking. The market structure and underlying infrastructure should be optimized to best serve the end user. By redesigning the L1 from first principles, Hyperliquid proves that jointly optimizing the full stack leads to tangible benefits for all users.",
-        "Latency and tx ordering on @HyperliquidX \n\nSome alpha for MMs and researchers:\n1) Hyperliquid L1 has a novel microstructure benefiting retail and makers over toxic takers\n2) Volume would be multiples higher without this design\n3) Hyperliquid is optimized for the end user, period. Not for VC metrics, fees, or HLP pnl\n\n----\n\nBackground\nA well-designed exchange matches trades when both sides want to transact. Maximizing volume is a secondary goal. First and foremost buyers and sellers should both be happy with the price. This guiding principle applies to all markets: centralized or decentralized, CLOB/AMM/RFQ etc.\n\nFor example, a user market buys on the UI and matches against the maker order with the lowest price. Both sides are happy.\n\nThe problem\nAn order book sometimes satisfies the \"well-designed\" principle above. If someone has a resting buy order, that means they think the fair price is higher than the limit price, and are happy with a fill.\n \nThe major exception is trades between HFT takers and HFT makers. The maker and taker have similar price preferences. Often the maker has sent the cancel request already, but the taker order is slightly faster and picks off the maker. It's no longer win-win. This is why this HFT taker volume is often called \"toxic flow.\"\n\nToxic flow hurts retail end users the most. Makers will quote wider to minimize collisions with takers. Spreads and liquidity degrade so retail gets worse execution. Everyone is happy except the end user.\n\nHyperliquid's design\nTo address this flaw with the standard order book design, Hyperliquid makes a fundamental adjustment to the onchain order book: Cancels and post-only orders are prioritized above GTC and IOC orders. \n\nThis ordering is enforced onchain by the L1 itself. The only correct way for a node to execute a block on the Hyperliquid L1 is to sort cancels and post-only orders first. \n\nHyperliquid has the fastest L1 in production, so human users barely notice this ordering. Most users happily wait half a second to save hundreds of dollars on a trade. \n\nThe effects\nOn Hyperliquid, trades between HFT maker and HFT taker happen at a dramatically lower rate, at least 10x lower than other platforms as a fraction of total volume. Note that this flow is the majority of volume on most other venues.\n\nLiquidity on Hyperliquid becomes deeper and more solid during times of volatility. Retail users get reduced slippage and lower spread on large orders. \n\nAlpha for automated traders \nWhen cancels go through with high success, makers can quote much more confidently.\n\nTakers can still make money aggressing against retail limit orders, or limit orders that actually disagree with the taker's price model. \n\nHyperliquid's design empowers everyone except those trading against orders that didn't want to be filled to begin with.\n\nClosing thoughts\nIf Hyperliquid's design is so great, why do no other DEXs or CEXs do it? Because most other venues are not optimized for the end user. \n\nMost platforms instead optimize for some combination of fees and volume metrics. Investors often look at these aggregate stats instead of studying real user experiences.\n\nHyperliquid is solely focused on the end user. Fees and market maker pnl are all increasing exponentially, but this is a byproduct of the relentless focus on the end user.  \n\nThe stats speak for themselves: On a day where Hyperliquid does $1B in volume, more than $500M is retail.",
-        "Are we so back?",
-        "interesting things happening on testnet",
-        "This new layout is the GOAT on monitors",
-        "1/ We've talked before about how latency is an important component of every crypto HFT strategy.\n\nThe optimization process is fun detective work because the exchange's tech is often a black box.\n\nA thread on what to measure, graph, and analyze for your production HFT system 🧵",
-        "record day"
+        "Hyperliquid’s fully onchain liquidations cannot be compared with underreported CEX liquidations\n\nHyperliquid is a blockchain where every order, trade, and liquidation happens onchain. Anyone can permissionlessly verify the chain’s execution, including all liquidations and their fair execution for all users. Furthermore, anyone can verify the solvency of the entire system in real time. Transparency and neutrality are key reasons that fully onchain defi is the ideal infrastructure for global finance.\n\nSome CEXs publicly document that they dramatically underreport user liquidations. For example on Binance, even if there are thousands of liquidation orders in the same second, only one is reported. Because liquidations happen in bursts, this could easily be 100x under-reporting under some conditions. Source below.\n\nHopefully the industry will see transparency and neutrality as important features of the new financial system, and others will follow."
       ],
       "tag": null,
       "verified": false
@@ -109,7 +102,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/2005767506175127552/B7WiObIW.jpg",
       "description": "@breakoutprop acq by @krakenfx | @orderbookshow",
-      "followers": 565049,
+      "followers": 565036,
       "handle": "Tradermayne",
       "name": "Mayne",
       "profileUrl": "https://x.com/Tradermayne",
@@ -130,7 +123,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/1966620097277038593/U364MS6H.jpg",
       "description": "Bitcoin class of 2014 // CEO: @fullstack_trade",
-      "followers": 298254,
+      "followers": 298263,
       "handle": "ThinkingUSD",
       "name": "Flood",
       "profileUrl": "https://x.com/ThinkingUSD",
@@ -163,7 +156,7 @@
     {
       "avatarUrl": "https://pbs.twimg.com/profile_images/1879556312822120448/QngrqCSC.jpg",
       "description": "@base builder #001 | DM @jessexbt_ai to get building",
-      "followers": 359229,
+      "followers": 359274,
       "handle": "jessepollak",
       "name": "jesse.base.eth",
       "profileUrl": "https://x.com/jessepollak",
