@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-30T08:33:47.837750Z",
+  "fetchedAt": "2026-10-30T15:27:28.488260Z",
   "handle": "MarketBubble",
   "profileImageUrl": "https://pbs.twimg.com/profile_images/2104654189108645889/qZKBgdYV.jpg",
   "profileTitle": "Market Bubble / @MarketBubble",
@@ -863,6 +863,46 @@
   "tweets": [
     {
       "author": "@MarketBubble",
+      "id": "2116166497764798911",
+      "isRetweet": false,
+      "media": [],
+      "metrics": {
+        "bookmarks": 3,
+        "likes": 25,
+        "quotes": 0,
+        "replies": 1,
+        "reposts": 6,
+        "views": 4199
+      },
+      "publishedAt": "2026-10-30T13:53:04Z",
+      "text": "New footage surfacing of Kim Jung Un just a day after increasing North Korea's GDP by $6 billion:",
+      "title": "New footage surfacing of Kim Jung Un just a day after increasing North Korea's GDP by $6 billion:",
+      "url": "https://x.com/MarketBubble/status/2116166497764798911",
+      "videoUrl": "https://video.twimg.com/amplify_video/2116164223000514560/vid/avc1/1920x1080/tkIhXIpEOaMtXTGF.mp4?tag=29",
+      "duration": 44.117
+    },
+    {
+      "author": "@MarketBubble",
+      "id": "2116152624278130989",
+      "isRetweet": false,
+      "media": [],
+      "metrics": {
+        "bookmarks": 3,
+        "likes": 52,
+        "quotes": 1,
+        "replies": 9,
+        "reposts": 7,
+        "views": 5050
+      },
+      "publishedAt": "2026-10-30T12:57:56Z",
+      "text": "Me getting ready for my job because I decided to take a screenshot instead of profit:",
+      "title": "Me getting ready for my job because I decided to take a screenshot instead of profit:",
+      "url": "https://x.com/MarketBubble/status/2116152624278130989",
+      "videoUrl": "https://video.twimg.com/amplify_video/2110367024949977088/vid/avc1/720x402/i9MGgW1dPebbYIxp.mp4?tag=29",
+      "duration": 13.281
+    },
+    {
+      "author": "@MarketBubble",
       "id": "2115950043832160289",
       "isRetweet": false,
       "media": [
@@ -870,11 +910,11 @@
       ],
       "metrics": {
         "bookmarks": 4,
-        "likes": 78,
-        "quotes": 0,
+        "likes": 82,
+        "quotes": 1,
         "replies": 11,
         "reposts": 6,
-        "views": 7231
+        "views": 7825
       },
       "publishedAt": "2026-10-29T23:32:57Z",
       "text": "Today's Binance exploit marks the biggest hack in crypto history.",
@@ -891,11 +931,11 @@
       ],
       "metrics": {
         "bookmarks": 4,
-        "likes": 75,
+        "likes": 77,
         "quotes": 3,
         "replies": 14,
         "reposts": 3,
-        "views": 15651
+        "views": 16040
       },
       "publishedAt": "2026-10-29T21:09:56Z",
       "text": "BINANCE DELETES RECENT SCHEDULED POST AMIDST CLAIMS OF A 2.77B HACK, LEADING PEOPLE TO ASSUME THE WORST.",
@@ -915,7 +955,7 @@
         "quotes": 1,
         "replies": 22,
         "reposts": 13,
-        "views": 5896
+        "views": 6209
       },
       "publishedAt": "2026-10-29T19:39:23Z",
       "text": "Now loading... \n\ninsentos, Trader \n\nToday @ 3PM PT",
@@ -935,7 +975,7 @@
         "quotes": 3,
         "replies": 12,
         "reposts": 10,
-        "views": 10505
+        "views": 10811
       },
       "publishedAt": "2026-10-29T18:36:04Z",
       "text": "Now loading...\n\nMayne, Trader and Founder of Breakout \n\nToday @ 2:30PM PT",
@@ -951,11 +991,11 @@
       ],
       "metrics": {
         "bookmarks": 8,
-        "likes": 107,
+        "likes": 113,
         "quotes": 5,
         "replies": 26,
         "reposts": 9,
-        "views": 8225
+        "views": 8601
       },
       "publishedAt": "2026-10-29T17:31:38Z",
       "text": "This is how locked in you need to be",
@@ -968,12 +1008,12 @@
       "isRetweet": false,
       "media": [],
       "metrics": {
-        "bookmarks": 11,
-        "likes": 92,
+        "bookmarks": 13,
+        "likes": 103,
         "quotes": 2,
         "replies": 6,
-        "reposts": 10,
-        "views": 8967
+        "reposts": 11,
+        "views": 9656
       },
       "publishedAt": "2026-10-29T16:23:16Z",
       "text": "\"Why do you work so hard?\"",
@@ -991,11 +1031,11 @@
       ],
       "metrics": {
         "bookmarks": 3,
-        "likes": 97,
+        "likes": 98,
         "quotes": 2,
         "replies": 16,
         "reposts": 9,
-        "views": 7128
+        "views": 7308
       },
       "publishedAt": "2026-10-29T13:51:06Z",
       "text": "",
@@ -1011,11 +1051,11 @@
       ],
       "metrics": {
         "bookmarks": 5,
-        "likes": 210,
+        "likes": 209,
         "quotes": 7,
         "replies": 35,
         "reposts": 19,
-        "views": 23081
+        "views": 23198
       },
       "publishedAt": "2026-10-28T21:22:49Z",
       "text": "Now loading... \n\nAnsem on Coinbase Q3 Earnings Call.\n\nTomorrow @ 5PM ET - See you soon!",
@@ -1035,7 +1075,7 @@
         "quotes": 0,
         "replies": 9,
         "reposts": 6,
-        "views": 6516
+        "views": 6579
       },
       "publishedAt": "2026-10-28T19:20:28Z",
       "text": "",
@@ -1055,7 +1095,7 @@
         "quotes": 1,
         "replies": 6,
         "reposts": 1,
-        "views": 6353
+        "views": 6402
       },
       "publishedAt": "2026-10-28T18:01:39Z",
       "text": "Everyone panicking over whether the Fed will hike or cut rates\n\nFOMC:",
@@ -1068,12 +1108,12 @@
       "isRetweet": false,
       "media": [],
       "metrics": {
-        "bookmarks": 9,
-        "likes": 214,
+        "bookmarks": 8,
+        "likes": 215,
         "quotes": 10,
         "replies": 63,
         "reposts": 26,
-        "views": 13896
+        "views": 13974
       },
       "publishedAt": "2026-10-28T14:59:05Z",
       "text": "mfers posting with 0 likes, 0 retweets and 0 comments",
@@ -1095,7 +1135,7 @@
         "quotes": 1,
         "replies": 11,
         "reposts": 8,
-        "views": 6907
+        "views": 6956
       },
       "publishedAt": "2026-10-28T13:56:08Z",
       "text": "ON THIS DAY: Mark Zuckerberg rebrands Facebook to Meta.\n\n“It is time for us to adopt a new company brand to encompass everything that we do. To reflect who we are, and what we hope to build, I am proud to announce that starting today, our company is now Meta.”",
@@ -1115,7 +1155,7 @@
         "quotes": 5,
         "replies": 27,
         "reposts": 47,
-        "views": 33127
+        "views": 33174
       },
       "publishedAt": "2026-10-27T18:59:34Z",
       "text": "Inflation is crazy",
@@ -1135,7 +1175,7 @@
         "quotes": 6,
         "replies": 33,
         "reposts": 42,
-        "views": 14937
+        "views": 14967
       },
       "publishedAt": "2026-10-27T14:00:30Z",
       "text": "",
@@ -1155,7 +1195,7 @@
         "quotes": 7,
         "replies": 36,
         "reposts": 27,
-        "views": 12438
+        "views": 12464
       },
       "publishedAt": "2026-10-26T19:52:48Z",
       "text": "",
@@ -1175,7 +1215,7 @@
         "quotes": 0,
         "replies": 4,
         "reposts": 1,
-        "views": 7682
+        "views": 7703
       },
       "publishedAt": "2026-10-26T17:09:58Z",
       "text": "Brazilians waking up and checking their retirement funds",
@@ -1191,11 +1231,11 @@
       ],
       "metrics": {
         "bookmarks": 58,
-        "likes": 827,
+        "likes": 826,
         "quotes": 16,
         "replies": 54,
         "reposts": 102,
-        "views": 24691
+        "views": 24787
       },
       "publishedAt": "2026-10-26T16:09:49Z",
       "text": "",
@@ -1211,11 +1251,11 @@
       ],
       "metrics": {
         "bookmarks": 0,
-        "likes": 41,
+        "likes": 40,
         "quotes": 0,
         "replies": 8,
         "reposts": 0,
-        "views": 7128
+        "views": 7150
       },
       "publishedAt": "2026-10-26T15:00:32Z",
       "text": "ON THIS DAY: @elonmusk walks into Twitter HQ carrying a sink, one day before his $44B acquisition.",
@@ -1235,7 +1275,7 @@
         "quotes": 2,
         "replies": 18,
         "reposts": 21,
-        "views": 8130
+        "views": 8139
       },
       "publishedAt": "2026-10-24T16:00:43Z",
       "text": "",
@@ -1291,11 +1331,11 @@
       ],
       "metrics": {
         "bookmarks": 6,
-        "likes": 103,
+        "likes": 102,
         "quotes": 0,
         "replies": 33,
         "reposts": 12,
-        "views": 7926
+        "views": 7932
       },
       "publishedAt": "2026-10-23T14:46:21Z",
       "text": "the duality of man",
@@ -1315,7 +1355,7 @@
         "quotes": 5,
         "replies": 40,
         "reposts": 14,
-        "views": 15749
+        "views": 15767
       },
       "publishedAt": "2026-10-22T21:45:48Z",
       "text": "GIVING AWAY $1,000 TO ONE PERSON WHO COMPLETES THE CT BOXING BRACKET CHALLENGE AND POSTS THE RESULTS ON X THROUGH:  \n\nhttps://ctboxingchallenge.com",
@@ -1335,7 +1375,7 @@
         "quotes": 1,
         "replies": 12,
         "reposts": 4,
-        "views": 8222
+        "views": 8224
       },
       "publishedAt": "2026-10-22T21:29:17Z",
       "text": "Don’t forget to take profits anon",
@@ -1355,7 +1395,7 @@
         "quotes": 2,
         "replies": 8,
         "reposts": 4,
-        "views": 12387
+        "views": 12400
       },
       "publishedAt": "2026-10-22T19:12:15Z",
       "text": "Now Loading...\n\nTulip King, Head of Strategy at Counterparty \n\nToday @ 3:30PM PT",
@@ -1375,7 +1415,7 @@
         "quotes": 7,
         "replies": 46,
         "reposts": 33,
-        "views": 28386
+        "views": 28423
       },
       "publishedAt": "2026-10-22T18:07:16Z",
       "text": "Now Loading...\n\nEli Ben-Sasson, Co-Founder & CEO of StarkWare\n\nToday @ 3:00PM PT",
@@ -1395,7 +1435,7 @@
         "quotes": 1,
         "replies": 12,
         "reposts": 7,
-        "views": 8370
+        "views": 8372
       },
       "publishedAt": "2026-10-22T17:11:08Z",
       "text": "Now loading...\n\nSaeed Badreg, CEO of Sunrise\n\nToday @ 2:30PM PT",
@@ -1415,7 +1455,7 @@
         "quotes": 2,
         "replies": 41,
         "reposts": 26,
-        "views": 10602
+        "views": 10604
       },
       "publishedAt": "2026-10-22T13:02:13Z",
       "text": "LOCK TF IN",
@@ -1433,7 +1473,7 @@
         "quotes": 12,
         "replies": 22,
         "reposts": 31,
-        "views": 22838
+        "views": 22847
       },
       "publishedAt": "2026-10-21T18:04:35Z",
       "text": "\"Sir, the coin you aped, another just launched with the same name and ticker\"",
@@ -1475,7 +1515,7 @@
         "quotes": 2,
         "replies": 51,
         "reposts": 30,
-        "views": 11766
+        "views": 11768
       },
       "publishedAt": "2026-10-20T19:24:39Z",
       "text": "",
@@ -1495,7 +1535,7 @@
         "quotes": 4,
         "replies": 28,
         "reposts": 5,
-        "views": 16350
+        "views": 16366
       },
       "publishedAt": "2026-10-20T18:11:39Z",
       "text": "If you bought everything we called and sold at the local highs, here’s what your potential profits could have looked like.\n\nWatch and earn.",
@@ -1535,7 +1575,7 @@
         "quotes": 2,
         "replies": 31,
         "reposts": 21,
-        "views": 9068
+        "views": 9070
       },
       "publishedAt": "2026-10-19T22:54:30Z",
       "text": "accept reality",
@@ -1555,7 +1595,7 @@
         "quotes": 5,
         "replies": 18,
         "reposts": 21,
-        "views": 7694
+        "views": 7696
       },
       "publishedAt": "2026-10-19T20:27:03Z",
       "text": "",
@@ -1573,7 +1613,7 @@
         "quotes": 5,
         "replies": 16,
         "reposts": 11,
-        "views": 70494
+        "views": 70526
       },
       "publishedAt": "2026-10-19T17:19:55Z",
       "text": "Our full conversation with Mayne and Avi Felman at TOKEN2049 in Singapore:\n\n0:08 Why is everyone so bullish?\n3:44 Finance and Crypto are converging\n9:38 Trading vs making investments\n12:45 The trading to content creation pipeline\n17:38 The hyper-rotation meta of meme coins\n22:08 The moral dilemma with trading publicly\n25:11 Social trading’s scalability\n29:18 Is there an AI bubble?\n33:31 Zcash vs Bitcoin",
@@ -1635,7 +1675,7 @@
         "quotes": 3,
         "replies": 43,
         "reposts": 36,
-        "views": 9389
+        "views": 9391
       },
       "publishedAt": "2026-10-17T00:00:48Z",
       "text": "",
@@ -1653,7 +1693,7 @@
         "quotes": 5,
         "replies": 35,
         "reposts": 27,
-        "views": 12698
+        "views": 12701
       },
       "publishedAt": "2026-10-16T19:34:08Z",
       "text": "I told her that I partially own 500 multibillion dollar companies  \n\n(I have $350 in the S&P 500)",
@@ -1695,7 +1735,7 @@
         "quotes": 7,
         "replies": 36,
         "reposts": 18,
-        "views": 9177
+        "views": 9178
       },
       "publishedAt": "2026-10-16T15:10:21Z",
       "text": "Say it out loud bros",
@@ -1735,7 +1775,7 @@
         "quotes": 2,
         "replies": 27,
         "reposts": 30,
-        "views": 7992
+        "views": 7993
       },
       "publishedAt": "2026-10-16T13:13:30Z",
       "text": "Never give up",
@@ -1749,7 +1789,7 @@
       "media": [],
       "metrics": {
         "bookmarks": 5,
-        "likes": 268,
+        "likes": 262,
         "quotes": 3,
         "replies": 13,
         "reposts": 20,
@@ -1775,7 +1815,7 @@
         "quotes": 0,
         "replies": 34,
         "reposts": 15,
-        "views": 14650
+        "views": 14653
       },
       "publishedAt": "2026-10-15T19:43:51Z",
       "text": "No Market Bubble stream today.\n\nWe will be back in the studio next Thursday.\n\nWe love you all. See you soon.",
@@ -1793,7 +1833,7 @@
         "quotes": 6,
         "replies": 51,
         "reposts": 21,
-        "views": 10490
+        "views": 10492
       },
       "publishedAt": "2026-10-15T18:10:44Z",
       "text": "The next candle after you sell",
@@ -1811,11 +1851,11 @@
       ],
       "metrics": {
         "bookmarks": 6,
-        "likes": 203,
+        "likes": 202,
         "quotes": 3,
         "replies": 28,
         "reposts": 16,
-        "views": 8668
+        "views": 8669
       },
       "publishedAt": "2026-10-15T15:59:30Z",
       "text": "\"What makes you happy?\"\n\nMe:",
@@ -1835,7 +1875,7 @@
         "quotes": 9,
         "replies": 23,
         "reposts": 25,
-        "views": 9241
+        "views": 9242
       },
       "publishedAt": "2026-10-15T14:42:24Z",
       "text": "\"Buy the dip\"\n\nWITH WHATTTT",
@@ -1875,7 +1915,7 @@
         "quotes": 7,
         "replies": 70,
         "reposts": 32,
-        "views": 11916
+        "views": 11929
       },
       "publishedAt": "2026-10-14T20:28:54Z",
       "text": "It's coming 🔜",
@@ -1895,7 +1935,7 @@
         "quotes": 4,
         "replies": 49,
         "reposts": 26,
-        "views": 9342
+        "views": 9343
       },
       "publishedAt": "2026-10-14T19:09:10Z",
       "text": "2027:\n\"Mom why are we so rich?\"\n\nBecause dad didn't panic sell.",
@@ -1935,7 +1975,7 @@
         "quotes": 3,
         "replies": 25,
         "reposts": 21,
-        "views": 8841
+        "views": 8842
       },
       "publishedAt": "2026-10-14T14:24:40Z",
       "text": "\"you just got lucky\"\n\nthe luck:",
@@ -1951,11 +1991,11 @@
       ],
       "metrics": {
         "bookmarks": 13,
-        "likes": 264,
+        "likes": 263,
         "quotes": 3,
         "replies": 26,
         "reposts": 21,
-        "views": 10291
+        "views": 10292
       },
       "publishedAt": "2026-10-13T20:04:43Z",
       "text": "YOU will be the first millionaire in your family 🫵",
@@ -2075,7 +2115,7 @@
         "quotes": 8,
         "replies": 33,
         "reposts": 32,
-        "views": 9881
+        "views": 9882
       },
       "publishedAt": "2026-10-12T16:27:38Z",
       "text": "",
@@ -2089,7 +2129,7 @@
       "media": [],
       "metrics": {
         "bookmarks": 18,
-        "likes": 320,
+        "likes": 319,
         "quotes": 10,
         "replies": 33,
         "reposts": 45,
@@ -2149,11 +2189,11 @@
       "media": [],
       "metrics": {
         "bookmarks": 59,
-        "likes": 475,
+        "likes": 476,
         "quotes": 5,
         "replies": 34,
         "reposts": 49,
-        "views": 23550
+        "views": 23556
       },
       "publishedAt": "2026-10-10T13:12:01Z",
       "text": "Me at 2am after I turned $57 into $258 trading",
@@ -2191,7 +2231,7 @@
       ],
       "metrics": {
         "bookmarks": 11,
-        "likes": 233,
+        "likes": 232,
         "quotes": 6,
         "replies": 24,
         "reposts": 26,
@@ -2355,7 +2395,7 @@
         "quotes": 14,
         "replies": 44,
         "reposts": 66,
-        "views": 22308
+        "views": 22309
       },
       "publishedAt": "2026-10-07T19:55:16Z",
       "text": "Say it until its real",
@@ -2475,7 +2515,7 @@
         "quotes": 8,
         "replies": 44,
         "reposts": 38,
-        "views": 12938
+        "views": 12939
       },
       "publishedAt": "2026-10-06T12:49:18Z",
       "text": "You’re next up.",
@@ -2768,7 +2808,7 @@
         "https://pbs.twimg.com/media/HTZA8jCWkAAoZsW?format=jpg&name=orig"
       ],
       "metrics": {
-        "bookmarks": 30,
+        "bookmarks": 31,
         "likes": 442,
         "quotes": 13,
         "replies": 32,
@@ -2851,7 +2891,7 @@
         "quotes": 3,
         "replies": 12,
         "reposts": 16,
-        "views": 15720
+        "views": 15722
       },
       "publishedAt": "2026-09-29T19:49:19Z",
       "text": "Damn... @AskVenice taking over NYC",
@@ -2929,11 +2969,11 @@
       ],
       "metrics": {
         "bookmarks": 31,
-        "likes": 734,
+        "likes": 735,
         "quotes": 14,
         "replies": 55,
         "reposts": 79,
-        "views": 26078
+        "views": 26079
       },
       "publishedAt": "2026-09-29T15:04:26Z",
       "text": "",
@@ -3051,7 +3091,7 @@
         "quotes": 7,
         "replies": 44,
         "reposts": 21,
-        "views": 111806
+        "views": 111807
       },
       "publishedAt": "2026-09-28T16:10:53Z",
       "text": "Welcome to Market Bubble V2",
@@ -3073,7 +3113,7 @@
         "quotes": 8,
         "replies": 37,
         "reposts": 43,
-        "views": 12868
+        "views": 12869
       },
       "publishedAt": "2026-09-28T15:28:00Z",
       "text": "You are not even close to bullish enough",
@@ -3169,11 +3209,11 @@
       ],
       "metrics": {
         "bookmarks": 42,
-        "likes": 1787,
+        "likes": 1789,
         "quotes": 12,
         "replies": 25,
         "reposts": 201,
-        "views": 41316
+        "views": 41319
       },
       "publishedAt": "2026-09-25T13:29:47Z",
       "text": "",
@@ -3193,7 +3233,7 @@
         "quotes": 5,
         "replies": 45,
         "reposts": 26,
-        "views": 14701
+        "views": 14702
       },
       "publishedAt": "2026-09-24T18:22:56Z",
       "text": "Every time.",
@@ -3251,7 +3291,7 @@
         "quotes": 38,
         "replies": 142,
         "reposts": 97,
-        "views": 112429
+        "views": 112437
       },
       "publishedAt": "2026-09-23T16:18:52Z",
       "text": "Coldest breathing",
@@ -3273,7 +3313,7 @@
         "quotes": 3,
         "replies": 18,
         "reposts": 11,
-        "views": 174802
+        "views": 174812
       },
       "publishedAt": "2026-09-23T14:18:18Z",
       "text": "Us too lil bro",
@@ -3311,7 +3351,7 @@
         "quotes": 4,
         "replies": 9,
         "reposts": 16,
-        "views": 12551
+        "views": 12552
       },
       "publishedAt": "2026-09-22T18:18:26Z",
       "text": "Our full conversation with Nate Benish \n\n2:07 Who is Nate Benish?\n7:38 What makes LONG different?\n9:07 Nate is up $1.3M in 24 hours\n11:46 Buying $AI after the crash\n13:00 Winning in public as marketing\n19:44 Could token holders eventually vote on Nvidia?\n20:28 Nate thinks $AI could become a top-10 crypto asset\n26:39 BREAKING: LONG is building a native iOS app",
@@ -3491,7 +3531,7 @@
         "quotes": 3,
         "replies": 31,
         "reposts": 30,
-        "views": 27025
+        "views": 27026
       },
       "publishedAt": "2026-09-18T17:06:05Z",
       "text": "Bears trying to short crypto after the rate hike and CLARITY act failure",
@@ -3573,7 +3613,7 @@
         "quotes": 4,
         "replies": 38,
         "reposts": 17,
-        "views": 55749
+        "views": 55751
       },
       "publishedAt": "2026-09-17T16:02:41Z",
       "text": "Now loading....\n\nMarket Bubble's Latest Partner",
@@ -3667,11 +3707,11 @@
       "media": [],
       "metrics": {
         "bookmarks": 19,
-        "likes": 1085,
+        "likes": 1079,
         "quotes": 9,
         "replies": 121,
         "reposts": 85,
-        "views": 135718
+        "views": 135720
       },
       "publishedAt": "2026-09-15T14:43:49Z",
       "text": "If the Clarity Act gets blocked today, crypto still has options.\n \nThe Options:",
@@ -3771,7 +3811,7 @@
         "quotes": 9,
         "replies": 23,
         "reposts": 28,
-        "views": 20185
+        "views": 20186
       },
       "publishedAt": "2026-09-14T15:01:23Z",
       "text": "POV: When nobody believed in you",
@@ -3873,7 +3913,7 @@
         "quotes": 10,
         "replies": 53,
         "reposts": 71,
-        "views": 24422
+        "views": 24423
       },
       "publishedAt": "2026-09-11T12:00:56Z",
       "text": "Nobody works harder than the man who understands he's the only hope for himself and his family.",
@@ -4108,7 +4148,7 @@
         "https://pbs.twimg.com/media/HR3ItbvbQAAcX2g?format=jpg&name=orig"
       ],
       "metrics": {
-        "bookmarks": 6,
+        "bookmarks": 7,
         "likes": 162,
         "quotes": 1,
         "replies": 28,
@@ -4211,7 +4251,7 @@
         "quotes": 2,
         "replies": 14,
         "reposts": 17,
-        "views": 31726
+        "views": 31727
       },
       "publishedAt": "2026-09-09T23:05:58Z",
       "text": "Our full conversation with Al Dunlap \n\n1:33 What is NetNet Capital?\n4:37 Is a mainstream financial game possible?\n9:09 NetNet’s impressive treasury growth\n11:47 Onboarding traditional game developers\n14:36 The return of NFTs\n17:17 Is DeFi back?\n19:44 What the NetNet CEO is most excited for\n21:58 The long-term vision for NetNet\n26:05 The top devs are coming to crypto",
@@ -4248,8 +4288,8 @@
         "https://pbs.twimg.com/media/HRy9LZ2XgAwZqDQ?format=png&name=orig"
       ],
       "metrics": {
-        "bookmarks": 16,
-        "likes": 413,
+        "bookmarks": 17,
+        "likes": 414,
         "quotes": 2,
         "replies": 49,
         "reposts": 30,
@@ -4268,12 +4308,12 @@
         "https://pbs.twimg.com/media/HRysYCzXAAAX5aE?format=jpg&name=orig"
       ],
       "metrics": {
-        "bookmarks": 9,
-        "likes": 214,
+        "bookmarks": 10,
+        "likes": 215,
         "quotes": 5,
         "replies": 20,
         "reposts": 21,
-        "views": 12847
+        "views": 12848
       },
       "publishedAt": "2026-09-09T17:36:57Z",
       "text": "Attempting to trade like a whale with a $500 portfolio",
@@ -4291,7 +4331,7 @@
         "quotes": 3,
         "replies": 8,
         "reposts": 4,
-        "views": 17248
+        "views": 17249
       },
       "publishedAt": "2026-09-08T21:17:55Z",
       "text": "Our full conversation with Tyler Bernabe \n\n0:20 Who is @jboogx_creative?\n4:08 How and why jboog became an AI creator\n7:22 Making money with AI\n8:28 Lock in and change your life\n15:40 Why @AskVenice is so good\n18:41 Using ultra-realistic AI in video games\n22:34 The most exciting time to be a creator\n25:59 jboog’s AI anime made with Venice\n28:10 Don’t be afraid of AI, embrace it",
@@ -4448,8 +4488,8 @@
         "https://pbs.twimg.com/media/HRZHpMAbsAAVhNC?format=jpg&name=orig"
       ],
       "metrics": {
-        "bookmarks": 13,
-        "likes": 240,
+        "bookmarks": 14,
+        "likes": 241,
         "quotes": 0,
         "replies": 19,
         "reposts": 22,
@@ -4486,8 +4526,8 @@
       "isRetweet": false,
       "media": [],
       "metrics": {
-        "bookmarks": 29,
-        "likes": 408,
+        "bookmarks": 30,
+        "likes": 409,
         "quotes": 6,
         "replies": 47,
         "reposts": 44,
@@ -4533,7 +4573,7 @@
         "quotes": 0,
         "replies": 10,
         "reposts": 4,
-        "views": 19062
+        "views": 19063
       },
       "publishedAt": "2026-09-03T20:01:20Z",
       "text": "Now Loading...\n\nWill Clemente, Trader & Investor \n\nToday @ 3:30PM PST",
@@ -4669,11 +4709,11 @@
       ],
       "metrics": {
         "bookmarks": 17,
-        "likes": 570,
+        "likes": 571,
         "quotes": 9,
         "replies": 67,
         "reposts": 48,
-        "views": 20539
+        "views": 20541
       },
       "publishedAt": "2026-09-02T20:32:02Z",
       "text": "This is you in September. \n\nBelieve it.",
@@ -4733,7 +4773,7 @@
         "quotes": 7,
         "replies": 44,
         "reposts": 72,
-        "views": 24897
+        "views": 24898
       },
       "publishedAt": "2026-09-01T21:27:34Z",
       "text": "Men only have two moods:",
@@ -4768,7 +4808,7 @@
         "https://pbs.twimg.com/media/HRJgbOtWMAAzGwG?format=jpg&name=orig"
       ],
       "metrics": {
-        "bookmarks": 35,
+        "bookmarks": 36,
         "likes": 386,
         "quotes": 13,
         "replies": 44,
@@ -4788,8 +4828,8 @@
         "https://pbs.twimg.com/media/HRJVD2OWgAAb8f9?format=jpg&name=orig"
       ],
       "metrics": {
-        "bookmarks": 33,
-        "likes": 475,
+        "bookmarks": 34,
+        "likes": 476,
         "quotes": 12,
         "replies": 51,
         "reposts": 65,
@@ -4811,7 +4851,7 @@
         "quotes": 3,
         "replies": 13,
         "reposts": 20,
-        "views": 19937
+        "views": 19938
       },
       "publishedAt": "2026-09-01T16:01:50Z",
       "text": "Our full conversation with Mayne \n\n00:00 Floods thesis: US Bitcoin vs China Gold \n1:10 Mayne sparks Canadian controversy \n3:16 Trading is going parabolic\n4:57 Hyperliquid onboarding \n11:40 Crypto Plumbers\n12:09 Harder to trade back then or now?\n15:30 CryptoOrca Puts Mayne on game \n16:28 A walk down memory lane \n17:30 Cryptopia? \n18:33 Ansem's old portfolio \n19:50 Do you believe in the crypto space more now? \n25:22 HUGE upside \n28:10 Private Poker with Augur founder \n29:50 Pumpfun Airdrop \n34:35 Options vs Perps\n35:00 $HOOD \n39:40 This cycle is going to be crazy \n41:34 Mayne likes Frank \n44:33 Buy low, Sell high \n48:55 $MSTR \n50:30 US Government eats Micro Strategy conspiracy\n53:50 USA headed towards scary censorship",
@@ -4869,7 +4909,7 @@
       ],
       "metrics": {
         "bookmarks": 44,
-        "likes": 973,
+        "likes": 972,
         "quotes": 21,
         "replies": 135,
         "reposts": 40,
@@ -4909,7 +4949,7 @@
       ],
       "metrics": {
         "bookmarks": 2,
-        "likes": 244,
+        "likes": 243,
         "quotes": 4,
         "replies": 41,
         "reposts": 15,
@@ -4951,7 +4991,7 @@
         "quotes": 4,
         "replies": 20,
         "reposts": 14,
-        "views": 26307
+        "views": 26308
       },
       "publishedAt": "2026-08-28T18:02:27Z",
       "text": "ANSEM AND BANKS EXPOSED \n\n3:30 Banks' Wild Las Vegas Story\n5:50 Ansem's First Solana Thesis\n7:25 Buying SOL at $1.50\n8:35 SOL Price Target: $600–$1000?\n9:17 Media Company & DraftKings Connection\n10:40 Watch-and-Earn Model Explained\n13:00 Funny Tweet Game\n15:05 Solana AI Hackathon Reveal",
@@ -5073,7 +5113,7 @@
         "quotes": 2,
         "replies": 11,
         "reposts": 5,
-        "views": 130002
+        "views": 130004
       },
       "publishedAt": "2026-08-27T22:38:24Z",
       "text": "FaZe Banks tells the story of recently going to dinner with Kimchi in LA. \n\n“Kimchi ate a piece of chocolate cake and drank tap water. Myself, TJR and Zach enjoyed a legitimate real meal.”\n\n“Then walks in the most random cast and crew. It was Sky Bri, Michael Porter Jr., and Steiny (from NELK).”\n\n“Steiny’s like, ‘Oh, is this the Kimchi guy?’ And they’re all freaking the fuck out. He’s just sitting there like, ‘Hey man, nice to meet you.’ He’s so nonchalant about it.”\n\n“It felt like the meme. It felt like a fake story. Then we walked out, jumped into the Maybach and dipped off.”",
@@ -5391,7 +5431,7 @@
       ],
       "metrics": {
         "bookmarks": 12,
-        "likes": 327,
+        "likes": 328,
         "quotes": 12,
         "replies": 31,
         "reposts": 35,
@@ -5433,7 +5473,7 @@
         "quotes": 1,
         "replies": 41,
         "reposts": 9,
-        "views": 13721
+        "views": 13722
       },
       "publishedAt": "2026-08-25T12:39:22Z",
       "text": "GM",
@@ -5453,7 +5493,7 @@
         "quotes": 0,
         "replies": 12,
         "reposts": 6,
-        "views": 17160
+        "views": 17161
       },
       "publishedAt": "2026-08-24T21:28:16Z",
       "text": "Our full conversation with Orangie. \n\n0:26 Orangie and Ansem meet for the first time\n3:20 Orangie’s origin story\n6:29 How much money has Orangie made?\n7:40 Orangie on Potion Alpha and how content is king\n12:58 The negative connotations around crypto and how to fix them\n14:51 Kimchi and Orangie’s history\n18:11 Is trading a team game?\n19:37 Ansem’s rise to fame through trading\n25:50 What makes Fortnite players good at trading?\n30:19 Robinhood vs Solana trenches\n32:44 What made Ansem want to get behind $ANSEM\n39:43 fomo vs pump \n43:18 “The Cupsey face reveal will be a bigger catalyst than Kimchi’s Trump trade.”\n44:49 Should there be movies about the lives of traders like Kimchi and Cupsey?\n51:12 Is trading new pairs back?\n56:45 Ansem on what type of catalyst memecoins need to succeed",
@@ -5495,7 +5535,7 @@
         "quotes": 7,
         "replies": 56,
         "reposts": 35,
-        "views": 14189
+        "views": 14190
       },
       "publishedAt": "2026-08-24T14:14:18Z",
       "text": "Next Stop, Valhalla.",
@@ -5513,7 +5553,7 @@
         "quotes": 3,
         "replies": 42,
         "reposts": 38,
-        "views": 15429
+        "views": 15430
       },
       "publishedAt": "2026-08-24T12:58:06Z",
       "text": "GM",
@@ -5653,7 +5693,7 @@
         "quotes": 1,
         "replies": 9,
         "reposts": 6,
-        "views": 30280
+        "views": 30282
       },
       "publishedAt": "2026-08-21T15:36:16Z",
       "text": "Market Bubble is now hiring an Associate Producer in New York City.\n\nOnly apply if you’re a killer who aspires to redefine the future of new media. http://x.com/i/article/2090824812356628480",
@@ -5691,7 +5731,7 @@
         "quotes": 1,
         "replies": 2,
         "reposts": 4,
-        "views": 13813
+        "views": 13815
       },
       "publishedAt": "2026-08-21T00:12:40Z",
       "text": "At 15 years old, DoubleZero founder Austin Federa hacked macOS onto a Dell and accidentally caused a “shitstorm” inside Apple",
@@ -5711,7 +5751,7 @@
         "quotes": 3,
         "replies": 9,
         "reposts": 13,
-        "views": 50261
+        "views": 50265
       },
       "publishedAt": "2026-08-20T23:27:19Z",
       "text": "Ansem and Se Yong, co-founder of fomo on why the next great social media platform will happen onchain",
@@ -5831,7 +5871,7 @@
         "quotes": 3,
         "replies": 7,
         "reposts": 2,
-        "views": 10738
+        "views": 10739
       },
       "publishedAt": "2026-08-20T21:59:11Z",
       "text": "Why are Fortnite players dominating the trenches?",
@@ -5911,7 +5951,7 @@
         "quotes": 2,
         "replies": 17,
         "reposts": 16,
-        "views": 26945
+        "views": 26946
       },
       "publishedAt": "2026-08-20T21:10:55Z",
       "text": "Ansem on http://ansem.io and the Z500\n\n\"The S&P500 is for stocks, the Z500 is an onchain index for all the top launches in crypto.\"\n\n\"I didn't want to do another launchpad but what I know makes sense is that there's a lot of teams who need marketing for their token launches, and they want to market towards me and all the $ANSEM holders.\"\n\n\"http://ansem.io is a way for teams to launch and immediately airdrop a portion of supply to all $ANSEM holders, and if you want to get boosted on the Z500 leaderboard you can buy and burn $ANSEM to do so.\"\n\n\"The idea is not to do more token launches, but to have a curated list of them. For the ones that do really well, we want those to be dropped to $ANSEM holders so you can just hold and get exposure to all these different coins.\"\n\n\"There's been around 1.7m $ANSEM burned so far and we've done almost $200m in volume.\"",
@@ -5933,7 +5973,7 @@
         "quotes": 3,
         "replies": 8,
         "reposts": 5,
-        "views": 17128
+        "views": 17131
       },
       "publishedAt": "2026-08-20T20:51:55Z",
       "text": "Now loading...\n\nAndrej, Founder of Grass Protocol\n\nToday @ 5PM PST",
@@ -5953,7 +5993,7 @@
         "quotes": 2,
         "replies": 21,
         "reposts": 20,
-        "views": 17058
+        "views": 17060
       },
       "publishedAt": "2026-08-20T20:27:52Z",
       "text": "Now loading...\n\nAustin Federa, Founder of DoubleZero\n\nToday @ 4:30PM PST",
@@ -6071,7 +6111,7 @@
         "quotes": 6,
         "replies": 37,
         "reposts": 146,
-        "views": 23336
+        "views": 23337
       },
       "publishedAt": "2026-08-19T20:48:16Z",
       "text": "Our full conversation with PoorGoat. \n\n0:24 Who is PoorGoat?\n3:04 PoorGoat has a j*b\n3:54 fomo bringing in new traders and how to keep them\n5:58 The $CATE origin story\n11:40 What caused the initial CATE crash?\n13:26 Ansem’s POV of PoorGoat’s story and how it relates back to $ANSEM\n19:14 Ansem’s advice for PoorGoat\n21:49 The goal is to bring more people in to crypto\n22:43 Poorgoat’s advice to YOU\n24:02 Finding your edge by finding your community",
@@ -6108,11 +6148,11 @@
       "media": [],
       "metrics": {
         "bookmarks": 50,
-        "likes": 254,
+        "likes": 253,
         "quotes": 3,
         "replies": 40,
         "reposts": 25,
-        "views": 154747
+        "views": 154748
       },
       "publishedAt": "2026-08-19T18:12:15Z",
       "text": "Market Bubble Episode 1, Ansem and Banks talk about how crazy it is that there was only a 22% chance that Anthropic would flip BTC in market cap on Polymarket by EOY which now turned out to be a free 5X.\n\nAre you paying attention anon?",
@@ -6152,7 +6192,7 @@
         "quotes": 0,
         "replies": 22,
         "reposts": 21,
-        "views": 9845
+        "views": 9846
       },
       "publishedAt": "2026-08-19T16:01:00Z",
       "text": "He is still inside you.\n\nDo it for him.",
@@ -6312,7 +6352,7 @@
         "quotes": 11,
         "replies": 46,
         "reposts": 38,
-        "views": 47196
+        "views": 47198
       },
       "publishedAt": "2026-08-17T22:51:39Z",
       "text": "Our full conversation with Mike Dudas. \n\n0:15 Market Bubble to $1B\n1:00 Who is Mike Dudas?\n5:01 From media founder to fund manager\n6:37 CZ threatening to sue Mike “out of existence”\n9:27 Every asset all at once\n10:56 Mike Dudas and $TOAD\n13:09 The word “scammer” has lost its meaning\n14:21 Are memecoins a net-negative for crypto?\n19:34 Gambling responsibly\n21:01 Do we need to CTO crypto?\n23:03 The narrative trading meta\n24:40 Is watch to earn the next meta?\n31:30 The future of watch to earn\n34:46 Banks glazes Mike\n35:06 Being the sole seed investor of pumpfun",
@@ -6408,7 +6448,7 @@
       "media": [],
       "metrics": {
         "bookmarks": 8,
-        "likes": 110,
+        "likes": 109,
         "quotes": 1,
         "replies": 10,
         "reposts": 10,
@@ -6533,7 +6573,7 @@
         "quotes": 8,
         "replies": 61,
         "reposts": 65,
-        "views": 34205
+        "views": 34206
       },
       "publishedAt": "2026-08-14T00:48:37Z",
       "text": "PoorGoat reveals he still works his traditional finance job despite making millions in crypto\n\n“Part of the reason I was able to hold my position on solana:9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump to whatever I held it to and back where it is now and I'm still holding and very bullish, is I have a real career in traditional finance”\n\n“I work every day. I love my job. It's super fun and it's what I love. When this crypto stuff blew up, it's like, I'm not gonna quit my job but I can do them both at the same time”\n\n“I'm in real estate, so my goal eventually is to kind of combine them, use crypto money to buy my own real estate”",
@@ -6608,7 +6648,7 @@
       "isRetweet": false,
       "media": [],
       "metrics": {
-        "bookmarks": 19,
+        "bookmarks": 20,
         "likes": 190,
         "quotes": 1,
         "replies": 22,
@@ -6635,7 +6675,7 @@
         "quotes": 69,
         "replies": 336,
         "reposts": 101,
-        "views": 426291
+        "views": 426301
       },
       "publishedAt": "2026-08-13T18:40:32Z",
       "text": "THE OFFICIAL TOP 25: \n'THE BEST ACTIVE ONCHAIN TRADERS'\n\n1. Change\n2. Profit\n3. Jayg\n5. Saood\n6. Asta\n7. Dxrant\n8. Rowdy\n9. Avast\n10. Unipcs\n11. Aurelius\n12. Forgivable\n13. Zinc\n14. Killua\n15. 3\n16. Pullup\n17. Ethermonk\n18. Smokey\n19. Frank\n20. Insentos \n21. TechQuant\n22. F4Vel\n23. TraderPow\n24. PoorGoat\n25. Rasmr",
@@ -6868,12 +6908,12 @@
       "isRetweet": false,
       "media": [],
       "metrics": {
-        "bookmarks": 266,
-        "likes": 1811,
+        "bookmarks": 265,
+        "likes": 1810,
         "quotes": 23,
         "replies": 1065,
         "reposts": 394,
-        "views": 565931
+        "views": 565937
       },
       "publishedAt": "2026-08-06T19:56:43Z",
       "text": "FaZe Banks teaches us a lesson in attention and clip-farming.\n\nHe intentionally paused stream and created a fabricated story about trader Kimchi and knew it would go viral.\n\nThe story became a global TikTok trend with creators like StableRonaldo, Lacy and TJR hopping on.\n\nThe clips surpassed 20M views internally and the trend Banks started is in the 100's of MILLIONS of impressions across all platforms and channels.\n\nMasterclass.",
@@ -7177,7 +7217,7 @@
         "quotes": 7,
         "replies": 33,
         "reposts": 14,
-        "views": 27349
+        "views": 27350
       },
       "publishedAt": "2026-08-03T01:17:00Z",
       "text": "",
@@ -7337,7 +7377,7 @@
         "quotes": 4,
         "replies": 127,
         "reposts": 49,
-        "views": 23560
+        "views": 23561
       },
       "publishedAt": "2026-07-30T23:16:17Z",
       "text": "Motion\n(MOH-shuhn)\nnoun\n\nThe act of breaking 100,000+ live viewers during one show. Up only.",
@@ -7415,7 +7455,7 @@
         "quotes": 9,
         "replies": 45,
         "reposts": 43,
-        "views": 45206
+        "views": 45207
       },
       "publishedAt": "2026-07-30T21:09:22Z",
       "text": "Kimchi, the trader who made $40M on $TRUMP mogs FaZe Banks.",
@@ -7731,7 +7771,7 @@
       "media": [],
       "metrics": {
         "bookmarks": 15,
-        "likes": 182,
+        "likes": 181,
         "quotes": 2,
         "replies": 23,
         "reposts": 23,
@@ -7751,11 +7791,11 @@
       "media": [],
       "metrics": {
         "bookmarks": 9,
-        "likes": 160,
+        "likes": 159,
         "quotes": 3,
         "replies": 21,
         "reposts": 9,
-        "views": 19988
+        "views": 19989
       },
       "publishedAt": "2026-07-23T23:41:55Z",
       "text": "Brian Armstrong explains why he got into crypto\n\n\"I'm super into freedom and economic freedom. There's so many people around the world who get their wealth eroded from them by inflation, or they're getting nickel and dimed on fees to just store their money securely, to move it around.. basic property rights\"\n\n\"I'm an investor, but I'm not an active day trader. That's actually a weakness of mine. When I co-founded Coinbase with Fred Ehrsam, he was a trader coming from Goldman Sachs. We had both sides of it\"\n\n\"I initially got into crypto thinking this is going to be a global payment system where everything is fast and cheap and cross-border. We are seeing that now with stablecoins, which is really cool but the trading stuff is just as important\"\n\n\"Even if my day sucks and I got yelled at, and the people in DC are telling me I'm an idiot, or Jamie Dimon hates me, whatever it is. We've got to go create more economic freedom in the world. That's what keeps me getting out of bed in the morning\"",
@@ -7771,7 +7811,7 @@
       "media": [],
       "metrics": {
         "bookmarks": 23,
-        "likes": 222,
+        "likes": 221,
         "quotes": 1,
         "replies": 27,
         "reposts": 22,
@@ -7811,7 +7851,7 @@
       "media": [],
       "metrics": {
         "bookmarks": 83,
-        "likes": 331,
+        "likes": 330,
         "quotes": 4,
         "replies": 38,
         "reposts": 20,
@@ -8175,7 +8215,7 @@
         "quotes": 7,
         "replies": 22,
         "reposts": 11,
-        "views": 26865
+        "views": 26866
       },
       "publishedAt": "2026-07-20T18:40:36Z",
       "text": "Jesse Pollak on the ecosystem forming around tokenized inference\n\n\"There's this really cool tokenized inference market that Venice has innovated, where they've taken inference and turned it into a token called DIEM where you can buy it and you get $1 of inference per day\"\n\n\"That innovation of tokenizing inference has unlocked a ton of innovation around it, where people are using that tokenized inference to do things\"\n\n\"There's other projects that let people sell their tokenized inference at a discount so other people can get cheaper inference and the whole system works more efficiently\"\n\n\"I feel like that's the first time we're really seeing the intersection of AI plus markets plus crypto and it's thanks to Venice and it's happening on Base\"",
@@ -8293,7 +8333,7 @@
       ],
       "metrics": {
         "bookmarks": 3,
-        "likes": 273,
+        "likes": 272,
         "quotes": 2,
         "replies": 34,
         "reposts": 31,
@@ -8391,7 +8431,7 @@
       "media": [],
       "metrics": {
         "bookmarks": 19,
-        "likes": 96,
+        "likes": 95,
         "quotes": 1,
         "replies": 19,
         "reposts": 6,
@@ -8455,7 +8495,7 @@
         "quotes": 7,
         "replies": 50,
         "reposts": 34,
-        "views": 46977
+        "views": 46978
       },
       "publishedAt": "2026-07-16T22:02:06Z",
       "text": "Jesse Pollak explains why he handed the Base app to Cobie\n\n“We made the call about a month ago to let me fully focus on the chain and fully focus on this mission of building the blockchain for global finance”\n\n“That meant taking the consumer product, the Base app and shifting it back to the mothership, where Cobie is now going to run it”\n\n“I think that's awesome for the Base app, it's awesome for Base and it's awesome for Coinbase because Cobie’s a beast”\n\n“It's been awesome watching the impact he's had already in the nine months he's been at the company and I think he's going to do really big things for us”",
@@ -8471,11 +8511,11 @@
       "media": [],
       "metrics": {
         "bookmarks": 37,
-        "likes": 300,
+        "likes": 299,
         "quotes": 3,
         "replies": 52,
         "reposts": 27,
-        "views": 76804
+        "views": 76805
       },
       "publishedAt": "2026-07-16T21:31:47Z",
       "text": "Ansem on why he's calling the crypto bottom early\n\n\"You saw cash heavy TradFi buyers step in and start to allocate towards crypto with $BTC, $ETH, and $SOL. $HYPE has been outperforming on its own, but the majors have been lagging behind\"\n\n\"The CT sentiment is really poor and typically when you have a divergence like that, it's a great place for a bottom\"\n\n\"You haven't seen that momentum shift happen yet on any of the majors. But I think if you see Solana back over $100, Bitcoin back over $80K, a lot of those traders will probably flip back\"",
@@ -8536,8 +8576,8 @@
         "likes": 409,
         "quotes": 11,
         "replies": 65,
-        "reposts": 42,
-        "views": 48431
+        "reposts": 43,
+        "views": 48432
       },
       "publishedAt": "2026-07-15T20:12:11Z",
       "text": "Now loading...\n\nJesse Pollak, Creator of Base\n\nThursday, July 16th, 2:30pm PST",
@@ -8591,7 +8631,7 @@
       "media": [],
       "metrics": {
         "bookmarks": 9,
-        "likes": 73,
+        "likes": 72,
         "quotes": 2,
         "replies": 20,
         "reposts": 5,
@@ -8671,11 +8711,11 @@
       "media": [],
       "metrics": {
         "bookmarks": 31,
-        "likes": 368,
+        "likes": 367,
         "quotes": 29,
         "replies": 90,
         "reposts": 39,
-        "views": 179506
+        "views": 179508
       },
       "publishedAt": "2026-07-13T22:43:00Z",
       "text": "WE NEED MORE COOL CRYPTO EVENTS\n\nAnsem: \"we should do more cool crypto events\"\n\nBanks: \"yeah actual cool ones. Even hearing you say 'crypto event' makes me want to stay home\"\n\nLuca: \"If I was Solana CMO I'd take a quarter million dollars in Solana, bring everybody together for a basketball tournament. Top team makes $250K, Solana sponsored, logos everywhere\"\n\nAnsem: \"Solana basketball tournament. Let's make this happen right now. I feel like we can manifest that. And we get Polymarket to run the markets on it\"",
@@ -8691,11 +8731,11 @@
       "media": [],
       "metrics": {
         "bookmarks": 15,
-        "likes": 460,
+        "likes": 459,
         "quotes": 11,
         "replies": 72,
         "reposts": 73,
-        "views": 58508
+        "views": 58509
       },
       "publishedAt": "2026-07-13T19:38:02Z",
       "text": "solana:9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump IS A MOVEMENT \n\n\"If I'm doing all the marketing, yeah it can work. I tweet a ton and I can direct attention. But if I have 100K people going out and doing stuff like this, that's different\"\n\n\"I think it can be a culture, a movement, a community thing that hasn't really existed in crypto and been done well at scale\"\n\n\"I want to get it in as many people's hands as possible. That's the whole idea\"",
@@ -8711,7 +8751,7 @@
       "media": [],
       "metrics": {
         "bookmarks": 105,
-        "likes": 320,
+        "likes": 319,
         "quotes": 15,
         "replies": 82,
         "reposts": 43,
@@ -8733,11 +8773,11 @@
       ],
       "metrics": {
         "bookmarks": 14,
-        "likes": 845,
+        "likes": 844,
         "quotes": 28,
         "replies": 183,
         "reposts": 133,
-        "views": 44841
+        "views": 44843
       },
       "publishedAt": "2026-07-13T16:04:50Z",
       "text": "Society when solana:9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump flips $PUMP",
@@ -8855,7 +8895,7 @@
         "quotes": 5,
         "replies": 22,
         "reposts": 21,
-        "views": 81830
+        "views": 81832
       },
       "publishedAt": "2026-07-10T17:27:51Z",
       "text": "Ansem explains why Solana will win the AI race\n\n\"For AI it makes a ton of sense that Solana is the L1 that gets the most interest. It's the cheapest, most performant, and they do a good job bringing in people external to crypto\"\n\n\"The open-source AI community is only going to grow faster and get bigger. Right now you have these large private labs that dominate but the design space for open-source AI, building products and protocols there, is where the smaller startups do well\"\n\n\"Mert said Solana wants to be the home for entrepreneurs to come and thrive, and I think they're going to keep building a chain that enables that\"\n\n\"The tech plays and infra plays on $SOL are kind of underlooked right now. That's actually one of the interesting spots that's going to be good this cycle\"",
@@ -8877,7 +8917,7 @@
         "quotes": 18,
         "replies": 55,
         "reposts": 164,
-        "views": 25573
+        "views": 25574
       },
       "publishedAt": "2026-07-10T16:26:20Z",
       "text": "JUST IN: solana:9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump has been listed on Hyperliquid\n\nBlack bull mode 🐂🀄️",
@@ -8915,7 +8955,7 @@
         "quotes": 3,
         "replies": 23,
         "reposts": 20,
-        "views": 48166
+        "views": 48167
       },
       "publishedAt": "2026-07-10T01:38:53Z",
       "text": "FaZe Banks explains why there's never been a better time to be young and broke\n\nFaZe Banks: \"I personally think it's never been a better time in human history to be a broke young person with an internet connection and all the time in the world\"\n\nAnsem: \"By far. You can do anything bro. With infinite time, you can build anything\"\n\nFaZe Banks: \"You're almost in a better spot than somebody tied to their rent, who has to make payments, who's forced to work their 9-to-5 because they have overhead and families\"\n\nFaZe Banks: \"To be a person with nothing to lose in 2026 is a really good spot to be in. Go sit on Claude all day, sit on GPT-Live all day, go build shit, learn how to leverage AI, watch shows like this, learn about attention, learn about markets\"",
@@ -8951,7 +8991,7 @@
       "media": [],
       "metrics": {
         "bookmarks": 15,
-        "likes": 268,
+        "likes": 269,
         "quotes": 1,
         "replies": 40,
         "reposts": 27,
@@ -8991,7 +9031,7 @@
       "media": [],
       "metrics": {
         "bookmarks": 24,
-        "likes": 488,
+        "likes": 489,
         "quotes": 9,
         "replies": 90,
         "reposts": 85,
@@ -9117,7 +9157,7 @@
         "quotes": 14,
         "replies": 123,
         "reposts": 71,
-        "views": 34830
+        "views": 34831
       },
       "publishedAt": "2026-07-09T15:44:18Z",
       "text": "Now loading...\n\nLuca Netz, CEO of Pudgy Penguins\n\nToday at 2:30pm PST",
@@ -9271,7 +9311,7 @@
       "media": [],
       "metrics": {
         "bookmarks": 18,
-        "likes": 435,
+        "likes": 434,
         "quotes": 9,
         "replies": 74,
         "reposts": 40,
@@ -9293,7 +9333,7 @@
       ],
       "metrics": {
         "bookmarks": 15,
-        "likes": 709,
+        "likes": 708,
         "quotes": 11,
         "replies": 130,
         "reposts": 61,
@@ -9315,7 +9355,7 @@
         "quotes": 9,
         "replies": 65,
         "reposts": 31,
-        "views": 29453
+        "views": 29454
       },
       "publishedAt": "2026-07-06T18:18:46Z",
       "text": "How should we celebrate when solana:9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump flips $PUMP?",
@@ -9333,10 +9373,10 @@
       ],
       "metrics": {
         "bookmarks": 8,
-        "likes": 711,
+        "likes": 710,
         "quotes": 14,
         "replies": 60,
-        "reposts": 66,
+        "reposts": 65,
         "views": 37313
       },
       "publishedAt": "2026-07-06T16:44:29Z",
@@ -9433,7 +9473,7 @@
       ],
       "metrics": {
         "bookmarks": 10,
-        "likes": 699,
+        "likes": 698,
         "quotes": 7,
         "replies": 78,
         "reposts": 66,
@@ -9495,7 +9535,7 @@
         "quotes": 13,
         "replies": 80,
         "reposts": 101,
-        "views": 65623
+        "views": 65624
       },
       "publishedAt": "2026-07-03T15:25:25Z",
       "text": "Ansem reacts to the odds of solana:9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump flipping solana:pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn \n\n\"This is free bro, its only like a 3x to flip right now\"\n\n\"If Solana makes a new ATH past where it was last cycle, i think the onchain coins are going to go higher than last cycle\"",
@@ -9511,11 +9551,11 @@
       "media": [],
       "metrics": {
         "bookmarks": 72,
-        "likes": 732,
+        "likes": 731,
         "quotes": 27,
         "replies": 93,
         "reposts": 98,
-        "views": 72941
+        "views": 72942
       },
       "publishedAt": "2026-07-03T14:02:29Z",
       "text": "Ansem explains how to qualify for the solana:9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump airdrop\n\n\"The main things i've focused on are people holding the coin and people who are posting. Posting a thesis, doing marketing for the coin etc\"\n\n\"It's very easy to buy the coin, so i want to give stimmies to people who are invested in the coin doing well\"\n\n\"People doing engaging things, helping with the art, the marketing, making content etc. Those are the people i want to give tokens to. They're empowering the community more\"",
@@ -9571,7 +9611,7 @@
       "media": [],
       "metrics": {
         "bookmarks": 26,
-        "likes": 611,
+        "likes": 610,
         "quotes": 17,
         "replies": 82,
         "reposts": 99,
@@ -9611,7 +9651,7 @@
       "media": [],
       "metrics": {
         "bookmarks": 62,
-        "likes": 515,
+        "likes": 516,
         "quotes": 8,
         "replies": 52,
         "reposts": 49,
@@ -9731,7 +9771,7 @@
       "media": [],
       "metrics": {
         "bookmarks": 22,
-        "likes": 200,
+        "likes": 199,
         "quotes": 1,
         "replies": 18,
         "reposts": 27,
