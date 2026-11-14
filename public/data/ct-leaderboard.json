@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-14T19:01:46.266451Z",
+  "fetchedAt": "2026-11-14T23:15:49.817628Z",
   "members": [
     {
       "avatarUrl": null,
@@ -86,9 +86,9 @@
       "verified": false
     },
     {
-      "avatarUrl": null,
-      "description": "",
-      "followers": 0,
+      "avatarUrl": "https://pbs.twimg.com/profile_images/1995052359068553216/hkPROmXA.jpg",
+      "description": "Product Manager",
+      "followers": 128136,
       "handle": "based16z",
       "name": "based16z",
       "profileUrl": "https://x.com/based16z",
