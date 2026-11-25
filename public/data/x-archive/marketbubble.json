@@ -1,8 +1,8 @@
 {
-  "fetchedAt": "2026-11-24T20:46:16.986855Z",
+  "fetchedAt": "2026-11-25T03:59:51.666004Z",
   "handle": "MarketBubble",
-  "profileImageUrl": null,
-  "profileTitle": "@MarketBubble",
+  "profileImageUrl": "https://pbs.twimg.com/profile_images/2104654189108645889/qZKBgdYV.jpg",
+  "profileTitle": "Market Bubble / @MarketBubble",
   "source": "gallery-dl",
   "taggedClips": [
     {
@@ -2503,6 +2503,66 @@
     }
   ],
   "tweets": [
+    {
+      "author": "@MarketBubble",
+      "id": "2124986573879959695",
+      "isRetweet": false,
+      "media": [
+        "https://pbs.twimg.com/media/HX14BuIX0AAWA2z?format=jpg&name=orig"
+      ],
+      "metrics": {
+        "bookmarks": 120,
+        "likes": 1579,
+        "quotes": 4,
+        "replies": 25,
+        "reposts": 168,
+        "views": 44406
+      },
+      "publishedAt": "2026-11-23T22:00:54Z",
+      "text": "just one crazy assist from God",
+      "title": "just one crazy assist from God",
+      "url": "https://x.com/MarketBubble/status/2124986573879959695"
+    },
+    {
+      "author": "@MarketBubble",
+      "id": "2124920521926058413",
+      "isRetweet": false,
+      "media": [
+        "https://pbs.twimg.com/media/HX077v_XYAAyyN9?format=jpg&name=orig"
+      ],
+      "metrics": {
+        "bookmarks": 2,
+        "likes": 194,
+        "quotes": 0,
+        "replies": 22,
+        "reposts": 12,
+        "views": 21471
+      },
+      "publishedAt": "2026-11-23T17:38:26Z",
+      "text": "Most people aren’t prepared for this scenario",
+      "title": "Most people aren’t prepared for this scenario",
+      "url": "https://x.com/MarketBubble/status/2124920521926058413"
+    },
+    {
+      "author": "@MarketBubble",
+      "id": "2124875319282917614",
+      "isRetweet": false,
+      "media": [],
+      "metrics": {
+        "bookmarks": 16,
+        "likes": 362,
+        "quotes": 4,
+        "replies": 43,
+        "reposts": 21,
+        "views": 37969
+      },
+      "publishedAt": "2026-11-23T14:38:49Z",
+      "text": "Jensen Huang back at Nvidia to thank everyone who helped with the CEO search",
+      "title": "Jensen Huang back at Nvidia to thank everyone who helped with the CEO search",
+      "url": "https://x.com/MarketBubble/status/2124875319282917614",
+      "videoUrl": "https://video.twimg.com/amplify_video/2122320017140158464/vid/avc1/1280x720/UVVc77ZzTES9PfhG.mp4?tag=29",
+      "duration": 90.906
+    },
     {
       "author": "@MarketBubble",
       "id": "2121266396562858087",
